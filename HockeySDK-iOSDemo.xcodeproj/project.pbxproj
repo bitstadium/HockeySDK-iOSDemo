@@ -1,0 +1,264 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1E9A624915504F2E00EE7C9D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E9A624815504F2E00EE7C9D /* UIKit.framework */; };
+		1E9A624B15504F2E00EE7C9D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E9A624A15504F2E00EE7C9D /* Foundation.framework */; };
+		1E9A624D15504F2E00EE7C9D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E9A624C15504F2E00EE7C9D /* CoreGraphics.framework */; };
+		1E9A625315504F2E00EE7C9D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1E9A625115504F2E00EE7C9D /* InfoPlist.strings */; };
+		1E9A625515504F2E00EE7C9D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E9A625415504F2E00EE7C9D /* main.m */; };
+		1E9A625915504F2E00EE7C9D /* CNSAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E9A625815504F2E00EE7C9D /* CNSAppDelegate.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1E9A624415504F2E00EE7C9D /* HockeySDK-iOSDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "HockeySDK-iOSDemo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1E9A624815504F2E00EE7C9D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		1E9A624A15504F2E00EE7C9D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		1E9A624C15504F2E00EE7C9D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		1E9A625015504F2E00EE7C9D /* HockeySDK-iOSDemo-Info.plist */ = {isa = PBXFileReference; path = "HockeySDK-iOSDemo-Info.plist"; sourceTree = "<group>"; };
+		1E9A625215504F2E00EE7C9D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		1E9A625415504F2E00EE7C9D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		1E9A625615504F2E00EE7C9D /* HockeySDK-iOSDemo-Prefix.pch */ = {isa = PBXFileReference; path = "HockeySDK-iOSDemo-Prefix.pch"; sourceTree = "<group>"; };
+		1E9A625715504F2E00EE7C9D /* CNSAppDelegate.h */ = {isa = PBXFileReference; path = CNSAppDelegate.h; sourceTree = "<group>"; };
+		1E9A625815504F2E00EE7C9D /* CNSAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CNSAppDelegate.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1E9A624115504F2E00EE7C9D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1E9A624915504F2E00EE7C9D /* UIKit.framework in Frameworks */,
+				1E9A624B15504F2E00EE7C9D /* Foundation.framework in Frameworks */,
+				1E9A624D15504F2E00EE7C9D /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1E9A623915504F2E00EE7C9D = {
+			isa = PBXGroup;
+			children = (
+				1E9A624E15504F2E00EE7C9D /* HockeySDK-iOSDemo */,
+				1E9A624715504F2E00EE7C9D /* Frameworks */,
+				1E9A624515504F2E00EE7C9D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		1E9A624515504F2E00EE7C9D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1E9A624415504F2E00EE7C9D /* HockeySDK-iOSDemo.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1E9A624715504F2E00EE7C9D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1E9A624815504F2E00EE7C9D /* UIKit.framework */,
+				1E9A624A15504F2E00EE7C9D /* Foundation.framework */,
+				1E9A624C15504F2E00EE7C9D /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		1E9A624E15504F2E00EE7C9D /* HockeySDK-iOSDemo */ = {
+			isa = PBXGroup;
+			children = (
+				1E9A625715504F2E00EE7C9D /* CNSAppDelegate.h */,
+				1E9A625815504F2E00EE7C9D /* CNSAppDelegate.m */,
+				1E9A624F15504F2E00EE7C9D /* Supporting Files */,
+			);
+			path = "HockeySDK-iOSDemo";
+			sourceTree = "<group>";
+		};
+		1E9A624F15504F2E00EE7C9D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				1E9A625015504F2E00EE7C9D /* HockeySDK-iOSDemo-Info.plist */,
+				1E9A625115504F2E00EE7C9D /* InfoPlist.strings */,
+				1E9A625415504F2E00EE7C9D /* main.m */,
+				1E9A625615504F2E00EE7C9D /* HockeySDK-iOSDemo-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1E9A624315504F2E00EE7C9D /* HockeySDK-iOSDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1E9A625C15504F2E00EE7C9D /* Build configuration list for PBXNativeTarget "HockeySDK-iOSDemo" */;
+			buildPhases = (
+				1E9A624015504F2E00EE7C9D /* Sources */,
+				1E9A624115504F2E00EE7C9D /* Frameworks */,
+				1E9A624215504F2E00EE7C9D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "HockeySDK-iOSDemo";
+			productName = "HockeySDK-iOSDemo";
+			productReference = 1E9A624415504F2E00EE7C9D /* HockeySDK-iOSDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1E9A623B15504F2E00EE7C9D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = CNS;
+				LastUpgradeCheck = 0430;
+			};
+			buildConfigurationList = 1E9A623E15504F2E00EE7C9D /* Build configuration list for PBXProject "HockeySDK-iOSDemo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 1E9A623915504F2E00EE7C9D;
+			productRefGroup = 1E9A624515504F2E00EE7C9D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1E9A624315504F2E00EE7C9D /* HockeySDK-iOSDemo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1E9A624215504F2E00EE7C9D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1E9A625315504F2E00EE7C9D /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1E9A624015504F2E00EE7C9D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1E9A625515504F2E00EE7C9D /* main.m in Sources */,
+				1E9A625915504F2E00EE7C9D /* CNSAppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		1E9A625115504F2E00EE7C9D /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1E9A625215504F2E00EE7C9D /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1E9A625A15504F2E00EE7C9D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		1E9A625B15504F2E00EE7C9D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		1E9A625D15504F2E00EE7C9D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "HockeySDK-iOSDemo/HockeySDK-iOSDemo-Prefix.pch";
+				INFOPLIST_FILE = "HockeySDK-iOSDemo/HockeySDK-iOSDemo-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		1E9A625E15504F2E00EE7C9D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "HockeySDK-iOSDemo/HockeySDK-iOSDemo-Prefix.pch";
+				INFOPLIST_FILE = "HockeySDK-iOSDemo/HockeySDK-iOSDemo-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1E9A623E15504F2E00EE7C9D /* Build configuration list for PBXProject "HockeySDK-iOSDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1E9A625A15504F2E00EE7C9D /* Debug */,
+				1E9A625B15504F2E00EE7C9D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1E9A625C15504F2E00EE7C9D /* Build configuration list for PBXNativeTarget "HockeySDK-iOSDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1E9A625D15504F2E00EE7C9D /* Debug */,
+				1E9A625E15504F2E00EE7C9D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1E9A623B15504F2E00EE7C9D /* Project object */;
+}
