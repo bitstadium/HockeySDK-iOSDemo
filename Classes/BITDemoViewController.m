@@ -56,6 +56,19 @@
   [[BITHockeyManager sharedHockeyManager].updateManager showUpdateView];
 }
 
+- (IBAction) triggerCrash {
+	/* Trigger a crash */
+	CFRelease(NULL);
+}
+
+
+- (IBAction) triggerExceptionCrash {
+	/* Trigger a crash */
+  NSArray *array = [NSArray array];
+  [array objectAtIndex:23];
+}
+
+
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation {
   if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
     return YES;

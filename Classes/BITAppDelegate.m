@@ -31,62 +31,77 @@
 #import "HockeySDK.h"
 
 
-@interface BITAppDelegate () <BITUpdateManagerDelegate> {}
+@interface BITAppDelegate () <BITUpdateManagerDelegate, BITCrashManagerDelegate> {}
+
 @end
 
 
 @implementation BITAppDelegate
 
-@synthesize viewController = _viewController;
-@synthesize navigationController = _navigationController;
-@synthesize window = _window;
-
-- (void)dealloc {
-  [_viewController release];
-  [_navigationController release];
-  [_window release];
-  [super dealloc];
-}
-
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-  [self.window makeKeyAndVisible];
-
+#warning Assign a valid HockeyApp app identifier first!
   [[BITHockeyManager sharedHockeyManager] configureWithIdentifier:@"<>"
                                                          delegate:nil];
+  
+  [[BITHockeyManager sharedHockeyManager].updateManager setDelegate:self];
+  [[BITHockeyManager sharedHockeyManager].crashManager setDelegate:self];
   
   // optionally enable logging to get more information about states.
   [BITHockeyManager sharedHockeyManager].debugLogEnabled = YES;
 
+  [[BITHockeyManager sharedHockeyManager] startManager];
+
+  [self.window makeKeyAndVisible];
+
+  if ([self didCrashInLastSessionOnStartup]) {
+    [self waitingUI];
+  } else {
+    [self setupApplication];
+  }
+
   return YES;
 }
 
-- (void)applicationWillResignActive:(UIApplication *)application
-{
-  // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
-  // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.
+- (void)waitingUI {
+  // show intermediate UI
+  [self.demoViewController.waitingView setHidden:NO];
+  [self.demoViewController.navigationItem.leftBarButtonItem setEnabled:NO];
 }
 
-- (void)applicationDidEnterBackground:(UIApplication *)application
-{
-  // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later. 
-  // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
+- (void)setupApplication {
+  // setup your app specific code
+  [self.demoViewController.waitingView setHidden:YES];
+  [self.demoViewController.navigationItem.leftBarButtonItem setEnabled:YES];
+  [self.window makeKeyAndVisible];
 }
 
-- (void)applicationWillEnterForeground:(UIApplication *)application
-{
-  // Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
+- (BOOL)didCrashInLastSessionOnStartup {
+  return ([[BITHockeyManager sharedHockeyManager].crashManager didCrashInLastSession] &&
+          [[BITHockeyManager sharedHockeyManager].crashManager timeintervalCrashInLastSessionOccured] < 5);
 }
 
-- (void)applicationDidBecomeActive:(UIApplication *)application
-{
-  // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+
+#pragma mark - BITCrashManagerDelegate
+
+- (void)crashManagerWillCancelSendingCrashReport:(BITCrashManager *)crashManager {
+  if ([self didCrashInLastSessionOnStartup]) {
+    [self setupApplication];
+  }
 }
 
-- (void)applicationWillTerminate:(UIApplication *)application
-{
-  // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+- (void)crashManager:(BITCrashManager *)crashManager didFailWithError:(NSError *)error {
+  if ([self didCrashInLastSessionOnStartup]) {
+    [self setupApplication];
+  }
 }
-
+       
+- (void)crashManagerDidFinishSendingCrashReport:(BITCrashManager *)crashManager {
+  if ([self didCrashInLastSessionOnStartup]) {
+    [self setupApplication];
+  }
+}
+              
+              
 #pragma mark - BITUpdateManagerDelegate
 
 -(NSString *)customDeviceIdentifierForUpdateManager:(BITUpdateManager *)updateManager  {

@@ -12,6 +12,7 @@
 		1E95486415C8011800C35F24 /* BITSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E95486315C8011800C35F24 /* BITSettingsViewController.m */; };
 		1E95486715C8016B00C35F24 /* HockeySDKResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 1E7E59A515C7FCC100D63C84 /* HockeySDKResources.bundle */; };
 		1E95486815C801D600C35F24 /* CrashReporter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E9A628C1550523300EE7C9D /* CrashReporter.framework */; };
+		1E9548B115C830C400C35F24 /* libHockeySDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E7E59A315C7FCC100D63C84 /* libHockeySDK.a */; };
 		1E9A624915504F2E00EE7C9D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E9A624815504F2E00EE7C9D /* UIKit.framework */; };
 		1E9A624B15504F2E00EE7C9D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E9A624A15504F2E00EE7C9D /* Foundation.framework */; };
 		1E9A624D15504F2E00EE7C9D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E9A624C15504F2E00EE7C9D /* CoreGraphics.framework */; };
@@ -19,7 +20,6 @@
 		1E9A6298155053DA00EE7C9D /* BITAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E9A6297155053DA00EE7C9D /* BITAppDelegate.m */; };
 		1E9A629F1550544900EE7C9D /* BITDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E9A629D1550544900EE7C9D /* BITDemoViewController.m */; };
 		1E9A62A01550544900EE7C9D /* BITDemoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1E9A629E1550544900EE7C9D /* BITDemoViewController.xib */; };
-		1E9A62BD155057E500EE7C9D /* libHockeySDK-iphoneos.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E9A62B7155056A800EE7C9D /* libHockeySDK-iphoneos.a */; };
 		1E9A62C11550581E00EE7C9D /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E9A62C01550581E00EE7C9D /* QuartzCore.framework */; };
 		1E9A62C3155059D500EE7C9D /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1E9A62C2155059D500EE7C9D /* MainWindow.xib */; };
 /* End PBXBuildFile section */
@@ -60,7 +60,7 @@
 			remoteGlobalIDString = 1E59550915B6F45800A03429;
 			remoteInfo = HockeySDKResources;
 		};
-		1E9548A615C80A1800C35F24 /* PBXContainerItemProxy */ = {
+		1E9548AF15C830C000C35F24 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 1E9A62AF155056A800EE7C9D /* HockeySDK.xcodeproj */;
 			proxyType = 1;
@@ -106,9 +106,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1E9548B115C830C400C35F24 /* libHockeySDK.a in Frameworks */,
 				1E95486815C801D600C35F24 /* CrashReporter.framework in Frameworks */,
 				1E9A62C11550581E00EE7C9D /* QuartzCore.framework in Frameworks */,
-				1E9A62BD155057E500EE7C9D /* libHockeySDK-iphoneos.a in Frameworks */,
 				1E9A624915504F2E00EE7C9D /* UIKit.framework in Frameworks */,
 				1E9A624B15504F2E00EE7C9D /* Foundation.framework in Frameworks */,
 				1E9A624D15504F2E00EE7C9D /* CoreGraphics.framework in Frameworks */,
@@ -213,7 +213,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				1E9548A715C80A1800C35F24 /* PBXTargetDependency */,
+				1E9548B015C830C000C35F24 /* PBXTargetDependency */,
 				1E95486615C8014200C35F24 /* PBXTargetDependency */,
 			);
 			name = "HockeySDK-iOSDemo";
@@ -326,10 +326,10 @@
 			name = HockeySDKResources;
 			targetProxy = 1E95486515C8014200C35F24 /* PBXContainerItemProxy */;
 		};
-		1E9548A715C80A1800C35F24 /* PBXTargetDependency */ = {
+		1E9548B015C830C000C35F24 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = HockeySDKLib;
-			targetProxy = 1E9548A615C80A1800C35F24 /* PBXContainerItemProxy */;
+			targetProxy = 1E9548AF15C830C000C35F24 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -355,10 +355,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/Vendor/HockeySDK/Classes\"/**";
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
-				OTHER_LDFLAGS = (
-					"-ObjC",
-					"-all_load",
-				);
+				OTHER_LDFLAGS = "-ObjC";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -379,10 +376,7 @@
 				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/Vendor/HockeySDK/Classes\"/**";
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
-				OTHER_LDFLAGS = (
-					"-ObjC",
-					"-all_load",
-				);
+				OTHER_LDFLAGS = "-ObjC";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
