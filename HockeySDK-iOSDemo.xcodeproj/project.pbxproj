@@ -54,20 +54,6 @@
 			remoteGlobalIDString = 1E59550A15B6F45800A03429;
 			remoteInfo = HockeySDKResources;
 		};
-		1E95486515C8014200C35F24 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 1E9A62AF155056A800EE7C9D /* HockeySDK.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 1E59550915B6F45800A03429;
-			remoteInfo = HockeySDKResources;
-		};
-		1E9548AF15C830C000C35F24 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 1E9A62AF155056A800EE7C9D /* HockeySDK.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 1E5954CB15B6F24A00A03429;
-			remoteInfo = HockeySDKLib;
-		};
 		1E9A62B6155056A800EE7C9D /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 1E9A62AF155056A800EE7C9D /* HockeySDK.xcodeproj */;
@@ -215,8 +201,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				1E9548B015C830C000C35F24 /* PBXTargetDependency */,
-				1E95486615C8014200C35F24 /* PBXTargetDependency */,
 			);
 			name = "HockeySDK-iOSDemo";
 			productName = "HockeySDK-iOSDemo";
@@ -321,19 +305,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		1E95486615C8014200C35F24 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = HockeySDKResources;
-			targetProxy = 1E95486515C8014200C35F24 /* PBXContainerItemProxy */;
-		};
-		1E9548B015C830C000C35F24 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = HockeySDKLib;
-			targetProxy = 1E9548AF15C830C000C35F24 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		1E85692715D2FAAC0066F15E /* AdHoc */ = {
