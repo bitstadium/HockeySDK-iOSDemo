@@ -43,8 +43,6 @@
   [[BITHockeyManager sharedHockeyManager] configureWithIdentifier:@"<>"
                                                          delegate:nil];
   
-  [[BITHockeyManager sharedHockeyManager].updateManager setDelegate:self];
-  [[BITHockeyManager sharedHockeyManager].crashManager setDelegate:self];
   
   // optionally enable logging to get more information about states.
   [BITHockeyManager sharedHockeyManager].debugLogEnabled = YES;
