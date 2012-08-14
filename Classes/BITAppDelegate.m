@@ -41,7 +41,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 #warning Assign a valid HockeyApp app identifier first!
   [[BITHockeyManager sharedHockeyManager] configureWithIdentifier:@"<>"
-                                                         delegate:nil];
+                                                         delegate:self];
   
   
   // optionally enable logging to get more information about states.
