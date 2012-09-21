@@ -9,10 +9,9 @@
 /* Begin PBXBuildFile section */
 		1E363072156D3916005179E7 /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E363070156D3916005179E7 /* JSONKit.m */; };
 		1E363073156D3916005179E7 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 1E363071156D3916005179E7 /* README.md */; };
-		1E85692615D2F8CF0066F15E /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E85692515D2F8CF0066F15E /* SystemConfiguration.framework */; };
+		1E5D122715E2C069002B06B8 /* CrashReporter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E9A628C1550523300EE7C9D /* CrashReporter.framework */; };
 		1E95486415C8011800C35F24 /* BITSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E95486315C8011800C35F24 /* BITSettingsViewController.m */; };
 		1E95486715C8016B00C35F24 /* HockeySDKResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 1E7E59A515C7FCC100D63C84 /* HockeySDKResources.bundle */; };
-		1E95486815C801D600C35F24 /* CrashReporter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E9A628C1550523300EE7C9D /* CrashReporter.framework */; };
 		1E9548B115C830C400C35F24 /* libHockeySDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E7E59A315C7FCC100D63C84 /* libHockeySDK.a */; };
 		1E9A624915504F2E00EE7C9D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E9A624815504F2E00EE7C9D /* UIKit.framework */; };
 		1E9A624B15504F2E00EE7C9D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E9A624A15504F2E00EE7C9D /* Foundation.framework */; };
@@ -23,6 +22,7 @@
 		1E9A62A01550544900EE7C9D /* BITDemoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1E9A629E1550544900EE7C9D /* BITDemoViewController.xib */; };
 		1E9A62C11550581E00EE7C9D /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E9A62C01550581E00EE7C9D /* QuartzCore.framework */; };
 		1E9A62C3155059D500EE7C9D /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1E9A62C2155059D500EE7C9D /* MainWindow.xib */; };
+		1ECDA34015E79F75006827FD /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E85692515D2F8CF0066F15E /* SystemConfiguration.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -86,6 +86,7 @@
 		1E9A62AF155056A800EE7C9D /* HockeySDK.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = HockeySDK.xcodeproj; path = Vendor/HockeySDK/Support/HockeySDK.xcodeproj; sourceTree = "<group>"; };
 		1E9A62C01550581E00EE7C9D /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		1E9A62C2155059D500EE7C9D /* MainWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MainWindow.xib; path = Resources/MainWindow.xib; sourceTree = SOURCE_ROOT; };
+		1ED8B40E15F3E875002CB229 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,11 +95,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				1E9548B115C830C400C35F24 /* libHockeySDK.a in Frameworks */,
-				1E95486815C801D600C35F24 /* CrashReporter.framework in Frameworks */,
+				1E5D122715E2C069002B06B8 /* CrashReporter.framework in Frameworks */,
 				1E9A624D15504F2E00EE7C9D /* CoreGraphics.framework in Frameworks */,
 				1E9A624B15504F2E00EE7C9D /* Foundation.framework in Frameworks */,
 				1E9A62C11550581E00EE7C9D /* QuartzCore.framework in Frameworks */,
-				1E85692615D2F8CF0066F15E /* SystemConfiguration.framework in Frameworks */,
+				1ECDA34015E79F75006827FD /* SystemConfiguration.framework in Frameworks */,
 				1E9A624915504F2E00EE7C9D /* UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -144,6 +145,7 @@
 				1E9A62C01550581E00EE7C9D /* QuartzCore.framework */,
 				1E85692515D2F8CF0066F15E /* SystemConfiguration.framework */,
 				1E9A624815504F2E00EE7C9D /* UIKit.framework */,
+				1ED8B40E15F3E875002CB229 /* SenTestingKit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -324,7 +326,6 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/Vendor/HockeySDK/Classes\"/**";
 				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
-				OTHER_LDFLAGS = "-ObjC";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -363,7 +364,6 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/Vendor/HockeySDK/Classes\"/**";
 				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
-				OTHER_LDFLAGS = "-ObjC";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -384,7 +384,6 @@
 				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/Vendor/HockeySDK/Classes\"/**";
 				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
-				OTHER_LDFLAGS = "-ObjC";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
