@@ -7,22 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1E363072156D3916005179E7 /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E363070156D3916005179E7 /* JSONKit.m */; };
-		1E363073156D3916005179E7 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 1E363071156D3916005179E7 /* README.md */; };
-		1E5D122715E2C069002B06B8 /* CrashReporter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E9A628C1550523300EE7C9D /* CrashReporter.framework */; };
+		1E004EDA16131DAB00D1E59F /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1E004ED916131DAB00D1E59F /* Default-568h@2x.png */; };
+		1E754E7216221B030070AB92 /* HockeySDKResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 1E7E59A515C7FCC100D63C84 /* HockeySDKResources.bundle */; };
 		1E95486415C8011800C35F24 /* BITSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E95486315C8011800C35F24 /* BITSettingsViewController.m */; };
-		1E95486715C8016B00C35F24 /* HockeySDKResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 1E7E59A515C7FCC100D63C84 /* HockeySDKResources.bundle */; };
-		1E9548B115C830C400C35F24 /* libHockeySDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E7E59A315C7FCC100D63C84 /* libHockeySDK.a */; };
 		1E9A624915504F2E00EE7C9D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E9A624815504F2E00EE7C9D /* UIKit.framework */; };
 		1E9A624B15504F2E00EE7C9D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E9A624A15504F2E00EE7C9D /* Foundation.framework */; };
-		1E9A624D15504F2E00EE7C9D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E9A624C15504F2E00EE7C9D /* CoreGraphics.framework */; };
 		1E9A62941550533600EE7C9D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E9A62931550533600EE7C9D /* main.m */; };
 		1E9A6298155053DA00EE7C9D /* BITAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E9A6297155053DA00EE7C9D /* BITAppDelegate.m */; };
 		1E9A629F1550544900EE7C9D /* BITDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E9A629D1550544900EE7C9D /* BITDemoViewController.m */; };
 		1E9A62A01550544900EE7C9D /* BITDemoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1E9A629E1550544900EE7C9D /* BITDemoViewController.xib */; };
-		1E9A62C11550581E00EE7C9D /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E9A62C01550581E00EE7C9D /* QuartzCore.framework */; };
 		1E9A62C3155059D500EE7C9D /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1E9A62C2155059D500EE7C9D /* MainWindow.xib */; };
-		1ECDA34015E79F75006827FD /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E85692515D2F8CF0066F15E /* SystemConfiguration.framework */; };
+		1EC189961640A5A70085DCC9 /* libHockeySDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E7E599F15C7FCC100D63C84 /* libHockeySDK.a */; };
+		1EC189971640A5B10085DCC9 /* CrashReporter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E754E971622209D0070AB92 /* CrashReporter.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,20 +29,6 @@
 			remoteGlobalIDString = 1E59544115B6C3DC00A03429;
 			remoteInfo = HockeySDK;
 		};
-		1E7E59A015C7FCC100D63C84 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 1E9A62AF155056A800EE7C9D /* HockeySDK.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 1E59547C15B6C41300A03429;
-			remoteInfo = "HockeySDK-Simulator";
-		};
-		1E7E59A215C7FCC100D63C84 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 1E9A62AF155056A800EE7C9D /* HockeySDK.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 1E5954F215B6F24A00A03429;
-			remoteInfo = HockeySDKLib;
-		};
 		1E7E59A415C7FCC100D63C84 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 1E9A62AF155056A800EE7C9D /* HockeySDK.xcodeproj */;
@@ -54,29 +36,19 @@
 			remoteGlobalIDString = 1E59550A15B6F45800A03429;
 			remoteInfo = HockeySDKResources;
 		};
-		1E9A62B6155056A800EE7C9D /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 1E9A62AF155056A800EE7C9D /* HockeySDK.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = E400561A148D79B500EB22B9;
-			remoteInfo = HockeySDK;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		1E36306F156D3916005179E7 /* JSONKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONKit.h; sourceTree = "<group>"; };
-		1E363070156D3916005179E7 /* JSONKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONKit.m; sourceTree = "<group>"; };
-		1E363071156D3916005179E7 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
-		1E85692515D2F8CF0066F15E /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		1E004ED916131DAB00D1E59F /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "Resources/Default-568h@2x.png"; sourceTree = SOURCE_ROOT; };
+		1E754E8016221BFB0070AB92 /* HockeyDemo.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = HockeyDemo.xcconfig; path = Resources/HockeyDemo.xcconfig; sourceTree = SOURCE_ROOT; };
+		1E754E971622209D0070AB92 /* CrashReporter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CrashReporter.framework; path = Vendor/HockeySDK/Vendor/CrashReporter.framework; sourceTree = "<group>"; };
 		1E95486315C8011800C35F24 /* BITSettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BITSettingsViewController.m; sourceTree = "<group>"; };
 		1E95486915C8038500C35F24 /* BITAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BITAppDelegate.h; sourceTree = "<group>"; };
 		1E9A624415504F2E00EE7C9D /* HockeySDK-iOSDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "HockeySDK-iOSDemo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E9A624815504F2E00EE7C9D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		1E9A624A15504F2E00EE7C9D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		1E9A624C15504F2E00EE7C9D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		1E9A625015504F2E00EE7C9D /* HockeySDK-iOSDemo-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; name = "HockeySDK-iOSDemo-Info.plist"; path = "Resources/HockeySDK-iOSDemo-Info.plist"; sourceTree = "<group>"; };
 		1E9A625615504F2E00EE7C9D /* HockeySDK-iOSDemo-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "HockeySDK-iOSDemo-Prefix.pch"; path = "Resources/HockeySDK-iOSDemo-Prefix.pch"; sourceTree = "<group>"; };
-		1E9A628C1550523300EE7C9D /* CrashReporter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CrashReporter.framework; path = Vendor/HockeySDK/Vendor/CrashReporter.framework; sourceTree = "<group>"; };
 		1E9A62931550533600EE7C9D /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = SOURCE_ROOT; };
 		1E9A6297155053DA00EE7C9D /* BITAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BITAppDelegate.m; sourceTree = "<group>"; };
 		1E9A629C1550544900EE7C9D /* BITDemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BITDemoViewController.h; sourceTree = "<group>"; };
@@ -84,7 +56,6 @@
 		1E9A629E1550544900EE7C9D /* BITDemoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BITDemoViewController.xib; sourceTree = "<group>"; };
 		1E9A62A11550546300EE7C9D /* BITSettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BITSettingsViewController.h; sourceTree = "<group>"; };
 		1E9A62AF155056A800EE7C9D /* HockeySDK.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = HockeySDK.xcodeproj; path = Vendor/HockeySDK/Support/HockeySDK.xcodeproj; sourceTree = "<group>"; };
-		1E9A62C01550581E00EE7C9D /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		1E9A62C2155059D500EE7C9D /* MainWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MainWindow.xib; path = Resources/MainWindow.xib; sourceTree = SOURCE_ROOT; };
 		1ED8B40E15F3E875002CB229 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 /* End PBXFileReference section */
@@ -94,12 +65,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1E9548B115C830C400C35F24 /* libHockeySDK.a in Frameworks */,
-				1E5D122715E2C069002B06B8 /* CrashReporter.framework in Frameworks */,
-				1E9A624D15504F2E00EE7C9D /* CoreGraphics.framework in Frameworks */,
+				1EC189971640A5B10085DCC9 /* CrashReporter.framework in Frameworks */,
+				1EC189961640A5A70085DCC9 /* libHockeySDK.a in Frameworks */,
 				1E9A624B15504F2E00EE7C9D /* Foundation.framework in Frameworks */,
-				1E9A62C11550581E00EE7C9D /* QuartzCore.framework in Frameworks */,
-				1ECDA34015E79F75006827FD /* SystemConfiguration.framework in Frameworks */,
 				1E9A624915504F2E00EE7C9D /* UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -107,16 +75,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		1E36306E156D3916005179E7 /* JSON */ = {
-			isa = PBXGroup;
-			children = (
-				1E36306F156D3916005179E7 /* JSONKit.h */,
-				1E363070156D3916005179E7 /* JSONKit.m */,
-				1E363071156D3916005179E7 /* README.md */,
-			);
-			path = JSON;
-			sourceTree = "<group>";
-		};
 		1E9A623915504F2E00EE7C9D = {
 			isa = PBXGroup;
 			children = (
@@ -139,11 +97,8 @@
 		1E9A624715504F2E00EE7C9D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				1E9A628C1550523300EE7C9D /* CrashReporter.framework */,
-				1E9A624C15504F2E00EE7C9D /* CoreGraphics.framework */,
+				1E754E971622209D0070AB92 /* CrashReporter.framework */,
 				1E9A624A15504F2E00EE7C9D /* Foundation.framework */,
-				1E9A62C01550581E00EE7C9D /* QuartzCore.framework */,
-				1E85692515D2F8CF0066F15E /* SystemConfiguration.framework */,
 				1E9A624815504F2E00EE7C9D /* UIKit.framework */,
 				1ED8B40E15F3E875002CB229 /* SenTestingKit.framework */,
 			);
@@ -155,6 +110,8 @@
 			children = (
 				1E9A625015504F2E00EE7C9D /* HockeySDK-iOSDemo-Info.plist */,
 				1E9A625615504F2E00EE7C9D /* HockeySDK-iOSDemo-Prefix.pch */,
+				1E004ED916131DAB00D1E59F /* Default-568h@2x.png */,
+				1E754E8016221BFB0070AB92 /* HockeyDemo.xcconfig */,
 				1E9A62C2155059D500EE7C9D /* MainWindow.xib */,
 				1E9A62931550533600EE7C9D /* main.m */,
 			);
@@ -172,7 +129,6 @@
 				1E9A629E1550544900EE7C9D /* BITDemoViewController.xib */,
 				1E9A62A11550546300EE7C9D /* BITSettingsViewController.h */,
 				1E95486315C8011800C35F24 /* BITSettingsViewController.m */,
-				1E36306E156D3916005179E7 /* JSON */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -180,10 +136,7 @@
 		1E9A62B0155056A800EE7C9D /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				1E7E599F15C7FCC100D63C84 /* HockeySDK.framework */,
-				1E9A62B7155056A800EE7C9D /* libHockeySDK-iphoneos.a */,
-				1E7E59A115C7FCC100D63C84 /* libHockeySDK-iphonesimulator.a */,
-				1E7E59A315C7FCC100D63C84 /* libHockeySDK.a */,
+				1E7E599F15C7FCC100D63C84 /* libHockeySDK.a */,
 				1E7E59A515C7FCC100D63C84 /* HockeySDKResources.bundle */,
 			);
 			name = Products;
@@ -242,25 +195,11 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		1E7E599F15C7FCC100D63C84 /* HockeySDK.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = HockeySDK.framework;
-			remoteRef = 1E7E599E15C7FCC100D63C84 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		1E7E59A115C7FCC100D63C84 /* libHockeySDK-iphonesimulator.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = "libHockeySDK-iphonesimulator.a";
-			remoteRef = 1E7E59A015C7FCC100D63C84 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		1E7E59A315C7FCC100D63C84 /* libHockeySDK.a */ = {
+		1E7E599F15C7FCC100D63C84 /* libHockeySDK.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
 			path = libHockeySDK.a;
-			remoteRef = 1E7E59A215C7FCC100D63C84 /* PBXContainerItemProxy */;
+			remoteRef = 1E7E599E15C7FCC100D63C84 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 		1E7E59A515C7FCC100D63C84 /* HockeySDKResources.bundle */ = {
@@ -268,13 +207,6 @@
 			fileType = wrapper.cfbundle;
 			path = HockeySDKResources.bundle;
 			remoteRef = 1E7E59A415C7FCC100D63C84 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		1E9A62B7155056A800EE7C9D /* libHockeySDK-iphoneos.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = "libHockeySDK-iphoneos.a";
-			remoteRef = 1E9A62B6155056A800EE7C9D /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -285,9 +217,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				1E9A62A01550544900EE7C9D /* BITDemoViewController.xib in Resources */,
-				1E95486715C8016B00C35F24 /* HockeySDKResources.bundle in Resources */,
 				1E9A62C3155059D500EE7C9D /* MainWindow.xib in Resources */,
-				1E363073156D3916005179E7 /* README.md in Resources */,
+				1E754E7216221B030070AB92 /* HockeySDKResources.bundle in Resources */,
+				1E004EDA16131DAB00D1E59F /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -301,7 +233,6 @@
 				1E9A62941550533600EE7C9D /* main.m in Sources */,
 				1E9A6298155053DA00EE7C9D /* BITAppDelegate.m in Sources */,
 				1E9A629F1550544900EE7C9D /* BITDemoViewController.m in Sources */,
-				1E363072156D3916005179E7 /* JSONKit.m in Sources */,
 				1E95486415C8011800C35F24 /* BITSettingsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -311,8 +242,9 @@
 /* Begin XCBuildConfiguration section */
 		1E85692715D2FAAC0066F15E /* AdHoc */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1E754E8016221BFB0070AB92 /* HockeyDemo.xcconfig */;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = YES;
+				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
@@ -324,8 +256,8 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/Vendor/HockeySDK/Classes\"/**";
-				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
+				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/Vendor/HockeySDK/Classes\"";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -340,7 +272,6 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Resources/HockeySDK-iOSDemo-Prefix.pch";
-				GCC_PREPROCESSOR_DEFINITIONS = "CONFIGURATION_$(CONFIGURATION)";
 				INFOPLIST_FILE = "Resources/HockeySDK-iOSDemo-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
@@ -349,8 +280,9 @@
 		};
 		1E9A625A15504F2E00EE7C9D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1E754E8016221BFB0070AB92 /* HockeyDemo.xcconfig */;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = YES;
+				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
@@ -362,8 +294,8 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/Vendor/HockeySDK/Classes\"/**";
-				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
+				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/Vendor/HockeySDK/Classes\"";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -371,8 +303,9 @@
 		};
 		1E9A625B15504F2E00EE7C9D /* AppStore */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1E754E8016221BFB0070AB92 /* HockeyDemo.xcconfig */;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = YES;
+				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
@@ -381,8 +314,8 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/Vendor/HockeySDK/Classes\"/**";
-				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
+				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/Vendor/HockeySDK/Classes\"";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -399,7 +332,6 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Resources/HockeySDK-iOSDemo-Prefix.pch";
-				GCC_PREPROCESSOR_DEFINITIONS = "CONFIGURATION_$(CONFIGURATION)";
 				INFOPLIST_FILE = "Resources/HockeySDK-iOSDemo-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
@@ -415,7 +347,6 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Resources/HockeySDK-iOSDemo-Prefix.pch";
-				GCC_PREPROCESSOR_DEFINITIONS = "CONFIGURATION_$(CONFIGURATION)";
 				INFOPLIST_FILE = "Resources/HockeySDK-iOSDemo-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
