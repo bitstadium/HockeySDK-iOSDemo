@@ -62,7 +62,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
   // Return the number of rows in the section.
-  return 1;
+  return 2;
 }
 
 
@@ -77,7 +77,11 @@
   }
   
   // Configure the cell...
-  cell.textLabel.text = NSLocalizedString(@"Beta Updates", @"");
+  if (indexPath.row == 0) {
+    cell.textLabel.text = NSLocalizedString(@"Beta Updates", @"");
+  } else {
+    cell.textLabel.text = NSLocalizedString(@"Feedback", @"");
+  }
   cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
   
   return cell;
@@ -90,6 +94,9 @@
   if (indexPath.row == 0) {
     BITUpdateViewController *updateViewController = [[BITHockeyManager sharedHockeyManager].updateManager hockeyViewController:NO];
     [self.navigationController pushViewController:updateViewController animated:YES];
+  } else {
+    BITFeedbackListViewController *feedbackViewController = [[BITHockeyManager sharedHockeyManager].feedbackManager feedbackListViewController:NO];
+    [self.navigationController pushViewController:feedbackViewController animated:YES];
   }
 }
 

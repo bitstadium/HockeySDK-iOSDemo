@@ -35,6 +35,7 @@
 @property (nonatomic, assign) IBOutlet UIView *waitingView;
 
 - (IBAction)openUpdateView;
+- (IBAction)openFeedbackView;
 
 - (IBAction) triggerCrash;
 - (IBAction) triggerExceptionCrash;

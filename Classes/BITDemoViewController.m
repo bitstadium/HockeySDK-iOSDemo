@@ -56,6 +56,10 @@
   [[BITHockeyManager sharedHockeyManager].updateManager showUpdateView];
 }
 
+- (IBAction)openFeedbackView {
+  [[BITHockeyManager sharedHockeyManager].feedbackManager showFeedbackListView];
+}
+
 - (IBAction) triggerCrash {
 	/* Trigger a crash */
 	CFRelease(NULL);
