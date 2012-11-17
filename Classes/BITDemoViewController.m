@@ -49,7 +49,7 @@
   BITSettingsViewController *hockeySettingsViewController = [[[BITSettingsViewController alloc] init] autorelease];
   UINavigationController *navController = [[[UINavigationController alloc] initWithRootViewController:hockeySettingsViewController] autorelease];
   navController.modalTransitionStyle = UIModalTransitionStyleCoverVertical;
-  [self presentModalViewController:navController animated:YES];
+  [self presentViewController:navController animated:YES completion:nil];
 }
 
 - (IBAction)openUpdateView {
