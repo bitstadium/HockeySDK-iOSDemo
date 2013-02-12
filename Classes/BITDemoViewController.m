@@ -1,7 +1,7 @@
 /*
  * Author: Andreas Linde <mail@andreaslinde.de>
  *
- * Copyright (c) 2012 HockeyApp, Bit Stadium GmbH.
+ * Copyright (c) 2012-2013 HockeyApp, Bit Stadium GmbH.
  * All rights reserved.
  *
  * Permission is hereby granted, free of charge, to any person
@@ -43,18 +43,43 @@
                                                                              style:UIBarButtonItemStyleBordered
                                                                             target:self
                                                                             action:@selector(showSettings)] autorelease];
+
+  self.title = NSLocalizedString(@"App", @"");
 }
 
 - (void)showSettings {
   BITSettingsViewController *hockeySettingsViewController = [[[BITSettingsViewController alloc] init] autorelease];
   UINavigationController *navController = [[[UINavigationController alloc] initWithRootViewController:hockeySettingsViewController] autorelease];
   navController.modalTransitionStyle = UIModalTransitionStyleCoverVertical;
-  [self presentModalViewController:navController animated:YES];
+  [self presentViewController:navController animated:YES completion:nil];
 }
 
 - (IBAction)openUpdateView {
   [[BITHockeyManager sharedHockeyManager].updateManager showUpdateView];
 }
+
+- (IBAction)openFeedbackView {
+  [[BITHockeyManager sharedHockeyManager].feedbackManager showFeedbackListView];
+}
+
+- (IBAction)openShareActivity {
+  Class activityViewControllerClass = NSClassFromString(@"UIActivityViewController");
+  // Framework not available, older iOS
+  if (activityViewControllerClass) {
+
+    BITFeedbackActivity *feedbackActivity = [[BITFeedbackActivity alloc] init];
+  
+    __block UIActivityViewController *activityViewController = [[UIActivityViewController alloc] initWithActivityItems:@[@"Share this text"]
+                                                                                               applicationActivities:@[feedbackActivity]];
+    activityViewController.excludedActivityTypes = @[UIActivityTypeAssignToContact];
+  
+    [self presentViewController:activityViewController animated:YES completion:^{
+      activityViewController.excludedActivityTypes = nil;
+      activityViewController = nil;
+    }];
+  }
+}
+
 
 - (IBAction) triggerCrash {
 	/* Trigger a crash */

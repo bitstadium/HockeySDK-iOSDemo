@@ -1,7 +1,7 @@
 /*
  * Author: Andreas Linde <mail@andreaslinde.de>
  *
- * Copyright (c) 2012 HockeyApp, Bit Stadium GmbH.
+ * Copyright (c) 2012-2013 HockeyApp, Bit Stadium GmbH.
  * All rights reserved.
  *
  * Permission is hereby granted, free of charge, to any person
@@ -41,7 +41,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 #warning Assign a valid HockeyApp app identifier first!
   [[BITHockeyManager sharedHockeyManager] configureWithIdentifier:@"<>"
-                                                         delegate:nil];
+                                                         delegate:self];
   
   
   // optionally enable logging to get more information about states.
@@ -79,7 +79,33 @@
 }
 
 
+#pragma mark - BITHockeyManagerDelegate
+
+//- (NSString *)userIDForHockeyManager:(BITHockeyManager *)hockeyManager componentManager:(BITHockeyBaseManager *)componentManager {
+//  return @"userID";
+//}
+
+//- (NSString *)userNameForHockeyManager:(BITHockeyManager *)hockeyManager componentManager:(BITHockeyBaseManager *)componentManager {
+//  return @"userName";
+//}
+//
+//- (NSString *)userEmailForHockeyManager:(BITHockeyManager *)hockeyManager componentManager:(BITHockeyBaseManager *)componentManager {
+//  return @"userEmail";
+//}
+
+- (NSString *)applicationLogForHockeyManager:(BITHockeyManager *)hockeyManager componentManager:(BITHockeyBaseManager *)componentManager {
+  return @"applicationLog";
+}
+
 #pragma mark - BITCrashManagerDelegate
+
+- (NSString *)applicationLogForCrashManager:(BITCrashManager *)crashManager {
+  return @"applicationLog";
+}
+
+-(NSString *)userNameForCrashManager:(BITCrashManager *)crashManager {
+  return @"me";
+}
 
 - (void)crashManagerWillCancelSendingCrashReport:(BITCrashManager *)crashManager {
   if ([self didCrashInLastSessionOnStartup]) {
