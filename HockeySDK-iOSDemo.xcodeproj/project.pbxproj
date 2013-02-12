@@ -17,6 +17,7 @@
 		1E9A629F1550544900EE7C9D /* BITDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E9A629D1550544900EE7C9D /* BITDemoViewController.m */; };
 		1E9A62A01550544900EE7C9D /* BITDemoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1E9A629E1550544900EE7C9D /* BITDemoViewController.xib */; };
 		1E9A62C3155059D500EE7C9D /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1E9A62C2155059D500EE7C9D /* MainWindow.xib */; };
+		1EB52FC6167B741F00C801D5 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1EB52FC4167B741F00C801D5 /* Localizable.strings */; };
 		1EC189961640A5A70085DCC9 /* libHockeySDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E7E599F15C7FCC100D63C84 /* libHockeySDK.a */; };
 		1EC189971640A5B10085DCC9 /* CrashReporter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E754E971622209D0070AB92 /* CrashReporter.framework */; };
 /* End PBXBuildFile section */
@@ -40,6 +41,7 @@
 
 /* Begin PBXFileReference section */
 		1E004ED916131DAB00D1E59F /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "Resources/Default-568h@2x.png"; sourceTree = SOURCE_ROOT; };
+		1E6DDCF3169E29370076C65D /* ro */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ro; path = ro.lproj/Localizable.strings; sourceTree = "<group>"; };
 		1E754E8016221BFB0070AB92 /* HockeyDemo.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = HockeyDemo.xcconfig; path = Resources/HockeyDemo.xcconfig; sourceTree = SOURCE_ROOT; };
 		1E754E971622209D0070AB92 /* CrashReporter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CrashReporter.framework; path = Vendor/HockeySDK/Vendor/CrashReporter.framework; sourceTree = "<group>"; };
 		1E95486315C8011800C35F24 /* BITSettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BITSettingsViewController.m; sourceTree = "<group>"; };
@@ -57,6 +59,18 @@
 		1E9A62A11550546300EE7C9D /* BITSettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BITSettingsViewController.h; sourceTree = "<group>"; };
 		1E9A62AF155056A800EE7C9D /* HockeySDK.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = HockeySDK.xcodeproj; path = Vendor/HockeySDK/Support/HockeySDK.xcodeproj; sourceTree = "<group>"; };
 		1E9A62C2155059D500EE7C9D /* MainWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MainWindow.xib; path = Resources/MainWindow.xib; sourceTree = SOURCE_ROOT; };
+		1EA512DE167F7EF000FC9FBA /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		1EB52FC5167B741F00C801D5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = SOURCE_ROOT; };
+		1EB52FCB167B742A00C801D5 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
+		1EB52FCC167B745000C801D5 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
+		1EB52FCD167B745C00C801D5 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
+		1EB52FCE167B746700C801D5 /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/Localizable.strings; sourceTree = "<group>"; };
+		1EB52FCF167B747100C801D5 /* hr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = hr; path = hr.lproj/Localizable.strings; sourceTree = "<group>"; };
+		1EB52FD0167B748400C801D5 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
+		1EB52FD1167B74A400C801D5 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
+		1EB52FD2167B74AC00C801D5 /* pt */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pt; path = pt.lproj/Localizable.strings; sourceTree = "<group>"; };
+		1EB52FD3167B74B700C801D5 /* pt-PT */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-PT"; path = "pt-PT.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		1EB9352F16C52CA800365D8F /* hu */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = hu; path = hu.lproj/Localizable.strings; sourceTree = "<group>"; };
 		1ED8B40E15F3E875002CB229 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 /* End PBXFileReference section */
 
@@ -80,6 +94,7 @@
 			children = (
 				1E9A6295155053DA00EE7C9D /* Classes */,
 				1E9A624F15504F2E00EE7C9D /* Ressources */,
+				1EB52FC4167B741F00C801D5 /* Localizable.strings */,
 				1E9A624715504F2E00EE7C9D /* Frameworks */,
 				1E9A624515504F2E00EE7C9D /* Products */,
 				1E9A62AF155056A800EE7C9D /* HockeySDK.xcodeproj */,
@@ -177,6 +192,19 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				de,
+				es,
+				fr,
+				it,
+				hr,
+				ja,
+				ru,
+				pt,
+				"pt-PT",
+				zh,
+				"zh-Hans",
+				ro,
+				hu,
 			);
 			mainGroup = 1E9A623915504F2E00EE7C9D;
 			productRefGroup = 1E9A624515504F2E00EE7C9D /* Products */;
@@ -220,6 +248,7 @@
 				1E9A62C3155059D500EE7C9D /* MainWindow.xib in Resources */,
 				1E754E7216221B030070AB92 /* HockeySDKResources.bundle in Resources */,
 				1E004EDA16131DAB00D1E59F /* Default-568h@2x.png in Resources */,
+				1EB52FC6167B741F00C801D5 /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -238,6 +267,29 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		1EB52FC4167B741F00C801D5 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1EB52FC5167B741F00C801D5 /* en */,
+				1EB52FCB167B742A00C801D5 /* de */,
+				1EB52FCC167B745000C801D5 /* es */,
+				1EB52FCD167B745C00C801D5 /* fr */,
+				1EB52FCE167B746700C801D5 /* it */,
+				1EB52FCF167B747100C801D5 /* hr */,
+				1EB52FD0167B748400C801D5 /* ja */,
+				1EB52FD1167B74A400C801D5 /* ru */,
+				1EB52FD2167B74AC00C801D5 /* pt */,
+				1EB52FD3167B74B700C801D5 /* pt-PT */,
+				1EA512DE167F7EF000FC9FBA /* zh-Hans */,
+				1E6DDCF3169E29370076C65D /* ro */,
+				1EB9352F16C52CA800365D8F /* hu */,
+			);
+			name = Localizable.strings;
+			sourceTree = SOURCE_ROOT;
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		1E85692715D2FAAC0066F15E /* AdHoc */ = {
@@ -364,7 +416,7 @@
 				1E9A625B15504F2E00EE7C9D /* AppStore */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = AppStore;
+			defaultConfigurationName = Debug;
 		};
 		1E9A625C15504F2E00EE7C9D /* Build configuration list for PBXNativeTarget "HockeySDK-iOSDemo" */ = {
 			isa = XCConfigurationList;
@@ -374,7 +426,7 @@
 				1E9A625E15504F2E00EE7C9D /* AppStore */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = AppStore;
+			defaultConfigurationName = Debug;
 		};
 /* End XCConfigurationList section */
 	};
