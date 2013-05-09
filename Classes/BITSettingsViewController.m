@@ -36,7 +36,7 @@
 #pragma mark - Initialization
 
 - (void)dismissSelf {
-  [self dismissModalViewControllerAnimated:YES];
+  [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 
