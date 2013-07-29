@@ -31,7 +31,7 @@
 #import "HockeySDK.h"
 
 
-@interface BITAppDelegate () <BITUpdateManagerDelegate, BITCrashManagerDelegate> {}
+@interface BITAppDelegate () <BITHockeyManagerDelegate> {}
 
 @end
 
