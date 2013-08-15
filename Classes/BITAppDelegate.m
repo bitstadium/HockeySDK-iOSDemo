@@ -40,9 +40,9 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 #warning Assign a valid HockeyApp app identifier first!
-  [[BITHockeyManager sharedHockeyManager] configureWithIdentifier:@"<>"
+  [[BITHockeyManager sharedHockeyManager] configureWithIdentifier:@"ca2aba1482cb9458a67b917930b202c8"
                                                          delegate:self];
-  
+  [BITHockeyManager sharedHockeyManager].authenticator.authenticationSecret = @"585935112885d912e95762fc27339a2c";
   [BITHockeyManager sharedHockeyManager].authenticator.authenticationType = BITAuthenticatorAuthTypeEmail;
   [BITHockeyManager sharedHockeyManager].authenticator.validationType = BITAuthenticatorValidationTypeOnFirstLaunch;
   
