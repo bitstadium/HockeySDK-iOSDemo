@@ -93,6 +93,27 @@
   [array objectAtIndex:23];
 }
 
+- (IBAction)authenticateInstallation:(UIButton *)sender {
+  BITAuthenticator *authenticator =   [BITHockeyManager sharedHockeyManager].authenticator;
+  sender.enabled = NO;
+  [authenticator authenticateWithCompletion:^(NSString *authenticationToken, NSError *error) {
+    NSLog(@"Token: %@", authenticationToken);
+    NSLog(@"Error: %@", error);
+    sender.enabled = YES;
+  }];
+}
+
+- (IBAction)validateInstallation:(UIButton*)sender {
+  BITAuthenticator *authenticator =   [BITHockeyManager sharedHockeyManager].authenticator;
+  
+  sender.enabled = NO;
+  [authenticator validateInstallationWithCompletion:^(BOOL validated, NSError *error) {
+    NSLog(@"Validated: %d", validated);
+    NSLog(@"Error: %@", error);
+    sender.enabled = YES;
+  }];
+}
+
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation {
   if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {

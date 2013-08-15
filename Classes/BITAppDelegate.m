@@ -43,6 +43,8 @@
   [[BITHockeyManager sharedHockeyManager] configureWithIdentifier:@"<>"
                                                          delegate:self];
   
+  [BITHockeyManager sharedHockeyManager].authenticator.authenticationType = BITAuthenticatorAuthTypeEmail;
+  [BITHockeyManager sharedHockeyManager].authenticator.validationType = BITAuthenticatorValidationTypeOnFirstLaunch;
   
   // optionally enable logging to get more information about states.
   [BITHockeyManager sharedHockeyManager].debugLogEnabled = YES;
