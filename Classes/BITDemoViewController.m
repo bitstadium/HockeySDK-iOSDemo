@@ -29,6 +29,7 @@
 #import "BITDemoViewController.h"
 #import "BITSettingsViewController.h"
 #import "HockeySDK.h"
+#import "BITAuthenticator_Private.h"
 
 @interface BITDemoViewController ()
 
