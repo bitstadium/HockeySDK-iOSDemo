@@ -48,7 +48,7 @@
                                                          delegate:self];
   [BITHockeyManager sharedHockeyManager].authenticator.authenticationSecret = @"585935112885d912e95762fc27339a2c";
 #endif
-  [BITHockeyManager sharedHockeyManager].authenticator.authenticationType = BITAuthenticatorAuthTypeWebbased;
+  [BITHockeyManager sharedHockeyManager].authenticator.authenticationType = BITAuthenticatorAuthTypeUDIDProvider;
   [BITHockeyManager sharedHockeyManager].authenticator.validationType = BITAuthenticatorValidationTypeOptional;
   
   // optionally enable logging to get more information about states.
