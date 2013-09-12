@@ -45,5 +45,16 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleURLName</key>
+			<string>com.hockeyapp.HockeySDK-iOSDemo.authentication</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>haca2aba1482cb9458a67b917930b202c8</string>
+			</array>
+		</dict>
+	</array>
 </dict>
 </plist>
