@@ -137,16 +137,5 @@
     [self setupApplication];
   }
 }
-              
-              
-#pragma mark - BITUpdateManagerDelegate
-
--(NSString *)customDeviceIdentifierForUpdateManager:(BITUpdateManager *)updateManager  {
-#if !defined (CONFIGURATION_AppStore_Distribution)
-  if ([[UIDevice currentDevice] respondsToSelector:@selector(uniqueIdentifier)])
-    return [[UIDevice currentDevice] performSelector:@selector(uniqueIdentifier)];
-#endif
-  return nil;
-}
 
 @end
