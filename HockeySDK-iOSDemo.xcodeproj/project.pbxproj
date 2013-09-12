@@ -23,6 +23,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		1E0F95A617E133F300CF4754 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1E9A62AF155056A800EE7C9D /* HockeySDK.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 1E5A459016F0DFC200B55C04;
+			remoteInfo = HockeySDKTests;
+		};
 		1E7E599E15C7FCC100D63C84 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 1E9A62AF155056A800EE7C9D /* HockeySDK.xcodeproj */;
@@ -153,6 +160,7 @@
 			children = (
 				1E7E599F15C7FCC100D63C84 /* libHockeySDK.a */,
 				1E7E59A515C7FCC100D63C84 /* HockeySDKResources.bundle */,
+				1E0F95A717E133F300CF4754 /* HockeySDKTests.octest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -223,6 +231,13 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
+		1E0F95A717E133F300CF4754 /* HockeySDKTests.octest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = HockeySDKTests.octest;
+			remoteRef = 1E0F95A617E133F300CF4754 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 		1E7E599F15C7FCC100D63C84 /* libHockeySDK.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
@@ -297,7 +312,7 @@
 			baseConfigurationReference = 1E754E8016221BFB0070AB92 /* HockeyDemo.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				ARCHS = "$(ARCHS_STANDARD)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -310,6 +325,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/Vendor/HockeySDK/Classes\"";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				"IPHONEOS_DEPLOYMENT_TARGET[arch=arm64]" = 7.0;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -335,7 +351,7 @@
 			baseConfigurationReference = 1E754E8016221BFB0070AB92 /* HockeyDemo.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				ARCHS = "$(ARCHS_STANDARD)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -348,6 +364,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/Vendor/HockeySDK/Classes\"";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				"IPHONEOS_DEPLOYMENT_TARGET[arch=arm64]" = 7.0;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -358,7 +375,7 @@
 			baseConfigurationReference = 1E754E8016221BFB0070AB92 /* HockeyDemo.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				ARCHS = "$(ARCHS_STANDARD)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -368,6 +385,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/Vendor/HockeySDK/Classes\"";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				"IPHONEOS_DEPLOYMENT_TARGET[arch=arm64]" = 7.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
