@@ -31,7 +31,7 @@
 #import "HockeySDK.h"
 #import "BITAuthenticator_Private.h"
 
-@interface BITDemoViewController ()
+@interface BITDemoViewController ()<UIAlertViewDelegate>
 
 @end
 
@@ -129,5 +129,75 @@
   }
 }
 
+- (IBAction)askForIdentification:(id)sender {
+  BITAuthenticator *authenticator =   [BITHockeyManager sharedHockeyManager].authenticator;
+  [authenticator cleanupInternalStorage];
+  //disable auto-mode (should be done on app launch)
+  authenticator.automaticMode = NO;
+  //this should've been set on initial app launch
+  authenticator.identificationType = BITAuthenticatorIdentificationTypeAnonymous;
+  
+  //present an alertView and kindly ask the user to identify to allow an easier
+  //AdHoc handling
+  UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:nil
+                                                      message:@"Would you like to help the developers during the Beta by identifying yourself via your device ID?"
+                                                     delegate:self
+                                            cancelButtonTitle:@"Never"
+                                            otherButtonTitles:@"Sure!", nil];
+  [alertView show];
+}
+
+
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
+  if(alertView.cancelButtonIndex == buttonIndex) {
+    //user doesn't want to be identified.
+    //you could store a flag to user-defaults and never ask him again
+    return;
+  }
+  
+  //cool, lets configure the authenticator and let it show the login view
+  BITAuthenticator *authenticator =   [BITHockeyManager sharedHockeyManager].authenticator;
+  authenticator.identificationType = BITAuthenticatorIdentificationTypeDevice;
+  //you could either switch back authenticator to automatic mode on app launch,
+  //or do it all for yourself. For now, just to it ourselves
+  //authenticator.automaticMode = YES;
+  [authenticator identifyWithCompletion:^(BOOL identified, NSError *error) {
+    if(identified) {
+      [[[UIAlertView alloc] initWithTitle:nil message:@"Thanks" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil] show];
+    }
+  }];
+}
+
+- (IBAction)checkAndBlock:(id)sender {
+  BITAuthenticator *authenticator =   [BITHockeyManager sharedHockeyManager].authenticator;
+  if(!authenticator.isIdentified) {
+    [[[UIAlertView alloc] initWithTitle:@"Error"
+                                message:@"Make sure to identify the user first"
+                               delegate:nil
+                      cancelButtonTitle:@"OK"
+                      otherButtonTitles:nil] show];
+    return;
+  }
+  UIAlertView *blockingView = [[UIAlertView alloc] initWithTitle:nil
+                                                      message:@"Please stand by..."
+                                                     delegate:nil
+                                            cancelButtonTitle:nil
+                                            otherButtonTitles:nil];
+  [authenticator validateWithCompletion:^(BOOL validated, NSError *error) {
+    if(validated) {
+      [blockingView dismissWithClickedButtonIndex:blockingView.cancelButtonIndex animated:YES];
+    } else {
+      //if he's not allowed to test the app anymore, show another alert,
+      //exit the app, etc.
+      UIAlertView *errorAlert = [[UIAlertView alloc] initWithTitle:nil
+                                                         message:error.localizedDescription
+                                                        delegate:nil
+                                               cancelButtonTitle:nil
+                                               otherButtonTitles:nil];
+      [errorAlert show];
+    }
+  }];
+  [blockingView show];
+}
 
 @end

@@ -49,8 +49,7 @@
   [BITHockeyManager sharedHockeyManager].authenticator.authenticationSecret = @"585935112885d912e95762fc27339a2c";
 #endif
   [BITHockeyManager sharedHockeyManager].authenticator.identificationType = BITAuthenticatorIdentificationTypeDevice;
-  [BITHockeyManager sharedHockeyManager].authenticator.restrictApplicationUsage = YES;
-  [BITHockeyManager sharedHockeyManager].authenticator.restrictionEnforcementFrequency = BITAuthenticatorAppRestrictionEnforcementOnAppActive;
+  [BITHockeyManager sharedHockeyManager].authenticator.restrictApplicationUsage = NO;
   
   // optionally enable logging to get more information about states.
   [BITHockeyManager sharedHockeyManager].debugLogEnabled = YES;

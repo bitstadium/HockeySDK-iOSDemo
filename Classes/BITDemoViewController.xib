@@ -201,7 +201,7 @@
 						<string key="NSFrame">{{199, 310}, {62, 37}}</string>
 						<reference key="NSSuperview" ref="348107954"/>
 						<reference key="NSWindow"/>
-						<reference key="NSNextKeyView"/>
+						<reference key="NSNextKeyView" ref="1007791768"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 						<int key="IBUIContentHorizontalAlignment">0</int>
@@ -210,6 +210,46 @@
 						<reference key="IBUINormalTitleColor" ref="690601148"/>
 						<reference key="IBUIHighlightedTitleColor" ref="304397588"/>
 						<string key="IBUINormalTitle">Reset</string>
+						<reference key="IBUINormalTitleShadowColor" ref="479890600"/>
+						<reference key="IBUIFontDescription" ref="136781460"/>
+						<reference key="IBUIFont" ref="552234776"/>
+					</object>
+					<object class="IBUIButton" id="1007791768">
+						<reference key="NSNextResponder" ref="348107954"/>
+						<int key="NSvFlags">1317</int>
+						<object class="NSPSMatrix" key="NSFrameMatrix"/>
+						<string key="NSFrame">{{58, 350}, {116, 44}}</string>
+						<reference key="NSSuperview" ref="348107954"/>
+						<reference key="NSWindow"/>
+						<reference key="NSNextKeyView" ref="252792020"/>
+						<bool key="IBUIOpaque">NO</bool>
+						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
+						<int key="IBUIContentHorizontalAlignment">0</int>
+						<int key="IBUIContentVerticalAlignment">0</int>
+						<int key="IBUIButtonType">1</int>
+						<reference key="IBUINormalTitleColor" ref="690601148"/>
+						<reference key="IBUIHighlightedTitleColor" ref="304397588"/>
+						<string key="IBUINormalTitle">Ask for ident</string>
+						<reference key="IBUINormalTitleShadowColor" ref="479890600"/>
+						<reference key="IBUIFontDescription" ref="136781460"/>
+						<reference key="IBUIFont" ref="552234776"/>
+					</object>
+					<object class="IBUIButton" id="252792020">
+						<reference key="NSNextResponder" ref="348107954"/>
+						<int key="NSvFlags">1317</int>
+						<object class="NSPSMatrix" key="NSFrameMatrix"/>
+						<string key="NSFrame">{{191, 350}, {70, 44}}</string>
+						<reference key="NSSuperview" ref="348107954"/>
+						<reference key="NSWindow"/>
+						<reference key="NSNextKeyView"/>
+						<bool key="IBUIOpaque">NO</bool>
+						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
+						<int key="IBUIContentHorizontalAlignment">0</int>
+						<int key="IBUIContentVerticalAlignment">0</int>
+						<int key="IBUIButtonType">1</int>
+						<reference key="IBUINormalTitleColor" ref="690601148"/>
+						<reference key="IBUIHighlightedTitleColor" ref="304397588"/>
+						<string key="IBUINormalTitle">Check</string>
 						<reference key="IBUINormalTitleShadowColor" ref="479890600"/>
 						<reference key="IBUIFontDescription" ref="136781460"/>
 						<reference key="IBUIFont" ref="552234776"/>
@@ -356,6 +396,15 @@
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchEventConnection" key="connection">
+						<string key="label">askForIdentification:</string>
+						<reference key="source" ref="1007791768"/>
+						<reference key="destination" ref="180965703"/>
+						<int key="IBEventType">7</int>
+					</object>
+					<string key="id">1hZ-Ol-lKT</string>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchEventConnection" key="connection">
 						<string key="label">validateInstallation:</string>
 						<reference key="source" ref="962568872"/>
 						<reference key="destination" ref="180965703"/>
@@ -371,6 +420,15 @@
 						<int key="IBEventType">7</int>
 					</object>
 					<string key="id">LT8-5B-2uJ</string>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchEventConnection" key="connection">
+						<string key="label">checkAndBlock:</string>
+						<reference key="source" ref="252792020"/>
+						<reference key="destination" ref="180965703"/>
+						<int key="IBEventType">7</int>
+					</object>
+					<string key="id">Rax-Be-RFa</string>
 				</object>
 			</array>
 			<object class="IBMutableOrderedSet" key="objectRecords">
@@ -405,6 +463,8 @@
 							<reference ref="962568872"/>
 							<reference ref="872692610"/>
 							<reference ref="1013915581"/>
+							<reference ref="1007791768"/>
+							<reference ref="252792020"/>
 						</array>
 						<reference key="parent" ref="0"/>
 					</object>
@@ -463,6 +523,16 @@
 						<reference key="object" ref="92181575"/>
 						<reference key="parent" ref="1013915581"/>
 					</object>
+					<object class="IBObjectRecord">
+						<string key="id">TUS-Y6-U2I</string>
+						<reference key="object" ref="1007791768"/>
+						<reference key="parent" ref="348107954"/>
+					</object>
+					<object class="IBObjectRecord">
+						<string key="id">sqM-Xu-ZbX</string>
+						<reference key="object" ref="252792020"/>
+						<reference key="parent" ref="348107954"/>
+					</object>
 				</array>
 			</object>
 			<dictionary class="NSMutableDictionary" key="flattenedProperties">
@@ -499,12 +569,18 @@
 				<string key="GCU-4N-mzR.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<reference key="GCU-4N-mzR.IBUserGuides" ref="0"/>
 				<boolean value="NO" key="GCU-4N-mzR.showNotes"/>
+				<string key="TUS-Y6-U2I.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
+				<reference key="TUS-Y6-U2I.IBUserGuides" ref="0"/>
+				<boolean value="NO" key="TUS-Y6-U2I.showNotes"/>
 				<string key="Whb-D8-Fdq.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<reference key="Whb-D8-Fdq.IBUserGuides" ref="0"/>
 				<boolean value="NO" key="Whb-D8-Fdq.showNotes"/>
 				<string key="bWP-fH-3OF.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<reference key="bWP-fH-3OF.IBUserGuides" ref="0"/>
 				<boolean value="NO" key="bWP-fH-3OF.showNotes"/>
+				<string key="sqM-Xu-ZbX.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
+				<reference key="sqM-Xu-ZbX.IBUserGuides" ref="0"/>
+				<boolean value="NO" key="sqM-Xu-ZbX.showNotes"/>
 			</dictionary>
 			<dictionary class="NSMutableDictionary" key="unlocalizedProperties"/>
 			<nil key="activeLocalization"/>
@@ -517,7 +593,9 @@
 					<string key="className">BITDemoViewController</string>
 					<string key="superclassName">UIViewController</string>
 					<dictionary class="NSMutableDictionary" key="actions">
+						<string key="askForIdentification:">id</string>
 						<string key="authenticateInstallation:">UIButton</string>
+						<string key="checkAndBlock:">id</string>
 						<string key="openFeedbackView">id</string>
 						<string key="openShareActivity">id</string>
 						<string key="openUpdateView">id</string>
@@ -527,9 +605,17 @@
 						<string key="validateInstallation:">UIButton</string>
 					</dictionary>
 					<dictionary class="NSMutableDictionary" key="actionInfosByName">
+						<object class="IBActionInfo" key="askForIdentification:">
+							<string key="name">askForIdentification:</string>
+							<string key="candidateClassName">id</string>
+						</object>
 						<object class="IBActionInfo" key="authenticateInstallation:">
 							<string key="name">authenticateInstallation:</string>
 							<string key="candidateClassName">UIButton</string>
+						</object>
+						<object class="IBActionInfo" key="checkAndBlock:">
+							<string key="name">checkAndBlock:</string>
+							<string key="candidateClassName">id</string>
 						</object>
 						<object class="IBActionInfo" key="openFeedbackView">
 							<string key="name">openFeedbackView</string>
