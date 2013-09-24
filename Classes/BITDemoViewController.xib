@@ -2,10 +2,10 @@
 <archive type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="8.00">
 	<data>
 		<int key="IBDocument.SystemTarget">1280</int>
-		<string key="IBDocument.SystemVersion">13A569</string>
+		<string key="IBDocument.SystemVersion">12F37</string>
 		<string key="IBDocument.InterfaceBuilderVersion">4510</string>
-		<string key="IBDocument.AppKitVersion">1251</string>
-		<string key="IBDocument.HIToolboxVersion">694.00</string>
+		<string key="IBDocument.AppKitVersion">1187.39</string>
+		<string key="IBDocument.HIToolboxVersion">626.00</string>
 		<object class="NSMutableDictionary" key="IBDocument.PluginVersions">
 			<string key="NS.key.0">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 			<string key="NS.object.0">3742</string>
@@ -158,7 +158,7 @@
 						<reference key="NSNextResponder" ref="348107954"/>
 						<int key="NSvFlags">1317</int>
 						<object class="NSPSMatrix" key="NSFrameMatrix"/>
-						<string key="NSFrame">{{58, 310}, {203, 37}}</string>
+						<string key="NSFrame">{{58, 310}, {61, 37}}</string>
 						<reference key="NSSuperview" ref="348107954"/>
 						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="962568872"/>
@@ -169,7 +169,7 @@
 						<int key="IBUIButtonType">1</int>
 						<reference key="IBUINormalTitleColor" ref="690601148"/>
 						<reference key="IBUIHighlightedTitleColor" ref="304397588"/>
-						<string key="IBUINormalTitle">Authenticate Installation</string>
+						<string key="IBUINormalTitle">Identify</string>
 						<reference key="IBUINormalTitleShadowColor" ref="479890600"/>
 						<reference key="IBUIFontDescription" ref="136781460"/>
 						<reference key="IBUIFont" ref="552234776"/>
@@ -178,7 +178,27 @@
 						<reference key="NSNextResponder" ref="348107954"/>
 						<int key="NSvFlags">1317</int>
 						<object class="NSPSMatrix" key="NSFrameMatrix"/>
-						<string key="NSFrame">{{58, 360}, {203, 37}}</string>
+						<string key="NSFrame">{{128, 310}, {63, 37}}</string>
+						<reference key="NSSuperview" ref="348107954"/>
+						<reference key="NSWindow"/>
+						<reference key="NSNextKeyView" ref="872692610"/>
+						<bool key="IBUIOpaque">NO</bool>
+						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
+						<int key="IBUIContentHorizontalAlignment">0</int>
+						<int key="IBUIContentVerticalAlignment">0</int>
+						<int key="IBUIButtonType">1</int>
+						<reference key="IBUINormalTitleColor" ref="690601148"/>
+						<reference key="IBUIHighlightedTitleColor" ref="304397588"/>
+						<string key="IBUINormalTitle">Validate</string>
+						<reference key="IBUINormalTitleShadowColor" ref="479890600"/>
+						<reference key="IBUIFontDescription" ref="136781460"/>
+						<reference key="IBUIFont" ref="552234776"/>
+					</object>
+					<object class="IBUIButton" id="872692610">
+						<reference key="NSNextResponder" ref="348107954"/>
+						<int key="NSvFlags">1317</int>
+						<object class="NSPSMatrix" key="NSFrameMatrix"/>
+						<string key="NSFrame">{{199, 310}, {62, 37}}</string>
 						<reference key="NSSuperview" ref="348107954"/>
 						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView"/>
@@ -189,7 +209,7 @@
 						<int key="IBUIButtonType">1</int>
 						<reference key="IBUINormalTitleColor" ref="690601148"/>
 						<reference key="IBUIHighlightedTitleColor" ref="304397588"/>
-						<string key="IBUINormalTitle">Validate Installation</string>
+						<string key="IBUINormalTitle">Reset</string>
 						<reference key="IBUINormalTitleShadowColor" ref="479890600"/>
 						<reference key="IBUIFontDescription" ref="136781460"/>
 						<reference key="IBUIFont" ref="552234776"/>
@@ -327,6 +347,15 @@
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchEventConnection" key="connection">
+						<string key="label">resetAuthenticator:</string>
+						<reference key="source" ref="872692610"/>
+						<reference key="destination" ref="180965703"/>
+						<int key="IBEventType">7</int>
+					</object>
+					<string key="id">9F1-83-Hpm</string>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchEventConnection" key="connection">
 						<string key="label">validateInstallation:</string>
 						<reference key="source" ref="962568872"/>
 						<reference key="destination" ref="180965703"/>
@@ -374,6 +403,7 @@
 							<reference ref="1006414861"/>
 							<reference ref="504163611"/>
 							<reference ref="962568872"/>
+							<reference ref="872692610"/>
 							<reference ref="1013915581"/>
 						</array>
 						<reference key="parent" ref="0"/>
@@ -413,6 +443,11 @@
 					<object class="IBObjectRecord">
 						<string key="id">Whb-D8-Fdq</string>
 						<reference key="object" ref="962568872"/>
+						<reference key="parent" ref="348107954"/>
+					</object>
+					<object class="IBObjectRecord">
+						<string key="id">GCU-4N-mzR</string>
+						<reference key="object" ref="872692610"/>
 						<reference key="parent" ref="348107954"/>
 					</object>
 					<object class="IBObjectRecord">
@@ -461,6 +496,9 @@
 				<string key="5.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<reference key="5.IBUserGuides" ref="0"/>
 				<boolean value="NO" key="5.showNotes"/>
+				<string key="GCU-4N-mzR.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
+				<reference key="GCU-4N-mzR.IBUserGuides" ref="0"/>
+				<boolean value="NO" key="GCU-4N-mzR.showNotes"/>
 				<string key="Whb-D8-Fdq.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<reference key="Whb-D8-Fdq.IBUserGuides" ref="0"/>
 				<boolean value="NO" key="Whb-D8-Fdq.showNotes"/>
@@ -483,6 +521,7 @@
 						<string key="openFeedbackView">id</string>
 						<string key="openShareActivity">id</string>
 						<string key="openUpdateView">id</string>
+						<string key="resetAuthenticator:">id</string>
 						<string key="triggerCrash">id</string>
 						<string key="triggerExceptionCrash">id</string>
 						<string key="validateInstallation:">UIButton</string>
@@ -502,6 +541,10 @@
 						</object>
 						<object class="IBActionInfo" key="openUpdateView">
 							<string key="name">openUpdateView</string>
+							<string key="candidateClassName">id</string>
+						</object>
+						<object class="IBActionInfo" key="resetAuthenticator:">
+							<string key="name">resetAuthenticator:</string>
 							<string key="candidateClassName">id</string>
 						</object>
 						<object class="IBActionInfo" key="triggerCrash">

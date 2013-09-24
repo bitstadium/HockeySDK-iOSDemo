@@ -39,7 +39,7 @@
 @implementation BITAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-#if 0 //live
+#if 1 //live
   [[BITHockeyManager sharedHockeyManager] configureWithIdentifier:@"fd51a3647d651add2171dd59d3b6e5ec"
                                                          delegate:self];
   [BITHockeyManager sharedHockeyManager].authenticator.authenticationSecret = @"cdfc46d2c9e8a2f64890a6bb1337eef0";
@@ -48,8 +48,9 @@
                                                          delegate:self];
   [BITHockeyManager sharedHockeyManager].authenticator.authenticationSecret = @"585935112885d912e95762fc27339a2c";
 #endif
-  [BITHockeyManager sharedHockeyManager].authenticator.authenticationType = BITAuthenticatorAuthTypeUDIDProvider;
-  [BITHockeyManager sharedHockeyManager].authenticator.validationType = BITAuthenticatorValidationTypeOptional;
+  [BITHockeyManager sharedHockeyManager].authenticator.identificationType = BITAuthenticatorIdentificationTypeDevice;
+  [BITHockeyManager sharedHockeyManager].authenticator.restrictApplicationUsage = YES;
+  [BITHockeyManager sharedHockeyManager].authenticator.restrictionEnforcementFrequency = BITAuthenticatorAppRestrictionEnforcementOnAppActive;
   
   // optionally enable logging to get more information about states.
   [BITHockeyManager sharedHockeyManager].debugLogEnabled = YES;

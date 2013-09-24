@@ -97,8 +97,8 @@
 - (IBAction)authenticateInstallation:(UIButton *)sender {
   BITAuthenticator *authenticator =   [BITHockeyManager sharedHockeyManager].authenticator;
   sender.enabled = NO;
-  [authenticator authenticateWithCompletion:^(NSString *authenticationToken, NSError *error) {
-    NSLog(@"Token: %@", authenticationToken);
+  [authenticator identifyWithCompletion:^(BOOL identified, NSError *error) {
+    NSLog(@"Identified: %d", identified);
     NSLog(@"Error: %@", error);
     sender.enabled = YES;
   }];
@@ -108,11 +108,16 @@
   BITAuthenticator *authenticator =   [BITHockeyManager sharedHockeyManager].authenticator;
   
   sender.enabled = NO;
-  [authenticator validateInstallationWithCompletion:^(BOOL validated, NSError *error) {
+  [authenticator validateWithCompletion:^(BOOL validated, NSError *error) {
     NSLog(@"Validated: %d", validated);
     NSLog(@"Error: %@", error);
     sender.enabled = YES;
   }];
+}
+
+- (IBAction)resetAuthenticator:(id)sender {
+  BITAuthenticator *authenticator =   [BITHockeyManager sharedHockeyManager].authenticator;
+  [authenticator cleanupInternalStorage];
 }
 
 
