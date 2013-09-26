@@ -50,6 +50,8 @@
 #endif
   [BITHockeyManager sharedHockeyManager].authenticator.identificationType = BITAuthenticatorIdentificationTypeDevice;
   [BITHockeyManager sharedHockeyManager].authenticator.restrictApplicationUsage = NO;
+  //manually present Authenticator's UI when the demoViewController appeared
+  [BITHockeyManager sharedHockeyManager].authenticator.automaticMode = NO;
   
   // optionally enable logging to get more information about states.
   [BITHockeyManager sharedHockeyManager].debugLogEnabled = YES;

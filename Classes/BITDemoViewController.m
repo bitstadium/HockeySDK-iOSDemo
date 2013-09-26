@@ -48,6 +48,13 @@
   self.title = NSLocalizedString(@"App", @"");
 }
 
+- (void) viewDidAppear:(BOOL)animated {
+  [super viewDidAppear:animated];
+  
+  BITAuthenticator *authenticator =   [BITHockeyManager sharedHockeyManager].authenticator;
+  [authenticator identifyWithCompletion:nil];
+}
+
 - (void)showSettings {
   BITSettingsViewController *hockeySettingsViewController = [[[BITSettingsViewController alloc] init] autorelease];
   UINavigationController *navController = [[[UINavigationController alloc] initWithRootViewController:hockeySettingsViewController] autorelease];
