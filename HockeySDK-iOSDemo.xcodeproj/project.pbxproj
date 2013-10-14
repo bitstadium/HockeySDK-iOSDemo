@@ -20,6 +20,8 @@
 		1EB52FC6167B741F00C801D5 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1EB52FC4167B741F00C801D5 /* Localizable.strings */; };
 		1EC189961640A5A70085DCC9 /* libHockeySDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E7E599F15C7FCC100D63C84 /* libHockeySDK.a */; };
 		1EC189971640A5B10085DCC9 /* CrashReporter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E754E971622209D0070AB92 /* CrashReporter.framework */; };
+		E43264E3180C07EC005E3820 /* BITAuthenticatorDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E43264E1180C07EC005E3820 /* BITAuthenticatorDemoViewController.m */; };
+		E43264E4180C07EC005E3820 /* BITAuthenticatorDemoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E43264E2180C07EC005E3820 /* BITAuthenticatorDemoViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +81,9 @@
 		1EB52FD3167B74B700C801D5 /* pt-PT */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-PT"; path = "pt-PT.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		1EB9352F16C52CA800365D8F /* hu */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = hu; path = hu.lproj/Localizable.strings; sourceTree = "<group>"; };
 		1ED8B40E15F3E875002CB229 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		E43264E0180C07EC005E3820 /* BITAuthenticatorDemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BITAuthenticatorDemoViewController.h; sourceTree = "<group>"; };
+		E43264E1180C07EC005E3820 /* BITAuthenticatorDemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BITAuthenticatorDemoViewController.m; sourceTree = "<group>"; };
+		E43264E2180C07EC005E3820 /* BITAuthenticatorDemoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BITAuthenticatorDemoViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,6 +156,9 @@
 				1E9A629E1550544900EE7C9D /* BITDemoViewController.xib */,
 				1E9A62A11550546300EE7C9D /* BITSettingsViewController.h */,
 				1E95486315C8011800C35F24 /* BITSettingsViewController.m */,
+				E43264E0180C07EC005E3820 /* BITAuthenticatorDemoViewController.h */,
+				E43264E1180C07EC005E3820 /* BITAuthenticatorDemoViewController.m */,
+				E43264E2180C07EC005E3820 /* BITAuthenticatorDemoViewController.xib */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -260,6 +268,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1E9A62A01550544900EE7C9D /* BITDemoViewController.xib in Resources */,
+				E43264E4180C07EC005E3820 /* BITAuthenticatorDemoViewController.xib in Resources */,
 				1E9A62C3155059D500EE7C9D /* MainWindow.xib in Resources */,
 				1E754E7216221B030070AB92 /* HockeySDKResources.bundle in Resources */,
 				1E004EDA16131DAB00D1E59F /* Default-568h@2x.png in Resources */,
@@ -277,6 +286,7 @@
 				1E9A62941550533600EE7C9D /* main.m in Sources */,
 				1E9A6298155053DA00EE7C9D /* BITAppDelegate.m in Sources */,
 				1E9A629F1550544900EE7C9D /* BITDemoViewController.m in Sources */,
+				E43264E3180C07EC005E3820 /* BITAuthenticatorDemoViewController.m in Sources */,
 				1E95486415C8011800C35F24 /* BITSettingsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
