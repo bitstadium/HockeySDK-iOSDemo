@@ -132,8 +132,6 @@
 - (IBAction)askForIdentification:(id)sender {
   BITAuthenticator *authenticator =   [BITHockeyManager sharedHockeyManager].authenticator;
   [authenticator cleanupInternalStorage];
-  //disable auto-mode (should be done on app launch)
-  authenticator.automaticMode = NO;
   //this should've been set on initial app launch
   authenticator.identificationType = BITAuthenticatorIdentificationTypeAnonymous;
   
