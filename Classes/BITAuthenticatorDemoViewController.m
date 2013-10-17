@@ -8,7 +8,13 @@
 
 #import "BITAuthenticatorDemoViewController.h"
 #import "HockeySDK.h"
+#import "HockeySDKPrivate.h"
 
+typedef NS_ENUM(NSUInteger, AuthenticatorDemoAlertViewTag) {
+  AuthenticatorDemoAlertViewTagOther = 0,
+  AuthenticatorDemoAlertViewTagAsking,
+  AuthenticatorDemoAlertViewTagMessages
+};
 @interface BITAuthenticatorDemoViewController ()
 
 @end
@@ -105,11 +111,26 @@
                                                      delegate:self
                                             cancelButtonTitle:@"Never"
                                             otherButtonTitles:@"Sure!", nil];
+  alertView.tag = AuthenticatorDemoAlertViewTagAsking;
+  [alertView autorelease];
   [alertView show];
 }
 
 
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
+  switch((AuthenticatorDemoAlertViewTag)alertView.tag) {
+    case AuthenticatorDemoAlertViewTagAsking:
+      [self askingAlertView:alertView clickedButtonAtIndex:buttonIndex];
+      break;
+    case AuthenticatorDemoAlertViewTagMessages:
+      [self messagesAlertView:alertView clickedButtonAtIndex:buttonIndex];
+      break;
+    case AuthenticatorDemoAlertViewTagOther:
+      break;
+  }
+}
+
+- (void) askingAlertView:(UIAlertView*) alertView clickedButtonAtIndex:(NSInteger) buttonIndex {
   if(alertView.cancelButtonIndex == buttonIndex) {
     //user doesn't want to be identified.
     //you could store a flag to user-defaults and never ask him again
@@ -127,6 +148,11 @@
       [[[UIAlertView alloc] initWithTitle:nil message:@"Thanks" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil] show];
     }
   }];
+
+}
+
+- (void) messagesAlertView:(UIAlertView*) alertView clickedButtonAtIndex:(NSInteger) buttonIndex {
+  [self handleAlerts:nil];
 }
 
 - (IBAction)checkAndBlock:(id)sender {
@@ -159,6 +185,39 @@
     }
   }];
   [blockingView show];
+}
+
+#pragma mark -
+- (IBAction)handleAlerts:(id)sender {
+  static NSUInteger currentMessageIndex = 0;
+  if(currentMessageIndex >= [self authenticatorAlertMessages].count) {
+    currentMessageIndex = 0;
+    return;
+  }
+
+  UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:nil
+                                                      message:[self authenticatorAlertMessages][currentMessageIndex++]
+                                                     delegate:self
+                                            cancelButtonTitle:@"OK"
+                                            otherButtonTitles:nil];
+  alertView.tag = AuthenticatorDemoAlertViewTagMessages;
+  [alertView autorelease];
+  [alertView show];
+}
+
+- (NSArray *) authenticatorAlertMessages {
+  static NSArray *messages = nil;
+  static dispatch_once_t onceToken;
+  dispatch_once(&onceToken, ^{
+    messages = [@[ BITHockeyLocalizedString(@"HockeyAuthenticationViewControllerNetworkError"),
+                  BITHockeyLocalizedString(@"HockeyAuthenticationFailedAuthenticate"),
+                  BITHockeyLocalizedString(@"HockeyAuthenticationNotMember"),
+                  BITHockeyLocalizedString(@"HockeyAuthenticationContactDeveloper"),
+                  BITHockeyLocalizedString(@"HockeyAuthenticationWrongEmailPassword"),
+                 ] retain];
+  });
+  
+  return messages;
 }
 
 @end
