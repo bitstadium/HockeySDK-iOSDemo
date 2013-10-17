@@ -15,6 +15,11 @@
 
 @implementation BITAuthenticatorDemoViewController
 
+- (void)dealloc {
+  [_restrictAppUsageSwitch release];
+  [super dealloc];
+}
+
 #pragma mark -
 - (IBAction)authenticateAnonymous:(UIButton *)sender {
   BITAuthenticator *authenticator = BITHockeyManager.sharedHockeyManager.authenticator;
@@ -156,13 +161,4 @@
   [blockingView show];
 }
 
-
-- (void)dealloc {
-  [_restrictAppUsageSwitch release];
-  [super dealloc];
-}
-- (void)viewDidUnload {
-  [self setRestrictAppUsageSwitch:nil];
-  [super viewDidUnload];
-}
 @end
