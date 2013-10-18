@@ -59,15 +59,13 @@ typedef NS_ENUM(NSUInteger, AuthenticatorDemoAlertViewTag) {
   [authenticator authenticateInstallation];
 }
 
-/*
 - (IBAction)authenticateWebAuth:(UIButton *)sender {
   BITAuthenticator *authenticator = BITHockeyManager.sharedHockeyManager.authenticator;
   [authenticator cleanupInternalStorage];
-  authenticator.identificationType = BITAuthenticatorIdentificationType;
+  authenticator.identificationType = BITAuthenticatorIdentificationTypeWebAuth;
   authenticator.restrictApplicationUsage = NO;
   [authenticator identifyWithCompletion:nil];
 }
- */
 
 #pragma mark -
 - (IBAction)authenticateInstallation:(UIButton *)sender {
