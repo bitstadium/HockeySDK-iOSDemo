@@ -75,6 +75,7 @@
 
 - (void)waitingUI {
   // show intermediate UI
+  [self.demoViewController.view addSubview:self.demoViewController.waitingView];
   [self.demoViewController.waitingView setHidden:NO];
   [self.demoViewController.navigationItem.leftBarButtonItem setEnabled:NO];
 }
@@ -82,6 +83,7 @@
 - (void)setupApplication {
   // setup your app specific code
   [self.demoViewController.waitingView setHidden:YES];
+  [self.demoViewController.waitingView removeFromSuperview];
   [self.demoViewController.navigationItem.leftBarButtonItem setEnabled:YES];
   [self.window makeKeyAndVisible];
 }

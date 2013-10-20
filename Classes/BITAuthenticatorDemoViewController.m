@@ -15,19 +15,26 @@ typedef NS_ENUM(NSUInteger, AuthenticatorDemoAlertViewTag) {
   AuthenticatorDemoAlertViewTagAsking,
   AuthenticatorDemoAlertViewTagMessages
 };
+
 @interface BITAuthenticatorDemoViewController ()
 
 @end
 
+
 @implementation BITAuthenticatorDemoViewController
 
-- (void)dealloc {
-  [_restrictAppUsageSwitch release];
-  [super dealloc];
+
+- (void)viewDidLoad {
+  [super viewDidLoad];
+ 
+  self.restrictAppUsageSwitch = [[UISwitch alloc] initWithFrame:CGRectZero];
+  [self.restrictAppUsageSwitch setOn:YES animated:NO];
 }
 
-#pragma mark -
-- (IBAction)authenticateAnonymous:(UIButton *)sender {
+
+#pragma mark - Private
+
+- (void)authenticateAnonymous {
   BITAuthenticator *authenticator = BITHockeyManager.sharedHockeyManager.authenticator;
   [authenticator cleanupInternalStorage];
   authenticator.identificationType = BITAuthenticatorIdentificationTypeAnonymous;
@@ -35,7 +42,7 @@ typedef NS_ENUM(NSUInteger, AuthenticatorDemoAlertViewTag) {
   [authenticator authenticateInstallation];
 }
 
-- (IBAction)authenticateDevice:(UIButton *)sender {
+- (void)authenticateDevice {
   BITAuthenticator *authenticator = BITHockeyManager.sharedHockeyManager.authenticator;
   [authenticator cleanupInternalStorage];
   authenticator.identificationType = BITAuthenticatorIdentificationTypeDevice;
@@ -43,7 +50,7 @@ typedef NS_ENUM(NSUInteger, AuthenticatorDemoAlertViewTag) {
   [authenticator authenticateInstallation];
 }
 
-- (IBAction)authenticateEmail:(UIButton *)sender {
+- (void)authenticateEmail {
   BITAuthenticator *authenticator = BITHockeyManager.sharedHockeyManager.authenticator;
   [authenticator cleanupInternalStorage];
   authenticator.identificationType = BITAuthenticatorIdentificationTypeHockeyAppEmail;
@@ -51,7 +58,7 @@ typedef NS_ENUM(NSUInteger, AuthenticatorDemoAlertViewTag) {
   [authenticator authenticateInstallation];
 }
 
-- (IBAction)authenticateAccount:(UIButton *)sender {
+- (void)authenticateAccount {
   BITAuthenticator *authenticator = BITHockeyManager.sharedHockeyManager.authenticator;
   [authenticator cleanupInternalStorage];
   authenticator.identificationType = BITAuthenticatorIdentificationTypeHockeyAppUser;
@@ -59,7 +66,7 @@ typedef NS_ENUM(NSUInteger, AuthenticatorDemoAlertViewTag) {
   [authenticator authenticateInstallation];
 }
 
-- (IBAction)authenticateWebAuth:(UIButton *)sender {
+- (void)authenticateWebAuth {
   BITAuthenticator *authenticator = BITHockeyManager.sharedHockeyManager.authenticator;
   [authenticator cleanupInternalStorage];
   authenticator.identificationType = BITAuthenticatorIdentificationTypeWebAuth;
@@ -68,35 +75,35 @@ typedef NS_ENUM(NSUInteger, AuthenticatorDemoAlertViewTag) {
 }
 
 #pragma mark -
-- (IBAction)authenticateInstallation:(UIButton *)sender {
+- (void)authenticateInstallation {
   BITAuthenticator *authenticator =   [BITHockeyManager sharedHockeyManager].authenticator;
-  sender.enabled = NO;
+//  sender.enabled = NO;
   [authenticator identifyWithCompletion:^(BOOL identified, NSError *error) {
     NSLog(@"Identified: %d", identified);
     NSLog(@"Error: %@", error);
-    sender.enabled = YES;
+//    sender.enabled = YES;
   }];
 }
 
-- (IBAction)validateInstallation:(UIButton*)sender {
+- (void)validateInstallation {
   BITAuthenticator *authenticator =   [BITHockeyManager sharedHockeyManager].authenticator;
   
-  sender.enabled = NO;
+//  sender.enabled = NO;
   [authenticator validateWithCompletion:^(BOOL validated, NSError *error) {
     NSLog(@"Validated: %d", validated);
     NSLog(@"Error: %@", error);
-    sender.enabled = YES;
+//    sender.enabled = YES;
   }];
 }
 
-- (IBAction)resetAuthenticator:(id)sender {
+- (void)resetAuthenticator {
   BITAuthenticator *authenticator =   [BITHockeyManager sharedHockeyManager].authenticator;
   [authenticator cleanupInternalStorage];
 }
 
 
 
-- (IBAction)askForIdentification:(id)sender {
+- (void)askForIdentification {
   BITAuthenticator *authenticator =   [BITHockeyManager sharedHockeyManager].authenticator;
   [authenticator cleanupInternalStorage];
   //this should've been set on initial app launch
@@ -110,7 +117,6 @@ typedef NS_ENUM(NSUInteger, AuthenticatorDemoAlertViewTag) {
                                             cancelButtonTitle:@"Never"
                                             otherButtonTitles:@"Sure!", nil];
   alertView.tag = AuthenticatorDemoAlertViewTagAsking;
-  [alertView autorelease];
   [alertView show];
 }
 
@@ -121,8 +127,6 @@ typedef NS_ENUM(NSUInteger, AuthenticatorDemoAlertViewTag) {
       [self askingAlertView:alertView clickedButtonAtIndex:buttonIndex];
       break;
     case AuthenticatorDemoAlertViewTagMessages:
-      [self messagesAlertView:alertView clickedButtonAtIndex:buttonIndex];
-      break;
     case AuthenticatorDemoAlertViewTagOther:
       break;
   }
@@ -149,11 +153,7 @@ typedef NS_ENUM(NSUInteger, AuthenticatorDemoAlertViewTag) {
 
 }
 
-- (void) messagesAlertView:(UIAlertView*) alertView clickedButtonAtIndex:(NSInteger) buttonIndex {
-  [self handleAlerts:nil];
-}
-
-- (IBAction)checkAndBlock:(id)sender {
+- (void)checkAndBlock {
   BITAuthenticator *authenticator =   [BITHockeyManager sharedHockeyManager].authenticator;
   if(!authenticator.isIdentified) {
     [[[UIAlertView alloc] initWithTitle:@"Error"
@@ -186,20 +186,13 @@ typedef NS_ENUM(NSUInteger, AuthenticatorDemoAlertViewTag) {
 }
 
 #pragma mark -
-- (IBAction)handleAlerts:(id)sender {
-  static NSUInteger currentMessageIndex = 0;
-  if(currentMessageIndex >= [self authenticatorAlertMessages].count) {
-    currentMessageIndex = 0;
-    return;
-  }
-
+- (void)handleAlerts:(NSInteger)index {
   UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:nil
-                                                      message:[self authenticatorAlertMessages][currentMessageIndex++]
+                                                      message:[self authenticatorAlertMessages][index]
                                                      delegate:self
                                             cancelButtonTitle:@"OK"
                                             otherButtonTitles:nil];
   alertView.tag = AuthenticatorDemoAlertViewTagMessages;
-  [alertView autorelease];
   [alertView show];
 }
 
@@ -207,15 +200,154 @@ typedef NS_ENUM(NSUInteger, AuthenticatorDemoAlertViewTag) {
   static NSArray *messages = nil;
   static dispatch_once_t onceToken;
   dispatch_once(&onceToken, ^{
-    messages = [@[ BITHockeyLocalizedString(@"HockeyAuthenticationViewControllerNetworkError"),
+    messages = @[ BITHockeyLocalizedString(@"HockeyAuthenticationViewControllerNetworkError"),
                   BITHockeyLocalizedString(@"HockeyAuthenticationFailedAuthenticate"),
                   BITHockeyLocalizedString(@"HockeyAuthenticationNotMember"),
                   BITHockeyLocalizedString(@"HockeyAuthenticationContactDeveloper"),
                   BITHockeyLocalizedString(@"HockeyAuthenticationWrongEmailPassword"),
-                 ] retain];
+                 ];
   });
   
   return messages;
+}
+
+
+#pragma mark - Table view data source
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+  return 4;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+  if (section == 0) {
+    return 6;
+  } else if (section == 1) {
+    return 5;
+  } else if (section == 2) {
+    return 3;
+  } else {
+    return 2;
+  }
+}
+
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
+  if (section == 0) {
+    return NSLocalizedString(@"Authenticate", @"");
+  } else if (section == 1) {
+    return NSLocalizedString(@"Alerts", @"");
+  } else if (section == 2) {
+    return NSLocalizedString(@"Tests", @"");
+  } else {
+    return NSLocalizedString(@"Internal Tests", @"");
+  }
+  return nil;
+}
+
+- (NSString *)tableView:(UITableView *)tableView titleForFooterInSection:(NSInteger)section {
+  if (section == 0 || section == 1) {
+    return NSLocalizedString(@"Presented UI relevant for localization", @"");
+  }
+  
+  return nil;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+  static NSString *CellIdentifier = @"Cell";
+  UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+  if (cell == nil) {
+    cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+  }
+  
+  // Configure the cell...
+  if (indexPath.section == 0) {
+    if (indexPath.row == 0) {
+      cell.textLabel.text = NSLocalizedString(@"Anonymous", @"");
+    } else if (indexPath.row == 1) {
+      cell.textLabel.text = NSLocalizedString(@"Device", @"");
+    } else if (indexPath.row == 2) {
+      cell.textLabel.text = NSLocalizedString(@"Email", @"");
+    } else if (indexPath.row == 3) {
+      cell.textLabel.text = NSLocalizedString(@"Account", @"");
+    } else if (indexPath.row == 4) {
+      cell.textLabel.text = NSLocalizedString(@"WebAuth", @"");
+    } else {
+      cell.textLabel.text = NSLocalizedString(@"Restrict application usage", @"");
+      cell.accessoryView = self.restrictAppUsageSwitch;
+    }
+  } else if (indexPath.section == 1) {
+    if (indexPath.row == 0) {
+      cell.textLabel.text = NSLocalizedString(@"Network Error", @"");
+    } else if (indexPath.row == 1) {
+      cell.textLabel.text = NSLocalizedString(@"Failed Authenticate", @"");
+    } else if (indexPath.row == 2) {
+      cell.textLabel.text = NSLocalizedString(@"Not Member", @"");
+    } else if (indexPath.row == 3) {
+      cell.textLabel.text = NSLocalizedString(@"Contact Developer", @"");
+    } else {
+      cell.textLabel.text = NSLocalizedString(@"Wrong Email/Password", @"");
+    }
+  } else if (indexPath.section == 2) {
+    if (indexPath.row == 0) {
+      cell.textLabel.text = NSLocalizedString(@"Identify", @"");
+    } else if (indexPath.row == 1) {
+      cell.textLabel.text = NSLocalizedString(@"Validate", @"");
+    } else {
+      cell.textLabel.text = NSLocalizedString(@"Reset", @"");
+    }
+  } else {
+    if (indexPath.row == 0) {
+      cell.textLabel.text = NSLocalizedString(@"Ask for ident", @"");
+    } else {
+      cell.textLabel.text = NSLocalizedString(@"Validate and potentially block", @"");
+    }
+  }
+  
+  return cell;
+}
+
+
+#pragma mark - Table view delegate
+
+- (NSIndexPath *)tableView:(UITableView *)tableView willSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+  if (indexPath.section == 0 && indexPath.row == 5) {
+    return nil;
+  }
+  
+  return indexPath;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+  [tableView deselectRowAtIndexPath:indexPath animated:YES];
+  
+  if (indexPath.section == 0) {
+    if (indexPath.row == 0) {
+      [self authenticateAnonymous];
+    } else if (indexPath.row == 1) {
+      [self authenticateDevice];
+    } else if (indexPath.row == 2) {
+      [self authenticateEmail];
+    } else if (indexPath.row == 3) {
+      [self authenticateAccount];
+    } else if (indexPath.row == 4) {
+      [self authenticateWebAuth];
+    }
+  } else if (indexPath.section == 1) {
+    [self handleAlerts:indexPath.row];
+  } else if (indexPath.section == 2) {
+    if (indexPath.row == 0) {
+      [self authenticateInstallation];
+    } else if (indexPath.row == 1) {
+      [self validateInstallation];
+    } else {
+      [self resetAuthenticator];
+    }
+  } else {
+    if (indexPath.row == 0) {
+      [self askForIdentification];
+    } else {
+      [self checkAndBlock];
+    }
+  }
 }
 
 @end

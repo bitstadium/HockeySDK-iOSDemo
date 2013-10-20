@@ -10,5 +10,5 @@
 
 @interface BITAuthenticatorDemoViewController : UIViewController
 
-@property (retain, nonatomic) IBOutlet UISwitch *restrictAppUsageSwitch;
+@property (strong, nonatomic) UISwitch *restrictAppUsageSwitch;
 @end

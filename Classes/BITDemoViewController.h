@@ -28,17 +28,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface BITDemoViewController : UIViewController {
+@interface BITDemoViewController : UITableViewController {
   
 }
 
-@property (nonatomic, assign) IBOutlet UIView *waitingView;
-
-- (IBAction)openUpdateView;
-- (IBAction)openFeedbackView;
-- (IBAction)openShareActivity;
-
-- (IBAction) triggerCrash;
-- (IBAction) triggerExceptionCrash;
+@property (nonatomic, weak) IBOutlet UIView *waitingView;
 
 @end
