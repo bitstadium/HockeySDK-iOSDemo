@@ -20,6 +20,25 @@
 	<string>1.0</string>
 	<key>CFBundleSignature</key>
 	<string>????</string>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleURLName</key>
+			<string>com.hockeyapp.HockeySDK-iOSDemo.authentication</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>hafd51a3647d651add2171dd59d3b6e5ec</string>
+			</array>
+		</dict>
+		<dict>
+			<key>CFBundleURLName</key>
+			<string>com.hockeyapp.HockeySDK-iOSDemo.authentication2</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>haca2aba1482cb9458a67b917930b202c8</string>
+			</array>
+		</dict>
+	</array>
 	<key>CFBundleVersion</key>
 	<string>476</string>
 	<key>LSRequiresIPhoneOS</key>

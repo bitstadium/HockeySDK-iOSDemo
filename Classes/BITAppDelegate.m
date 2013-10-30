@@ -31,7 +31,7 @@
 #import "HockeySDK.h"
 
 
-@interface BITAppDelegate () <BITUpdateManagerDelegate, BITCrashManagerDelegate> {}
+@interface BITAppDelegate () <BITHockeyManagerDelegate> {}
 
 @end
 
@@ -39,10 +39,17 @@
 @implementation BITAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-#warning Assign a valid HockeyApp app identifier first!
-  [[BITHockeyManager sharedHockeyManager] configureWithIdentifier:@"<>"
+#if 1 //live
+  [[BITHockeyManager sharedHockeyManager] configureWithIdentifier:@"fd51a3647d651add2171dd59d3b6e5ec"
                                                          delegate:self];
-  
+  [BITHockeyManager sharedHockeyManager].authenticator.authenticationSecret = @"cdfc46d2c9e8a2f64890a6bb1337eef0";
+#else //warmup
+  [[BITHockeyManager sharedHockeyManager] configureWithIdentifier:@"ca2aba1482cb9458a67b917930b202c8"
+                                                         delegate:self];
+  [BITHockeyManager sharedHockeyManager].authenticator.authenticationSecret = @"585935112885d912e95762fc27339a2c";
+#endif
+  [BITHockeyManager sharedHockeyManager].authenticator.identificationType = BITAuthenticatorIdentificationTypeDevice;
+  [BITHockeyManager sharedHockeyManager].authenticator.restrictApplicationUsage = NO;
   
   // optionally enable logging to get more information about states.
   [BITHockeyManager sharedHockeyManager].debugLogEnabled = YES;
@@ -60,8 +67,15 @@
   return YES;
 }
 
+- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
+  return [[BITHockeyManager sharedHockeyManager].authenticator handleOpenURL:url
+                                                           sourceApplication:sourceApplication
+                                                                  annotation:annotation];
+}
+
 - (void)waitingUI {
   // show intermediate UI
+  [self.demoViewController.view addSubview:self.demoViewController.waitingView];
   [self.demoViewController.waitingView setHidden:NO];
   [self.demoViewController.navigationItem.leftBarButtonItem setEnabled:NO];
 }
@@ -69,6 +83,7 @@
 - (void)setupApplication {
   // setup your app specific code
   [self.demoViewController.waitingView setHidden:YES];
+  [self.demoViewController.waitingView removeFromSuperview];
   [self.demoViewController.navigationItem.leftBarButtonItem setEnabled:YES];
   [self.window makeKeyAndVisible];
 }
@@ -123,17 +138,6 @@
   if ([self didCrashInLastSessionOnStartup]) {
     [self setupApplication];
   }
-}
-              
-              
-#pragma mark - BITUpdateManagerDelegate
-
--(NSString *)customDeviceIdentifierForUpdateManager:(BITUpdateManager *)updateManager  {
-#if !defined (CONFIGURATION_AppStore_Distribution)
-  if ([[UIDevice currentDevice] respondsToSelector:@selector(uniqueIdentifier)])
-    return [[UIDevice currentDevice] performSelector:@selector(uniqueIdentifier)];
-#endif
-  return nil;
 }
 
 @end

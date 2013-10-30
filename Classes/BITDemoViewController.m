@@ -30,75 +30,149 @@
 #import "BITSettingsViewController.h"
 #import "HockeySDK.h"
 
-@interface BITDemoViewController ()
+#import "BITAuthenticatorDemoViewController.h"
+#import "BITBetaUpdatesViewController.h"
+#import "BITStoreUpdatesViewController.h"
+#import "BITFeedbackViewController.h"
+#import "BITCrashReportsViewController.h"
+
+
+@interface BITDemoViewController ()<UIAlertViewDelegate>
 
 @end
+
 
 @implementation BITDemoViewController
 
 - (void)viewDidLoad {
   [super viewDidLoad];
   
-  self.navigationItem.leftBarButtonItem =  [[[UIBarButtonItem alloc] initWithTitle:@"Settings"
+  self.navigationItem.leftBarButtonItem =  [[UIBarButtonItem alloc] initWithTitle:@"Settings"
                                                                              style:UIBarButtonItemStyleBordered
                                                                             target:self
-                                                                            action:@selector(showSettings)] autorelease];
+                                                                            action:@selector(showSettings)];
 
   self.title = NSLocalizedString(@"App", @"");
 }
 
 - (void)showSettings {
-  BITSettingsViewController *hockeySettingsViewController = [[[BITSettingsViewController alloc] init] autorelease];
-  UINavigationController *navController = [[[UINavigationController alloc] initWithRootViewController:hockeySettingsViewController] autorelease];
+  BITSettingsViewController *hockeySettingsViewController = [[BITSettingsViewController alloc] init];
+  UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:hockeySettingsViewController];
   navController.modalTransitionStyle = UIModalTransitionStyleCoverVertical;
   [self presentViewController:navController animated:YES completion:nil];
 }
 
-- (IBAction)openUpdateView {
-  [[BITHockeyManager sharedHockeyManager].updateManager showUpdateView];
-}
 
-- (IBAction)openFeedbackView {
-  [[BITHockeyManager sharedHockeyManager].feedbackManager showFeedbackListView];
-}
-
-- (IBAction)openShareActivity {
-  Class activityViewControllerClass = NSClassFromString(@"UIActivityViewController");
-  // Framework not available, older iOS
-  if (activityViewControllerClass) {
-
-    BITFeedbackActivity *feedbackActivity = [[BITFeedbackActivity alloc] init];
-  
-    __block UIActivityViewController *activityViewController = [[UIActivityViewController alloc] initWithActivityItems:@[@"Share this text"]
-                                                                                               applicationActivities:@[feedbackActivity]];
-    activityViewController.excludedActivityTypes = @[UIActivityTypeAssignToContact];
-  
-    [self presentViewController:activityViewController animated:YES completion:^{
-      activityViewController.excludedActivityTypes = nil;
-      activityViewController = nil;
-    }];
-  }
-}
-
-
-- (IBAction) triggerCrash {
-	/* Trigger a crash */
-	CFRelease(NULL);
-}
-
-
-- (IBAction) triggerExceptionCrash {
-	/* Trigger a crash */
-  NSArray *array = [NSArray array];
-  [array objectAtIndex:23];
-}
-
+#pragma mark - view controller
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation {
   if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
     return YES;
   }else {
     return toInterfaceOrientation != UIInterfaceOrientationPortraitUpsideDown;
+  }
+}
+
+
+#pragma mark - Table view data source
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+  // Return the number of sections.
+  return 1;
+}
+
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+  // Return the number of rows in the section.
+  return 5;
+}
+
+
+// Customize the appearance of table view cells.
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+  
+  static NSString *CellIdentifier = @"Cell";
+  
+  UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+  if (cell == nil) {
+    cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+  }
+  
+  // Configure the cell...
+  switch (indexPath.row) {
+    case 0: {
+      cell.textLabel.text = NSLocalizedString(@"Authorize", @"");
+      break;
+    }
+      
+    case 1: {
+      cell.textLabel.text = NSLocalizedString(@"Beta Updates", @"");
+      break;
+    }
+      
+    case 2: {
+      cell.textLabel.text = NSLocalizedString(@"Store Updates", @"");
+      break;
+    }
+      
+    case 3: {
+      cell.textLabel.text = NSLocalizedString(@"Feedback", @"");
+      break;
+    }
+      
+    case 4: {
+      cell.textLabel.text = NSLocalizedString(@"Crash Reports", @"");
+      break;
+    }
+      
+    default:
+      break;
+  }
+  
+  cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+  
+  return cell;
+}
+
+
+#pragma mark - Table view delegate
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+  [tableView deselectRowAtIndexPath:indexPath animated:YES];
+  
+  switch (indexPath.row) {
+    case 0: {
+      BITAuthenticatorDemoViewController *vc = [[BITAuthenticatorDemoViewController alloc] initWithNibName:nil bundle:nil];
+      [self.navigationController pushViewController:vc animated:YES];
+      break;
+    }
+      
+    case 1: {
+      BITBetaUpdatesViewController *vc = [[BITBetaUpdatesViewController alloc] initWithNibName:nil bundle:nil];
+      [self.navigationController pushViewController:vc animated:YES];
+      break;
+    }
+    
+    case 2: {
+      BITStoreUpdatesViewController *vc = [[BITStoreUpdatesViewController alloc] initWithNibName:nil bundle:nil];
+      [self.navigationController pushViewController:vc animated:YES];
+      break;
+    }
+      
+    case 3: {
+      BITFeedbackViewController *vc = [[BITFeedbackViewController alloc] initWithNibName:nil bundle:nil];
+      [self.navigationController pushViewController:vc animated:YES];
+      break;
+    }
+
+    case 4: {
+      BITCrashReportsViewController *vc = [[BITCrashReportsViewController alloc] initWithNibName:nil bundle:nil];
+      [self.navigationController pushViewController:vc animated:YES];
+      break;
+    }
+      
+    default:
+      break;
   }
 }
 

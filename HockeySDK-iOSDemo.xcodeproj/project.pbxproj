@@ -8,6 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		1E004EDA16131DAB00D1E59F /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1E004ED916131DAB00D1E59F /* Default-568h@2x.png */; };
+		1E6E93EF1814177D00F8456E /* BITBetaUpdatesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E6E93ED1814177D00F8456E /* BITBetaUpdatesViewController.m */; };
+		1E6E93F01814177D00F8456E /* BITBetaUpdatesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1E6E93EE1814177D00F8456E /* BITBetaUpdatesViewController.xib */; };
+		1E6E93F41814192A00F8456E /* BITFeedbackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E6E93F21814192A00F8456E /* BITFeedbackViewController.m */; };
+		1E6E93F51814192A00F8456E /* BITFeedbackViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1E6E93F31814192A00F8456E /* BITFeedbackViewController.xib */; };
+		1E6E93F91814193D00F8456E /* BITCrashReportsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E6E93F71814193D00F8456E /* BITCrashReportsViewController.m */; };
+		1E6E93FA1814193D00F8456E /* BITCrashReportsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1E6E93F81814193D00F8456E /* BITCrashReportsViewController.xib */; };
+		1E6E93FE18142D0000F8456E /* BITStoreUpdatesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E6E93FC18142D0000F8456E /* BITStoreUpdatesViewController.m */; };
+		1E6E93FF18142D0000F8456E /* BITStoreUpdatesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1E6E93FD18142D0000F8456E /* BITStoreUpdatesViewController.xib */; };
 		1E754E7216221B030070AB92 /* HockeySDKResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 1E7E59A515C7FCC100D63C84 /* HockeySDKResources.bundle */; };
 		1E95486415C8011800C35F24 /* BITSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E95486315C8011800C35F24 /* BITSettingsViewController.m */; };
 		1E9A624915504F2E00EE7C9D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E9A624815504F2E00EE7C9D /* UIKit.framework */; };
@@ -20,9 +28,18 @@
 		1EB52FC6167B741F00C801D5 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1EB52FC4167B741F00C801D5 /* Localizable.strings */; };
 		1EC189961640A5A70085DCC9 /* libHockeySDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E7E599F15C7FCC100D63C84 /* libHockeySDK.a */; };
 		1EC189971640A5B10085DCC9 /* CrashReporter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E754E971622209D0070AB92 /* CrashReporter.framework */; };
+		E43264E3180C07EC005E3820 /* BITAuthenticatorDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E43264E1180C07EC005E3820 /* BITAuthenticatorDemoViewController.m */; };
+		E43264E4180C07EC005E3820 /* BITAuthenticatorDemoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E43264E2180C07EC005E3820 /* BITAuthenticatorDemoViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		1E0F95A617E133F300CF4754 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1E9A62AF155056A800EE7C9D /* HockeySDK.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 1E5A459016F0DFC200B55C04;
+			remoteInfo = HockeySDKTests;
+		};
 		1E7E599E15C7FCC100D63C84 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 1E9A62AF155056A800EE7C9D /* HockeySDK.xcodeproj */;
@@ -41,7 +58,20 @@
 
 /* Begin PBXFileReference section */
 		1E004ED916131DAB00D1E59F /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "Resources/Default-568h@2x.png"; sourceTree = SOURCE_ROOT; };
+		1E20A585181EC68F00D5B770 /* nl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nl; path = nl.lproj/Localizable.strings; sourceTree = "<group>"; };
 		1E6DDCF3169E29370076C65D /* ro */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ro; path = ro.lproj/Localizable.strings; sourceTree = "<group>"; };
+		1E6E93EC1814177D00F8456E /* BITBetaUpdatesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BITBetaUpdatesViewController.h; sourceTree = "<group>"; };
+		1E6E93ED1814177D00F8456E /* BITBetaUpdatesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BITBetaUpdatesViewController.m; sourceTree = "<group>"; };
+		1E6E93EE1814177D00F8456E /* BITBetaUpdatesViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BITBetaUpdatesViewController.xib; sourceTree = "<group>"; };
+		1E6E93F11814192A00F8456E /* BITFeedbackViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BITFeedbackViewController.h; sourceTree = "<group>"; };
+		1E6E93F21814192A00F8456E /* BITFeedbackViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BITFeedbackViewController.m; sourceTree = "<group>"; };
+		1E6E93F31814192A00F8456E /* BITFeedbackViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BITFeedbackViewController.xib; sourceTree = "<group>"; };
+		1E6E93F61814193D00F8456E /* BITCrashReportsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BITCrashReportsViewController.h; sourceTree = "<group>"; };
+		1E6E93F71814193D00F8456E /* BITCrashReportsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BITCrashReportsViewController.m; sourceTree = "<group>"; };
+		1E6E93F81814193D00F8456E /* BITCrashReportsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BITCrashReportsViewController.xib; sourceTree = "<group>"; };
+		1E6E93FB18142D0000F8456E /* BITStoreUpdatesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BITStoreUpdatesViewController.h; sourceTree = "<group>"; };
+		1E6E93FC18142D0000F8456E /* BITStoreUpdatesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BITStoreUpdatesViewController.m; sourceTree = "<group>"; };
+		1E6E93FD18142D0000F8456E /* BITStoreUpdatesViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BITStoreUpdatesViewController.xib; sourceTree = "<group>"; };
 		1E754E8016221BFB0070AB92 /* HockeyDemo.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = HockeyDemo.xcconfig; path = Resources/HockeyDemo.xcconfig; sourceTree = SOURCE_ROOT; };
 		1E754E971622209D0070AB92 /* CrashReporter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CrashReporter.framework; path = Vendor/HockeySDK/Vendor/CrashReporter.framework; sourceTree = "<group>"; };
 		1E95486315C8011800C35F24 /* BITSettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BITSettingsViewController.m; sourceTree = "<group>"; };
@@ -72,6 +102,9 @@
 		1EB52FD3167B74B700C801D5 /* pt-PT */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-PT"; path = "pt-PT.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		1EB9352F16C52CA800365D8F /* hu */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = hu; path = hu.lproj/Localizable.strings; sourceTree = "<group>"; };
 		1ED8B40E15F3E875002CB229 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		E43264E0180C07EC005E3820 /* BITAuthenticatorDemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BITAuthenticatorDemoViewController.h; sourceTree = "<group>"; };
+		E43264E1180C07EC005E3820 /* BITAuthenticatorDemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BITAuthenticatorDemoViewController.m; sourceTree = "<group>"; };
+		E43264E2180C07EC005E3820 /* BITAuthenticatorDemoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BITAuthenticatorDemoViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,6 +175,21 @@
 				1E9A629C1550544900EE7C9D /* BITDemoViewController.h */,
 				1E9A629D1550544900EE7C9D /* BITDemoViewController.m */,
 				1E9A629E1550544900EE7C9D /* BITDemoViewController.xib */,
+				E43264E0180C07EC005E3820 /* BITAuthenticatorDemoViewController.h */,
+				E43264E1180C07EC005E3820 /* BITAuthenticatorDemoViewController.m */,
+				E43264E2180C07EC005E3820 /* BITAuthenticatorDemoViewController.xib */,
+				1E6E93EC1814177D00F8456E /* BITBetaUpdatesViewController.h */,
+				1E6E93ED1814177D00F8456E /* BITBetaUpdatesViewController.m */,
+				1E6E93EE1814177D00F8456E /* BITBetaUpdatesViewController.xib */,
+				1E6E93F11814192A00F8456E /* BITFeedbackViewController.h */,
+				1E6E93F21814192A00F8456E /* BITFeedbackViewController.m */,
+				1E6E93F31814192A00F8456E /* BITFeedbackViewController.xib */,
+				1E6E93F61814193D00F8456E /* BITCrashReportsViewController.h */,
+				1E6E93F71814193D00F8456E /* BITCrashReportsViewController.m */,
+				1E6E93F81814193D00F8456E /* BITCrashReportsViewController.xib */,
+				1E6E93FB18142D0000F8456E /* BITStoreUpdatesViewController.h */,
+				1E6E93FC18142D0000F8456E /* BITStoreUpdatesViewController.m */,
+				1E6E93FD18142D0000F8456E /* BITStoreUpdatesViewController.xib */,
 				1E9A62A11550546300EE7C9D /* BITSettingsViewController.h */,
 				1E95486315C8011800C35F24 /* BITSettingsViewController.m */,
 			);
@@ -153,6 +201,7 @@
 			children = (
 				1E7E599F15C7FCC100D63C84 /* libHockeySDK.a */,
 				1E7E59A515C7FCC100D63C84 /* HockeySDKResources.bundle */,
+				1E0F95A717E133F300CF4754 /* HockeySDKTests.octest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -184,7 +233,7 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = CNS;
-				LastUpgradeCheck = 0430;
+				LastUpgradeCheck = 0500;
 			};
 			buildConfigurationList = 1E9A623E15504F2E00EE7C9D /* Build configuration list for PBXProject "HockeySDK-iOSDemo" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -205,6 +254,7 @@
 				"zh-Hans",
 				ro,
 				hu,
+				nl,
 			);
 			mainGroup = 1E9A623915504F2E00EE7C9D;
 			productRefGroup = 1E9A624515504F2E00EE7C9D /* Products */;
@@ -223,6 +273,13 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
+		1E0F95A717E133F300CF4754 /* HockeySDKTests.octest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = HockeySDKTests.octest;
+			remoteRef = 1E0F95A617E133F300CF4754 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 		1E7E599F15C7FCC100D63C84 /* libHockeySDK.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
@@ -244,10 +301,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1E6E93F01814177D00F8456E /* BITBetaUpdatesViewController.xib in Resources */,
+				1E6E93FF18142D0000F8456E /* BITStoreUpdatesViewController.xib in Resources */,
+				1E6E93F51814192A00F8456E /* BITFeedbackViewController.xib in Resources */,
 				1E9A62A01550544900EE7C9D /* BITDemoViewController.xib in Resources */,
+				E43264E4180C07EC005E3820 /* BITAuthenticatorDemoViewController.xib in Resources */,
 				1E9A62C3155059D500EE7C9D /* MainWindow.xib in Resources */,
 				1E754E7216221B030070AB92 /* HockeySDKResources.bundle in Resources */,
 				1E004EDA16131DAB00D1E59F /* Default-568h@2x.png in Resources */,
+				1E6E93FA1814193D00F8456E /* BITCrashReportsViewController.xib in Resources */,
 				1EB52FC6167B741F00C801D5 /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -259,9 +321,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1E6E93FE18142D0000F8456E /* BITStoreUpdatesViewController.m in Sources */,
+				1E6E93F91814193D00F8456E /* BITCrashReportsViewController.m in Sources */,
 				1E9A62941550533600EE7C9D /* main.m in Sources */,
 				1E9A6298155053DA00EE7C9D /* BITAppDelegate.m in Sources */,
+				1E6E93F41814192A00F8456E /* BITFeedbackViewController.m in Sources */,
 				1E9A629F1550544900EE7C9D /* BITDemoViewController.m in Sources */,
+				1E6E93EF1814177D00F8456E /* BITBetaUpdatesViewController.m in Sources */,
+				E43264E3180C07EC005E3820 /* BITAuthenticatorDemoViewController.m in Sources */,
 				1E95486415C8011800C35F24 /* BITSettingsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -285,6 +352,7 @@
 				1EA512DE167F7EF000FC9FBA /* zh-Hans */,
 				1E6DDCF3169E29370076C65D /* ro */,
 				1EB9352F16C52CA800365D8F /* hu */,
+				1E20A585181EC68F00D5B770 /* nl */,
 			);
 			name = Localizable.strings;
 			sourceTree = SOURCE_ROOT;
@@ -297,7 +365,12 @@
 			baseConfigurationReference = 1E754E8016221BFB0070AB92 /* HockeyDemo.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -305,11 +378,15 @@
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/Vendor/HockeySDK/Classes\"";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				"IPHONEOS_DEPLOYMENT_TARGET[arch=arm64]" = 7.0;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -318,6 +395,7 @@
 		1E85692815D2FAAC0066F15E /* AdHoc */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/Vendor/HockeySDK/Vendor\"",
@@ -335,7 +413,12 @@
 			baseConfigurationReference = 1E754E8016221BFB0070AB92 /* HockeyDemo.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -343,11 +426,16 @@
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/Vendor/HockeySDK/Classes\"";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				"IPHONEOS_DEPLOYMENT_TARGET[arch=arm64]" = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -358,16 +446,25 @@
 			baseConfigurationReference = 1E754E8016221BFB0070AB92 /* HockeyDemo.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/Vendor/HockeySDK/Classes\"";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				"IPHONEOS_DEPLOYMENT_TARGET[arch=arm64]" = 7.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -378,6 +475,7 @@
 		1E9A625D15504F2E00EE7C9D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/Vendor/HockeySDK/Vendor\"",
@@ -393,6 +491,7 @@
 		1E9A625E15504F2E00EE7C9D /* AppStore */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/Vendor/HockeySDK/Vendor\"",

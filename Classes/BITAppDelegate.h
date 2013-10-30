@@ -32,7 +32,7 @@
 
 @interface BITAppDelegate : UIResponder <UIApplicationDelegate>
 
-@property (nonatomic, assign) IBOutlet BITDemoViewController *demoViewController;
-@property (nonatomic, retain) IBOutlet UIWindow *window;
+@property (nonatomic, weak) IBOutlet BITDemoViewController *demoViewController;
+@property (nonatomic, strong) IBOutlet UIWindow *window;
 
 @end
