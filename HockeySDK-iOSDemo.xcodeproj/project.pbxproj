@@ -58,6 +58,7 @@
 
 /* Begin PBXFileReference section */
 		1E004ED916131DAB00D1E59F /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "Resources/Default-568h@2x.png"; sourceTree = SOURCE_ROOT; };
+		1E20A585181EC68F00D5B770 /* nl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nl; path = nl.lproj/Localizable.strings; sourceTree = "<group>"; };
 		1E6DDCF3169E29370076C65D /* ro */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ro; path = ro.lproj/Localizable.strings; sourceTree = "<group>"; };
 		1E6E93EC1814177D00F8456E /* BITBetaUpdatesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BITBetaUpdatesViewController.h; sourceTree = "<group>"; };
 		1E6E93ED1814177D00F8456E /* BITBetaUpdatesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BITBetaUpdatesViewController.m; sourceTree = "<group>"; };
@@ -253,6 +254,7 @@
 				"zh-Hans",
 				ro,
 				hu,
+				nl,
 			);
 			mainGroup = 1E9A623915504F2E00EE7C9D;
 			productRefGroup = 1E9A624515504F2E00EE7C9D /* Products */;
@@ -350,6 +352,7 @@
 				1EA512DE167F7EF000FC9FBA /* zh-Hans */,
 				1E6DDCF3169E29370076C65D /* ro */,
 				1EB9352F16C52CA800365D8F /* hu */,
+				1E20A585181EC68F00D5B770 /* nl */,
 			);
 			name = Localizable.strings;
 			sourceTree = SOURCE_ROOT;
