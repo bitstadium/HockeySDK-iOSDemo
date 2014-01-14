@@ -86,6 +86,7 @@
   [self.demoViewController.waitingView removeFromSuperview];
   [self.demoViewController.navigationItem.leftBarButtonItem setEnabled:YES];
   [self.window makeKeyAndVisible];
+  [[BITHockeyManager sharedHockeyManager].authenticator authenticateInstallation];
 }
 
 - (BOOL)didCrashInLastSessionOnStartup {
@@ -113,14 +114,6 @@
 }
 
 #pragma mark - BITCrashManagerDelegate
-
-- (NSString *)applicationLogForCrashManager:(BITCrashManager *)crashManager {
-  return @"applicationLog";
-}
-
--(NSString *)userNameForCrashManager:(BITCrashManager *)crashManager {
-  return @"me";
-}
 
 - (void)crashManagerWillCancelSendingCrashReport:(BITCrashManager *)crashManager {
   if ([self didCrashInLastSessionOnStartup]) {
