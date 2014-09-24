@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1E004EDA16131DAB00D1E59F /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1E004ED916131DAB00D1E59F /* Default-568h@2x.png */; };
 		1E30AED8191A476800BE7AC9 /* QuickLook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E30AED7191A476800BE7AC9 /* QuickLook.framework */; };
 		1E30AEDF191A476D00BE7AC9 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E30AEDE191A476D00BE7AC9 /* MobileCoreServices.framework */; };
 		1E30AEE1191A477300BE7AC9 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E30AEE0191A477300BE7AC9 /* CoreGraphics.framework */; };
@@ -44,6 +43,7 @@
 		1E9A62C3155059D500EE7C9D /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1E9A62C2155059D500EE7C9D /* MainWindow.xib */; };
 		1EB52FC6167B741F00C801D5 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1EB52FC4167B741F00C801D5 /* Localizable.strings */; };
 		1EB5D9611932A1C200DAA3EC /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1EB5D9601932A1C200DAA3EC /* AssetsLibrary.framework */; };
+		1EDAD46F19D0492E0051A9A7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1EDAD46E19D0492E0051A9A7 /* LaunchScreen.storyboard */; };
 		E43264E3180C07EC005E3820 /* BITAuthenticatorDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E43264E1180C07EC005E3820 /* BITAuthenticatorDemoViewController.m */; };
 		E43264E4180C07EC005E3820 /* BITAuthenticatorDemoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E43264E2180C07EC005E3820 /* BITAuthenticatorDemoViewController.xib */; };
 /* End PBXBuildFile section */
@@ -73,7 +73,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		1E004ED916131DAB00D1E59F /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "Resources/Default-568h@2x.png"; sourceTree = SOURCE_ROOT; };
 		1E20A585181EC68F00D5B770 /* nl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nl; path = nl.lproj/Localizable.strings; sourceTree = "<group>"; };
 		1E30AED7191A476800BE7AC9 /* QuickLook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuickLook.framework; path = System/Library/Frameworks/QuickLook.framework; sourceTree = SDKROOT; };
 		1E30AEDE191A476D00BE7AC9 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
@@ -132,6 +131,7 @@
 		1EB5D9601932A1C200DAA3EC /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
 		1EB9352F16C52CA800365D8F /* hu */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = hu; path = hu.lproj/Localizable.strings; sourceTree = "<group>"; };
 		1ED8B40E15F3E875002CB229 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		1EDAD46E19D0492E0051A9A7 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = ../Resources/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E43264E0180C07EC005E3820 /* BITAuthenticatorDemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BITAuthenticatorDemoViewController.h; sourceTree = "<group>"; };
 		E43264E1180C07EC005E3820 /* BITAuthenticatorDemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BITAuthenticatorDemoViewController.m; sourceTree = "<group>"; };
 		E43264E2180C07EC005E3820 /* BITAuthenticatorDemoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BITAuthenticatorDemoViewController.xib; sourceTree = "<group>"; };
@@ -200,6 +200,7 @@
 		1E9A624F15504F2E00EE7C9D /* Ressources */ = {
 			isa = PBXGroup;
 			children = (
+				1EDAD46E19D0492E0051A9A7 /* LaunchScreen.storyboard */,
 				1E72EFDF1936B0DA00DC6301 /* 29x29.png */,
 				1E72EFE01936B0DA00DC6301 /* 57x57.png */,
 				1E72EFE11936B0DA00DC6301 /* 58x58.png */,
@@ -208,7 +209,6 @@
 				1E72EFE41936B0DA00DC6301 /* 114x114.png */,
 				1E72EFE51936B0DA00DC6301 /* 120x120.png */,
 				1E72EFE61936B0DA00DC6301 /* 144x144.png */,
-				1E004ED916131DAB00D1E59F /* Default-568h@2x.png */,
 				1EB52FC4167B741F00C801D5 /* Localizable.strings */,
 				1E754E8016221BFB0070AB92 /* HockeyDemo.xcconfig */,
 				1E9A62C2155059D500EE7C9D /* MainWindow.xib */,
@@ -375,7 +375,7 @@
 				E43264E4180C07EC005E3820 /* BITAuthenticatorDemoViewController.xib in Resources */,
 				1E9A62C3155059D500EE7C9D /* MainWindow.xib in Resources */,
 				1E754E7216221B030070AB92 /* HockeySDKResources.bundle in Resources */,
-				1E004EDA16131DAB00D1E59F /* Default-568h@2x.png in Resources */,
+				1EDAD46F19D0492E0051A9A7 /* LaunchScreen.storyboard in Resources */,
 				1E6E93FA1814193D00F8456E /* BITCrashReportsViewController.xib in Resources */,
 				1E546FAC196C79140081E763 /* Images.xcassets in Resources */,
 				1EB52FC6167B741F00C801D5 /* Localizable.strings in Resources */,

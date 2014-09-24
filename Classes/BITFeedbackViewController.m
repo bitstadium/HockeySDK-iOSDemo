@@ -31,21 +31,17 @@
 #pragma mark - Private
 
 - (void)openShareActivity {
-  Class activityViewControllerClass = NSClassFromString(@"UIActivityViewController");
-  // Framework not available, older iOS
-  if (activityViewControllerClass) {
-    
-    BITFeedbackActivity *feedbackActivity = [[BITFeedbackActivity alloc] init];
-    
-    __block UIActivityViewController *activityViewController = [[UIActivityViewController alloc] initWithActivityItems:@[@"Share this text"]
-                                                                                                 applicationActivities:@[feedbackActivity]];
-    activityViewController.excludedActivityTypes = @[UIActivityTypeAssignToContact];
-    
-    [self presentViewController:activityViewController animated:YES completion:^{
-      activityViewController.excludedActivityTypes = nil;
-      activityViewController = nil;
-    }];
-  }
+  BITFeedbackActivity *feedbackActivity = [[BITFeedbackActivity alloc] init];
+  feedbackActivity.customActivityTitle = @"Feedback";
+  
+  __block UIActivityViewController *activityViewController = [[UIActivityViewController alloc] initWithActivityItems:@[@"Share this text"]
+                                                                                               applicationActivities:@[feedbackActivity]];
+  activityViewController.excludedActivityTypes = @[UIActivityTypeAssignToContact];
+  
+  [self presentViewController:activityViewController animated:YES completion:^{
+    activityViewController.excludedActivityTypes = nil;
+    activityViewController = nil;
+  }];
 }
 
 #pragma mark - Table view data source
