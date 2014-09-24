@@ -15,9 +15,6 @@
     if (!self.didSetupHockeySDK) {
       [[BITHockeyManager sharedHockeyManager] configureWithIdentifier:@"fd51a3647d651add2171dd59d3b6e5ec"
                                                              delegate:nil];
-      [BITHockeyManager sharedHockeyManager].authenticator.authenticationSecret = @"cdfc46d2c9e8a2f64890a6bb1337eef0";
-      [BITHockeyManager sharedHockeyManager].authenticator.identificationType = BITAuthenticatorIdentificationTypeDevice;
-      [BITHockeyManager sharedHockeyManager].authenticator.restrictApplicationUsage = NO;
   
       // optionally enable logging to get more information about states.
       [BITHockeyManager sharedHockeyManager].debugLogEnabled = YES;
