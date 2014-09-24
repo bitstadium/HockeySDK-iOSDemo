@@ -1,4 +1,3 @@
-# Xcode
 build/*
 *.pbxuser
 !default.pbxuser
@@ -11,10 +10,9 @@ build/*
 xcuserdata
 profile
 *.moved-aside
-
-# osx noise
 .DS_Store
 *.ipa
 *.swp
 *~.nib
 profile
+HockeySDK-iOSDemo.xcodeproj/project.xcworkspace/xcshareddata
