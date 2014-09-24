@@ -12,18 +12,19 @@
 
 - (void)viewDidLoad {
   [super viewDidLoad];
-    if (!self.didSetupHockeySDK) {
-      [[BITHockeyManager sharedHockeyManager] configureWithIdentifier:@"fd51a3647d651add2171dd59d3b6e5ec"
-                                                             delegate:nil];
-  
-      // optionally enable logging to get more information about states.
-      [BITHockeyManager sharedHockeyManager].debugLogEnabled = YES;
-      [BITHockeyManager sharedHockeyManager].crashManager.crashManagerStatus = BITCrashManagerStatusAutoSend;
-      
-  
-      [[BITHockeyManager sharedHockeyManager] startManager];
-      self.didSetupHockeySDK = YES;
-    }
+  if (!self.didSetupHockeySDK) {
+    [[BITHockeyManager sharedHockeyManager] configureWithIdentifier:@"fd51a3647d651add2171dd59d3b6e5ec"
+                                                           delegate:nil];
+    
+    // optionally enable logging to get more information about states.
+    [BITHockeyManager sharedHockeyManager].debugLogEnabled = YES;
+    [BITHockeyManager sharedHockeyManager].crashManager.crashManagerStatus = BITCrashManagerStatusAutoSend;
+    
+    
+    [[BITHockeyManager sharedHockeyManager] startManager];
+    self.didSetupHockeySDK = YES;
+  }
+  self.preferredContentSize = CGSizeMake(self.view.frame.size.width, 40.0f);
 }
 
 - (void)didReceiveMemoryWarning {
