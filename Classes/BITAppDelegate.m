@@ -109,11 +109,21 @@
 //  return @"userEmail";
 //}
 
-- (NSString *)applicationLogForHockeyManager:(BITHockeyManager *)hockeyManager componentManager:(BITHockeyBaseManager *)componentManager {
+#pragma mark - BITCrashManagerDelegate
+
+- (NSString *)applicationLogForCrashManager:(BITCrashManager *)crashManager {
   return @"applicationLog";
 }
 
-#pragma mark - BITCrashManagerDelegate
+//- (BITHockeyAttachment *)attachmentForCrashManager:(BITCrashManager *)crashManager {
+//  NSURL *url = [[NSBundle mainBundle] URLForResource:@"Default-568h@2x" withExtension:@"png"];
+//  NSData *data = [NSData dataWithContentsOfURL:url];
+//  
+//  BITCrashAttachment *attachment = [[BITCrashAttachment alloc] initWithFilename:@"image.png"
+//                                                            crashAttachmentData:data
+//                                                                    contentType:@"image/png"];
+//  return attachment;
+//}
 
 - (void)crashManagerWillCancelSendingCrashReport:(BITCrashManager *)crashManager {
   if ([self didCrashInLastSessionOnStartup]) {

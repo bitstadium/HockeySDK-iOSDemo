@@ -31,21 +31,17 @@
 #pragma mark - Private
 
 - (void)openShareActivity {
-  Class activityViewControllerClass = NSClassFromString(@"UIActivityViewController");
-  // Framework not available, older iOS
-  if (activityViewControllerClass) {
-    
-    BITFeedbackActivity *feedbackActivity = [[BITFeedbackActivity alloc] init];
-    
-    __block UIActivityViewController *activityViewController = [[UIActivityViewController alloc] initWithActivityItems:@[@"Share this text"]
-                                                                                                 applicationActivities:@[feedbackActivity]];
-    activityViewController.excludedActivityTypes = @[UIActivityTypeAssignToContact];
-    
-    [self presentViewController:activityViewController animated:YES completion:^{
-      activityViewController.excludedActivityTypes = nil;
-      activityViewController = nil;
-    }];
-  }
+  BITFeedbackActivity *feedbackActivity = [[BITFeedbackActivity alloc] init];
+  feedbackActivity.customActivityTitle = @"Feedback";
+  
+  __block UIActivityViewController *activityViewController = [[UIActivityViewController alloc] initWithActivityItems:@[@"Share this text"]
+                                                                                               applicationActivities:@[feedbackActivity]];
+  activityViewController.excludedActivityTypes = @[UIActivityTypeAssignToContact];
+  
+  [self presentViewController:activityViewController animated:YES completion:^{
+    activityViewController.excludedActivityTypes = nil;
+    activityViewController = nil;
+  }];
 }
 
 #pragma mark - Table view data source
@@ -55,6 +51,10 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+  if (section == 0) {
+    return 4;
+  }
+  
   return 1;
 }
 
@@ -84,7 +84,15 @@
   
   // Configure the cell...
   if (indexPath.section == 0) {
-    cell.textLabel.text = NSLocalizedString(@"Modal presentation", @"");
+    if (indexPath.row == 0) {
+      cell.textLabel.text = NSLocalizedString(@"Modal presentation", @"");
+    } else if (indexPath.row == 1) {
+      cell.textLabel.text = NSLocalizedString(@"Compose feedback", @"");
+    } else if (indexPath.row == 2) {
+      cell.textLabel.text = NSLocalizedString(@"Compose with screenshot", @"");
+    } else {
+      cell.textLabel.text = NSLocalizedString(@"Compose with data", @"");
+    }
   } else if (indexPath.section == 1) {
     cell.textLabel.text = NSLocalizedString(@"Activity/Share", @"");
   } else {
@@ -101,7 +109,19 @@
   [tableView deselectRowAtIndexPath:indexPath animated:YES];
   
   if (indexPath.section == 0) {
-    [[BITHockeyManager sharedHockeyManager].feedbackManager showFeedbackListView];
+    if (indexPath.row == 0) {
+      [[BITHockeyManager sharedHockeyManager].feedbackManager showFeedbackListView];
+    } else if (indexPath.row == 1) {
+      [[BITHockeyManager sharedHockeyManager].feedbackManager showFeedbackComposeView];
+    } else if (indexPath.row == 2) {
+      [[BITHockeyManager sharedHockeyManager].feedbackManager showFeedbackComposeViewWithGeneratedScreenshot];
+    } else {
+      NSArray *paths = NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES);
+      NSString *settingsDir = [[paths objectAtIndex:0] stringByAppendingPathComponent:BITHOCKEY_IDENTIFIER];
+      
+      NSData *binaryData = [NSData dataWithContentsOfFile:[settingsDir stringByAppendingPathComponent:@"BITFeedbackManager.plist"]];
+      [[BITHockeyManager sharedHockeyManager].feedbackManager showFeedbackComposeViewWithPreparedItems:@[binaryData]];
+    }
   } else if (indexPath.section == 1) {
     [self openShareActivity];
   } else {
