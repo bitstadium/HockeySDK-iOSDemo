@@ -44,6 +44,13 @@
 		1EB52FC6167B741F00C801D5 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1EB52FC4167B741F00C801D5 /* Localizable.strings */; };
 		1EB5D9611932A1C200DAA3EC /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1EB5D9601932A1C200DAA3EC /* AssetsLibrary.framework */; };
 		1EDAD46F19D0492E0051A9A7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1EDAD46E19D0492E0051A9A7 /* LaunchScreen.storyboard */; };
+		6C65DFCA19D2F3A000467082 /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C65DFC919D2F3A000467082 /* NotificationCenter.framework */; };
+		6C65DFD019D2F3A000467082 /* TodayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C65DFCF19D2F3A000467082 /* TodayViewController.m */; };
+		6C65DFD219D2F3A000467082 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6C65DFD119D2F3A000467082 /* MainInterface.storyboard */; };
+		6C65DFD519D2F3A000467082 /* iOSDemo-Today.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 6C65DFC819D2F3A000467082 /* iOSDemo-Today.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		6C65DFE219D2F7AD00467082 /* CrashReporter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E754E971622209D0070AB92 /* CrashReporter.framework */; };
+		6C65DFE519D2F80300467082 /* libHockeySDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E7E599F15C7FCC100D63C84 /* libHockeySDK.a */; };
+		6C65DFE619D2F93200467082 /* HockeySDKResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 1E7E59A515C7FCC100D63C84 /* HockeySDKResources.bundle */; };
 		E43264E3180C07EC005E3820 /* BITAuthenticatorDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E43264E1180C07EC005E3820 /* BITAuthenticatorDemoViewController.m */; };
 		E43264E4180C07EC005E3820 /* BITAuthenticatorDemoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E43264E2180C07EC005E3820 /* BITAuthenticatorDemoViewController.xib */; };
 /* End PBXBuildFile section */
@@ -70,7 +77,35 @@
 			remoteGlobalIDString = 1E59550A15B6F45800A03429;
 			remoteInfo = HockeySDKResources;
 		};
+		6C65DFD319D2F3A000467082 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1E9A623B15504F2E00EE7C9D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6C65DFC719D2F3A000467082;
+			remoteInfo = "iOSDemo-Today";
+		};
+		6C65DFD619D2F3A000467082 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1E9A623B15504F2E00EE7C9D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6C65DFC719D2F3A000467082;
+			remoteInfo = "iOSDemo-Today";
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		6C65DFE119D2F3A000467082 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				6C65DFD519D2F3A000467082 /* iOSDemo-Today.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		1E20A585181EC68F00D5B770 /* nl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nl; path = nl.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -132,6 +167,12 @@
 		1EB9352F16C52CA800365D8F /* hu */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = hu; path = hu.lproj/Localizable.strings; sourceTree = "<group>"; };
 		1ED8B40E15F3E875002CB229 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		1EDAD46E19D0492E0051A9A7 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = ../Resources/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		6C65DFC819D2F3A000467082 /* iOSDemo-Today.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "iOSDemo-Today.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6C65DFC919D2F3A000467082 /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
+		6C65DFCD19D2F3A000467082 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6C65DFCE19D2F3A000467082 /* TodayViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TodayViewController.h; sourceTree = "<group>"; };
+		6C65DFCF19D2F3A000467082 /* TodayViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TodayViewController.m; sourceTree = "<group>"; };
+		6C65DFD119D2F3A000467082 /* MainInterface.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainInterface.storyboard; sourceTree = "<group>"; };
 		E43264E0180C07EC005E3820 /* BITAuthenticatorDemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BITAuthenticatorDemoViewController.h; sourceTree = "<group>"; };
 		E43264E1180C07EC005E3820 /* BITAuthenticatorDemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BITAuthenticatorDemoViewController.m; sourceTree = "<group>"; };
 		E43264E2180C07EC005E3820 /* BITAuthenticatorDemoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BITAuthenticatorDemoViewController.xib; sourceTree = "<group>"; };
@@ -156,6 +197,16 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		6C65DFC519D2F3A000467082 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6C65DFE519D2F80300467082 /* libHockeySDK.a in Frameworks */,
+				6C65DFCA19D2F3A000467082 /* NotificationCenter.framework in Frameworks */,
+				6C65DFE219D2F7AD00467082 /* CrashReporter.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -165,6 +216,7 @@
 				1E546FAB196C79140081E763 /* Images.xcassets */,
 				1E9A6295155053DA00EE7C9D /* Classes */,
 				1E9A624F15504F2E00EE7C9D /* Ressources */,
+				6C65DFCB19D2F3A000467082 /* iOSDemo-Today */,
 				1E9A624715504F2E00EE7C9D /* Frameworks */,
 				1E9A624515504F2E00EE7C9D /* Products */,
 				1E9A62AF155056A800EE7C9D /* HockeySDK.xcodeproj */,
@@ -175,6 +227,7 @@
 			isa = PBXGroup;
 			children = (
 				1E9A624415504F2E00EE7C9D /* HockeySDK-iOSDemo.app */,
+				6C65DFC819D2F3A000467082 /* iOSDemo-Today.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -193,6 +246,7 @@
 				1E9A624A15504F2E00EE7C9D /* Foundation.framework */,
 				1E9A624815504F2E00EE7C9D /* UIKit.framework */,
 				1ED8B40E15F3E875002CB229 /* SenTestingKit.framework */,
+				6C65DFC919D2F3A000467082 /* NotificationCenter.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -257,6 +311,25 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		6C65DFCB19D2F3A000467082 /* iOSDemo-Today */ = {
+			isa = PBXGroup;
+			children = (
+				6C65DFCE19D2F3A000467082 /* TodayViewController.h */,
+				6C65DFCF19D2F3A000467082 /* TodayViewController.m */,
+				6C65DFD119D2F3A000467082 /* MainInterface.storyboard */,
+				6C65DFCC19D2F3A000467082 /* Supporting Files */,
+			);
+			path = "iOSDemo-Today";
+			sourceTree = "<group>";
+		};
+		6C65DFCC19D2F3A000467082 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				6C65DFCD19D2F3A000467082 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -267,15 +340,35 @@
 				1E9A624015504F2E00EE7C9D /* Sources */,
 				1E9A624115504F2E00EE7C9D /* Frameworks */,
 				1E9A624215504F2E00EE7C9D /* Resources */,
+				6C65DFE119D2F3A000467082 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				6C65DFD419D2F3A000467082 /* PBXTargetDependency */,
+				6C65DFD719D2F3A000467082 /* PBXTargetDependency */,
 			);
 			name = "HockeySDK-iOSDemo";
 			productName = "HockeySDK-iOSDemo";
 			productReference = 1E9A624415504F2E00EE7C9D /* HockeySDK-iOSDemo.app */;
 			productType = "com.apple.product-type.application";
+		};
+		6C65DFC719D2F3A000467082 /* iOSDemo-Today */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6C65DFE019D2F3A000467082 /* Build configuration list for PBXNativeTarget "iOSDemo-Today" */;
+			buildPhases = (
+				6C65DFC419D2F3A000467082 /* Sources */,
+				6C65DFC519D2F3A000467082 /* Frameworks */,
+				6C65DFC619D2F3A000467082 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "iOSDemo-Today";
+			productName = "iOSDemo-Today";
+			productReference = 6C65DFC819D2F3A000467082 /* iOSDemo-Today.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -293,6 +386,10 @@
 								enabled = 0;
 							};
 						};
+					};
+					6C65DFC719D2F3A000467082 = {
+						CreatedOnToolsVersion = 6.0.1;
+						DevelopmentTeam = W477SBT4VU;
 					};
 				};
 			};
@@ -329,6 +426,7 @@
 			projectRoot = "";
 			targets = (
 				1E9A624315504F2E00EE7C9D /* HockeySDK-iOSDemo */,
+				6C65DFC719D2F3A000467082 /* iOSDemo-Today */,
 			);
 		};
 /* End PBXProject section */
@@ -384,6 +482,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		6C65DFC619D2F3A000467082 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6C65DFD219D2F3A000467082 /* MainInterface.storyboard in Resources */,
+				6C65DFE619D2F93200467082 /* HockeySDKResources.bundle in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -403,7 +510,28 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		6C65DFC419D2F3A000467082 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6C65DFD019D2F3A000467082 /* TodayViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		6C65DFD419D2F3A000467082 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6C65DFC719D2F3A000467082 /* iOSDemo-Today */;
+			targetProxy = 6C65DFD319D2F3A000467082 /* PBXContainerItemProxy */;
+		};
+		6C65DFD719D2F3A000467082 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6C65DFC719D2F3A000467082 /* iOSDemo-Today */;
+			targetProxy = 6C65DFD619D2F3A000467082 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		1EB52FC4167B741F00C801D5 /* Localizable.strings */ = {
@@ -459,6 +587,7 @@
 				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/Vendor/HockeySDK/Classes\"";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				"IPHONEOS_DEPLOYMENT_TARGET[arch=arm64]" = 7.0;
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -470,8 +599,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_OBJC_ARC = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/Vendor/HockeySDK/Vendor\"",
@@ -481,7 +610,7 @@
 				GCC_PREFIX_HEADER = "Resources/HockeySDK-iOSDemo-Prefix.pch";
 				INFOPLIST_FILE = "Resources/HockeySDK-iOSDemo-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "860D7F07-D53E-4EE8-B60A-9121EF1EA39F";
 				WRAPPER_EXTENSION = app;
 			};
 			name = AdHoc;
@@ -516,6 +645,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				"IPHONEOS_DEPLOYMENT_TARGET[arch=arm64]" = 7.0;
 				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -548,6 +678,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				"IPHONEOS_DEPLOYMENT_TARGET[arch=arm64]" = 7.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -571,7 +702,6 @@
 				GCC_PREFIX_HEADER = "Resources/HockeySDK-iOSDemo-Prefix.pch";
 				INFOPLIST_FILE = "Resources/HockeySDK-iOSDemo-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -593,8 +723,126 @@
 				GCC_PREFIX_HEADER = "Resources/HockeySDK-iOSDemo-Prefix.pch";
 				INFOPLIST_FILE = "Resources/HockeySDK-iOSDemo-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
+			};
+			name = AppStore;
+		};
+		6C65DFD819D2F3A000467082 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Vendor/HockeySDK/Vendor",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				INFOPLIST_FILE = "iOSDemo-Today/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		6C65DFD919D2F3A000467082 /* AdHoc */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Vendor/HockeySDK/Vendor",
+				);
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "iOSDemo-Today/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "860D7F07-D53E-4EE8-B60A-9121EF1EA39F";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = AdHoc;
+		};
+		6C65DFDA19D2F3A000467082 /* AppStore */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Vendor/HockeySDK/Vendor",
+				);
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "iOSDemo-Today/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				VALIDATE_PRODUCT = YES;
 			};
 			name = AppStore;
 		};
@@ -617,6 +865,16 @@
 				1E9A625D15504F2E00EE7C9D /* Debug */,
 				1E85692815D2FAAC0066F15E /* AdHoc */,
 				1E9A625E15504F2E00EE7C9D /* AppStore */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		6C65DFE019D2F3A000467082 /* Build configuration list for PBXNativeTarget "iOSDemo-Today" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6C65DFD819D2F3A000467082 /* Debug */,
+				6C65DFD919D2F3A000467082 /* AdHoc */,
+				6C65DFDA19D2F3A000467082 /* AppStore */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
