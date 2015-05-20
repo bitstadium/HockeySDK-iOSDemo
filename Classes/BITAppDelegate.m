@@ -91,7 +91,7 @@
 
 - (BOOL)didCrashInLastSessionOnStartup {
   return ([[BITHockeyManager sharedHockeyManager].crashManager didCrashInLastSession] &&
-          [[BITHockeyManager sharedHockeyManager].crashManager timeintervalCrashInLastSessionOccured] < 5);
+          [[BITHockeyManager sharedHockeyManager].crashManager timeIntervalCrashInLastSessionOccurred] < 5);
 }
 
 
