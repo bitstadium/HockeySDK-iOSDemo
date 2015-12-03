@@ -467,10 +467,10 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = CNS;
-				LastUpgradeCheck = 0630;
+				LastUpgradeCheck = 0720;
 				TargetAttributes = {
 					1E9A624315504F2E00EE7C9D = {
-						DevelopmentTeam = W477SBT4VU;
+						DevelopmentTeam = 5Z97G9NZQ6;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
 								enabled = 0;
@@ -479,7 +479,7 @@
 					};
 					6C65DFC719D2F3A000467082 = {
 						CreatedOnToolsVersion = 6.0.1;
-						DevelopmentTeam = W477SBT4VU;
+						DevelopmentTeam = 5Z97G9NZQ6;
 					};
 				};
 			};
@@ -749,6 +749,7 @@
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/Vendor/HockeySDK/Vendor\"",
@@ -758,6 +759,7 @@
 				GCC_PREFIX_HEADER = "Resources/HockeySDK-iOSDemo-Prefix.pch";
 				INFOPLIST_FILE = "Resources/HockeySDK-iOSDemo-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				PRODUCT_BUNDLE_IDENTIFIER = net.hockeyapp.sdk.ios.demo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
@@ -779,6 +781,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -843,6 +846,7 @@
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/Vendor/HockeySDK/Vendor\"",
@@ -852,6 +856,7 @@
 				GCC_PREFIX_HEADER = "Resources/HockeySDK-iOSDemo-Prefix.pch";
 				INFOPLIST_FILE = "Resources/HockeySDK-iOSDemo-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				PRODUCT_BUNDLE_IDENTIFIER = net.hockeyapp.sdk.ios.demo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -865,6 +870,7 @@
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/Vendor/HockeySDK/Vendor\"",
@@ -874,6 +880,7 @@
 				GCC_PREFIX_HEADER = "Resources/HockeySDK-iOSDemo-Prefix.pch";
 				INFOPLIST_FILE = "Resources/HockeySDK-iOSDemo-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				PRODUCT_BUNDLE_IDENTIFIER = net.hockeyapp.sdk.ios.demo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -887,6 +894,7 @@
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/Vendor/HockeySDK/Vendor\"",
@@ -896,6 +904,7 @@
 				GCC_PREFIX_HEADER = "Resources/HockeySDK-iOSDemo-Prefix.pch";
 				INFOPLIST_FILE = "Resources/HockeySDK-iOSDemo-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				PRODUCT_BUNDLE_IDENTIFIER = net.hockeyapp.sdk.ios.demo;
 				PRODUCT_NAME = "HockeySDK-iOSDemo";
 				WRAPPER_EXTENSION = app;
 			};
@@ -909,6 +918,7 @@
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/Vendor/HockeySDK/Vendor\"",
@@ -918,6 +928,7 @@
 				GCC_PREFIX_HEADER = "Resources/HockeySDK-iOSDemo-Prefix.pch";
 				INFOPLIST_FILE = "Resources/HockeySDK-iOSDemo-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				PRODUCT_BUNDLE_IDENTIFIER = net.hockeyapp.sdk.ios.demo;
 				PRODUCT_NAME = "HockeySDK-iOSDemo";
 				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
@@ -932,6 +943,7 @@
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/Vendor/HockeySDK/Vendor\"",
@@ -941,6 +953,7 @@
 				GCC_PREFIX_HEADER = "Resources/HockeySDK-iOSDemo-Prefix.pch";
 				INFOPLIST_FILE = "Resources/HockeySDK-iOSDemo-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				PRODUCT_BUNDLE_IDENTIFIER = net.hockeyapp.sdk.ios.demo;
 				PRODUCT_NAME = "HockeySDK-iOSDemo";
 				WRAPPER_EXTENSION = app;
 			};
@@ -957,6 +970,7 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Vendor/HockeySDK/Vendor",
@@ -971,6 +985,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "net.hockeyapp.sdk.ios.demo.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 			};
@@ -996,6 +1011,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				COPY_PHASE_STRIP = YES;
+				ENABLE_BITCODE = NO;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -1013,6 +1029,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = "net.hockeyapp.sdk.ios.demo.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
@@ -1040,6 +1057,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				COPY_PHASE_STRIP = YES;
+				ENABLE_BITCODE = NO;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -1057,6 +1075,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = "net.hockeyapp.sdk.ios.demo.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
