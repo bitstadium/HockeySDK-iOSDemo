@@ -52,7 +52,7 @@
   [BITHockeyManager sharedHockeyManager].authenticator.restrictApplicationUsage = NO;
   
   // optionally enable logging to get more information about states.
-  [BITHockeyManager sharedHockeyManager].debugLogEnabled = YES;
+  [BITHockeyManager sharedHockeyManager].logLevel = BITLogLevelVerbose;
 
   [[BITHockeyManager sharedHockeyManager] startManager];
 
