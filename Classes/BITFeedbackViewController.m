@@ -8,8 +8,8 @@
 
 #import "BITFeedbackViewController.h"
 
-#import "HockeySDK.h"
-#import "HockeySDKPrivate.h"
+#import <HockeySDK/HockeySDK.h>
+
 
 
 @interface BITFeedbackViewController ()
@@ -108,31 +108,31 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
   [tableView deselectRowAtIndexPath:indexPath animated:YES];
   
-  if (indexPath.section == 0) {
-    if (indexPath.row == 0) {
-      [[BITHockeyManager sharedHockeyManager].feedbackManager showFeedbackListView];
-    } else if (indexPath.row == 1) {
-      [[BITHockeyManager sharedHockeyManager].feedbackManager showFeedbackComposeView];
-    } else if (indexPath.row == 2) {
-      [[BITHockeyManager sharedHockeyManager].feedbackManager showFeedbackComposeViewWithGeneratedScreenshot];
-    } else {
-      NSArray *paths = NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES);
-      NSString *settingsDir = [[paths objectAtIndex:0] stringByAppendingPathComponent:BITHOCKEY_IDENTIFIER];
-      
-      NSData *binaryData = [NSData dataWithContentsOfFile:[settingsDir stringByAppendingPathComponent:@"BITFeedbackManager.plist"]];
-      [[BITHockeyManager sharedHockeyManager].feedbackManager showFeedbackComposeViewWithPreparedItems:@[binaryData]];
-    }
-  } else if (indexPath.section == 1) {
-    [self openShareActivity];
-  } else {
-    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:BITHockeyLocalizedString(@"HockeyFeedbackNewMessageTitle")
-                                                        message:BITHockeyLocalizedString(@"HockeyFeedbackNewMessageText")
-                                                       delegate:self
-                                              cancelButtonTitle:BITHockeyLocalizedString(@"HockeyFeedbackIgnore")
-                                              otherButtonTitles:BITHockeyLocalizedString(@"HockeyFeedbackShow"), nil
-                              ];
-    [alertView show];
-  }
+//  if (indexPath.section == 0) {
+//    if (indexPath.row == 0) {
+//      [[BITHockeyManager sharedHockeyManager].feedbackManager showFeedbackListView];
+//    } else if (indexPath.row == 1) {
+//      [[BITHockeyManager sharedHockeyManager].feedbackManager showFeedbackComposeView];
+//    } else if (indexPath.row == 2) {
+//      [[BITHockeyManager sharedHockeyManager].feedbackManager showFeedbackComposeViewWithGeneratedScreenshot];
+//    } else {
+//      NSArray *paths = NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES);
+//      NSString *settingsDir = [[paths objectAtIndex:0] stringByAppendingPathComponent:BITHOCKEY_IDENTIFIER];
+//      
+//      NSData *binaryData = [NSData dataWithContentsOfFile:[settingsDir stringByAppendingPathComponent:@"BITFeedbackManager.plist"]];
+//      [[BITHockeyManager sharedHockeyManager].feedbackManager showFeedbackComposeViewWithPreparedItems:@[binaryData]];
+//    }
+//  } else if (indexPath.section == 1) {
+//    [self openShareActivity];
+//  } else {
+//    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"HockeyFeedbackNewMessageTitle")
+//                                                        message:NSLocalizedString(@"HockeyFeedbackNewMessageText")
+//                                                       delegate:self
+//                                              cancelButtonTitle:NSLocalizedString(@"HockeyFeedbackIgnore")
+//                                              otherButtonTitles:NSLocalizedString(@"HockeyFeedbackShow"), nil
+//                              ];
+//    [alertView show];
+//  }
 }
 
 

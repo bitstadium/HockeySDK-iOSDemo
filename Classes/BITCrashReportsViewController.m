@@ -8,8 +8,8 @@
 
 #import "BITCrashReportsViewController.h"
 
-#import "HockeySDK.h"
-#import "HockeySDKPrivate.h"
+#import <HockeySDK/HockeySDK.h>
+
 
 
 @interface BITCrashReportsViewController ()
@@ -115,22 +115,22 @@
     }
   } else {
     NSString *appName = @"DemoApp";
-    NSString *alertDescription = [NSString stringWithFormat:BITHockeyLocalizedString(@"CrashDataFoundAnonymousDescription"), appName];
+    NSString *alertDescription = [NSString stringWithFormat:NSLocalizedString(@"CrashDataFoundAnonymousDescription", @""), appName];
     
     if (indexPath.row == 2) {
-      alertDescription = [NSString stringWithFormat:BITHockeyLocalizedString(@"CrashDataFoundDescription"), appName];
+      alertDescription = [NSString stringWithFormat:NSLocalizedString(@"CrashDataFoundDescription", @""), appName];
     }
     
 
     
-    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:[NSString stringWithFormat:BITHockeyLocalizedString(@"CrashDataFoundTitle"), appName]
+    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:[NSString stringWithFormat:NSLocalizedString(@"CrashDataFoundTitle", @""), appName]
                                                         message:alertDescription
                                                        delegate:self
-                                              cancelButtonTitle:BITHockeyLocalizedString(@"CrashDontSendReport")
-                                              otherButtonTitles:BITHockeyLocalizedString(@"CrashSendReport"), nil];
+                                              cancelButtonTitle:NSLocalizedString(@"CrashDontSendReport", @"")
+                                              otherButtonTitles:NSLocalizedString(@"CrashSendReport", @""), nil];
     
     if (indexPath.row == 1) {
-      [alertView addButtonWithTitle:BITHockeyLocalizedString(@"CrashSendReportAlways")];
+      [alertView addButtonWithTitle:NSLocalizedString(@"CrashSendReportAlways", @"")];
     }
     
     [alertView show];

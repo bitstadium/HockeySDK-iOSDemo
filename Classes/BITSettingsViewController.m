@@ -27,7 +27,8 @@
  */
 
 #import "BITSettingsViewController.h"
-#import "HockeySDK.h"
+#import <HockeySDK/HockeySDK.h>
+
 
 
 @implementation BITSettingsViewController

@@ -28,7 +28,7 @@
 
 #import "BITDemoViewController.h"
 #import "BITSettingsViewController.h"
-#import "HockeySDK.h"
+#import <HockeySDK/HockeySDK.h>
 
 #import "BITAuthenticatorDemoViewController.h"
 #import "BITBetaUpdatesViewController.h"

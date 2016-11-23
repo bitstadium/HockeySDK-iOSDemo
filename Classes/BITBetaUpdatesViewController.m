@@ -8,8 +8,8 @@
 
 #import "BITBetaUpdatesViewController.h"
 
-#import "HockeySDK.h"
-#import "HockeySDKPrivate.h"
+#import <HockeySDK/HockeySDK.h>
+
 
 
 @interface BITBetaUpdatesViewController ()
@@ -88,22 +88,22 @@
     [[BITHockeyManager sharedHockeyManager].updateManager showUpdateView];
   } else {
     if (indexPath.row == 2) {
-      UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:BITHockeyLocalizedString(@"UpdateAvailable")
-                                                          message:[NSString stringWithFormat:BITHockeyLocalizedString(@"UpdateAlertMandatoryTextWithAppVersion"), @"DemoApp 5.0 (284)"]
+      UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"UpdateAvailable", @"")
+                                                          message:[NSString stringWithFormat:NSLocalizedString(@"UpdateAlertMandatoryTextWithAppVersion", @""), @"DemoApp 5.0 (284)"]
                                                          delegate:self
-                                                cancelButtonTitle:BITHockeyLocalizedString(@"UpdateInstall")
+                                                cancelButtonTitle:NSLocalizedString(@"UpdateInstall", @"")
                                                 otherButtonTitles:nil
                                 ];
       [alertView show];
     } else {
-      UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:BITHockeyLocalizedString(@"UpdateAvailable")
-                                                          message:[NSString stringWithFormat:BITHockeyLocalizedString(@"UpdateAlertTextWithAppVersion"), @"DemoApp 5.0 (284)"]
+      UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"UpdateAvailable", @"")
+                                                          message:[NSString stringWithFormat:NSLocalizedString(@"UpdateAlertTextWithAppVersion", @"%@"), @"DemoApp 5.0 (284)"]
                                                          delegate:self
-                                                cancelButtonTitle:BITHockeyLocalizedString(@"UpdateIgnore")
-                                                otherButtonTitles:BITHockeyLocalizedString(@"UpdateShow"), nil
+                                                cancelButtonTitle:NSLocalizedString(@"UpdateIgnore", @"")
+                                                otherButtonTitles:NSLocalizedString(@"UpdateShow", @""), nil
                                 ];
       if (indexPath.row == 1) {
-        [alertView addButtonWithTitle:BITHockeyLocalizedString(@"UpdateInstall")];
+        [alertView addButtonWithTitle:NSLocalizedString(@"UpdateInstall", @"")];
       }
       [alertView show];
     }

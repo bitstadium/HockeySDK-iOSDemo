@@ -28,8 +28,8 @@
 
 #import "BITAppDelegate.h"
 #import "BITDemoViewController.h"
-#import "HockeySDK.h"
 
+#import <HockeySDK/HockeySDK.h>
 
 @interface BITAppDelegate () <BITHockeyManagerDelegate> {}
 

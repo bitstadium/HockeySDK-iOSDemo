@@ -7,8 +7,7 @@
 //
 
 #import "BITAuthenticatorDemoViewController.h"
-#import "HockeySDK.h"
-#import "HockeySDKPrivate.h"
+#import <HockeySDK/HockeySDK.h>
 
 typedef NS_ENUM(NSUInteger, AuthenticatorDemoAlertViewTag) {
   AuthenticatorDemoAlertViewTagOther = 0,
@@ -200,11 +199,11 @@ typedef NS_ENUM(NSUInteger, AuthenticatorDemoAlertViewTag) {
   static NSArray *messages = nil;
   static dispatch_once_t onceToken;
   dispatch_once(&onceToken, ^{
-    messages = @[ BITHockeyLocalizedString(@"HockeyAuthenticationViewControllerNetworkError"),
-                  BITHockeyLocalizedString(@"HockeyAuthenticationFailedAuthenticate"),
-                  BITHockeyLocalizedString(@"HockeyAuthenticationNotMember"),
-                  BITHockeyLocalizedString(@"HockeyAuthenticationContactDeveloper"),
-                  BITHockeyLocalizedString(@"HockeyAuthenticationWrongEmailPassword"),
+    messages = @[@"HockeyAuthenticationViewControllerNetworkError",
+                 @"HockeyAuthenticationFailedAuthenticate",
+                  @"HockeyAuthenticationNotMember",
+                  @"HockeyAuthenticationContactDeveloper",
+                  @"HockeyAuthenticationWrongEmailPassword",
                  ];
   });
   

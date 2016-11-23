@@ -1,6 +1,7 @@
 #import "TodayViewController.h"
 #import <NotificationCenter/NotificationCenter.h>
-#import "HockeySDK.h"
+
+#import <HockeySDK/HockeySDK.h>
 
 @interface TodayViewController () <NCWidgetProviding>
 

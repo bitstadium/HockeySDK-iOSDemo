@@ -7,14 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1B25BC0BDE52DC867AAD38FB /* libPods-HockeySDK-iOSDemo Framework.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7696D8B9D0BDE21D455253D2 /* libPods-HockeySDK-iOSDemo Framework.a */; };
 		1E30AED8191A476800BE7AC9 /* QuickLook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E30AED7191A476800BE7AC9 /* QuickLook.framework */; };
 		1E30AEDF191A476D00BE7AC9 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E30AEDE191A476D00BE7AC9 /* MobileCoreServices.framework */; };
 		1E30AEE1191A477300BE7AC9 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E30AEE0191A477300BE7AC9 /* CoreGraphics.framework */; };
 		1E30AEE3191A477A00BE7AC9 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E30AEE2191A477A00BE7AC9 /* SystemConfiguration.framework */; };
 		1E30AEE5191A478100BE7AC9 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E30AEE4191A478100BE7AC9 /* QuartzCore.framework */; };
 		1E3A2B4E196460E200D5BD66 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E3A2B4D196460E200D5BD66 /* CFNetwork.framework */; };
-		1E3A2B551964723600D5BD66 /* libHockeySDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E7E599F15C7FCC100D63C84 /* libHockeySDK.a */; };
-		1E3A2B561964725300D5BD66 /* CrashReporter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E754E971622209D0070AB92 /* CrashReporter.framework */; };
 		1E546FAC196C79140081E763 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1E546FAB196C79140081E763 /* Images.xcassets */; };
 		1E6E93EF1814177D00F8456E /* BITBetaUpdatesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E6E93ED1814177D00F8456E /* BITBetaUpdatesViewController.m */; };
 		1E6E93F01814177D00F8456E /* BITBetaUpdatesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1E6E93EE1814177D00F8456E /* BITBetaUpdatesViewController.xib */; };
@@ -32,7 +31,6 @@
 		1E72EFEC1936B0DA00DC6301 /* 114x114.png in Resources */ = {isa = PBXBuildFile; fileRef = 1E72EFE41936B0DA00DC6301 /* 114x114.png */; };
 		1E72EFED1936B0DA00DC6301 /* 120x120.png in Resources */ = {isa = PBXBuildFile; fileRef = 1E72EFE51936B0DA00DC6301 /* 120x120.png */; };
 		1E72EFEE1936B0DA00DC6301 /* 144x144.png in Resources */ = {isa = PBXBuildFile; fileRef = 1E72EFE61936B0DA00DC6301 /* 144x144.png */; };
-		1E754E7216221B030070AB92 /* HockeySDKResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 1E7E59A515C7FCC100D63C84 /* HockeySDKResources.bundle */; };
 		1E95486415C8011800C35F24 /* BITSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E95486315C8011800C35F24 /* BITSettingsViewController.m */; };
 		1E9A624915504F2E00EE7C9D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E9A624815504F2E00EE7C9D /* UIKit.framework */; };
 		1E9A624B15504F2E00EE7C9D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E9A624A15504F2E00EE7C9D /* Foundation.framework */; };
@@ -66,7 +64,6 @@
 		1EB617FB1B0A38C50035A986 /* 58x58.png in Resources */ = {isa = PBXBuildFile; fileRef = 1E72EFE11936B0DA00DC6301 /* 58x58.png */; };
 		1EB617FC1B0A38C50035A986 /* BITAuthenticatorDemoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E43264E2180C07EC005E3820 /* BITAuthenticatorDemoViewController.xib */; };
 		1EB617FD1B0A38C50035A986 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1E9A62C2155059D500EE7C9D /* MainWindow.xib */; };
-		1EB617FE1B0A38C50035A986 /* HockeySDKResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 1E7E59A515C7FCC100D63C84 /* HockeySDKResources.bundle */; };
 		1EB617FF1B0A38C50035A986 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1EDAD46E19D0492E0051A9A7 /* LaunchScreen.storyboard */; };
 		1EB618001B0A38C50035A986 /* BITCrashReportsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1E6E93F81814193D00F8456E /* BITCrashReportsViewController.xib */; };
 		1EB618011B0A38C50035A986 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1E546FAB196C79140081E763 /* Images.xcassets */; };
@@ -74,28 +71,18 @@
 		1EB618031B0A38C50035A986 /* 144x144.png in Resources */ = {isa = PBXBuildFile; fileRef = 1E72EFE61936B0DA00DC6301 /* 144x144.png */; };
 		1EB618041B0A38C50035A986 /* 120x120.png in Resources */ = {isa = PBXBuildFile; fileRef = 1E72EFE51936B0DA00DC6301 /* 120x120.png */; };
 		1EB618061B0A38C50035A986 /* iOSDemo-Today.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 6C65DFC819D2F3A000467082 /* iOSDemo-Today.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		1EB618181B0A38EE0035A986 /* HockeySDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1EB618151B0A38C60035A986 /* HockeySDK.framework */; };
-		1EB6181D1B0A5BBC0035A986 /* HockeySDK.framework in Resources */ = {isa = PBXBuildFile; fileRef = 1EB618151B0A38C60035A986 /* HockeySDK.framework */; };
 		1EDAD46F19D0492E0051A9A7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1EDAD46E19D0492E0051A9A7 /* LaunchScreen.storyboard */; };
 		6C65DFCA19D2F3A000467082 /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C65DFC919D2F3A000467082 /* NotificationCenter.framework */; };
 		6C65DFD019D2F3A000467082 /* TodayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C65DFCF19D2F3A000467082 /* TodayViewController.m */; };
 		6C65DFD219D2F3A000467082 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6C65DFD119D2F3A000467082 /* MainInterface.storyboard */; };
 		6C65DFD519D2F3A000467082 /* iOSDemo-Today.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 6C65DFC819D2F3A000467082 /* iOSDemo-Today.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		6C65DFE219D2F7AD00467082 /* CrashReporter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E754E971622209D0070AB92 /* CrashReporter.framework */; };
-		6C65DFE519D2F80300467082 /* libHockeySDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E7E599F15C7FCC100D63C84 /* libHockeySDK.a */; };
-		6C65DFE619D2F93200467082 /* HockeySDKResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 1E7E59A515C7FCC100D63C84 /* HockeySDKResources.bundle */; };
 		E43264E3180C07EC005E3820 /* BITAuthenticatorDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E43264E1180C07EC005E3820 /* BITAuthenticatorDemoViewController.m */; };
 		E43264E4180C07EC005E3820 /* BITAuthenticatorDemoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E43264E2180C07EC005E3820 /* BITAuthenticatorDemoViewController.xib */; };
+		E8EF856BA16B74287B6185D0 /* libPods-HockeySDK-iOSDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C52FF80A1919636D2E95A53 /* libPods-HockeySDK-iOSDemo.a */; };
+		FF47D8756A9DC934F076E41A /* libPods-iOSDemo-Today.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B28D2582A6195994C995FEF /* libPods-iOSDemo-Today.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		1E0F95A617E133F300CF4754 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 1E9A62AF155056A800EE7C9D /* HockeySDK.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 1E5A459016F0DFC200B55C04;
-			remoteInfo = HockeySDKTests;
-		};
 		1E16266F1AB26187004F4BAD /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 1E9A623B15504F2E00EE7C9D /* Project object */;
@@ -103,40 +90,12 @@
 			remoteGlobalIDString = 6C65DFC719D2F3A000467082;
 			remoteInfo = "iOSDemo-Today";
 		};
-		1E7E599E15C7FCC100D63C84 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 1E9A62AF155056A800EE7C9D /* HockeySDK.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 1E59544115B6C3DC00A03429;
-			remoteInfo = HockeySDK;
-		};
-		1E7E59A415C7FCC100D63C84 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 1E9A62AF155056A800EE7C9D /* HockeySDK.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 1E59550A15B6F45800A03429;
-			remoteInfo = HockeySDKResources;
-		};
 		1EB617DA1B0A38C50035A986 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 1E9A623B15504F2E00EE7C9D /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 6C65DFC719D2F3A000467082;
 			remoteInfo = "iOSDemo-Today";
-		};
-		1EB618141B0A38C60035A986 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 1E9A62AF155056A800EE7C9D /* HockeySDK.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 1EB6173F1B0A30480035A986;
-			remoteInfo = "HockeySDK Framework";
-		};
-		1EB618161B0A38C60035A986 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 1E9A62AF155056A800EE7C9D /* HockeySDK.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 1EB617491B0A30480035A986;
-			remoteInfo = "HockeySDK FrameworkTests";
 		};
 /* End PBXContainerItemProxy section */
 
@@ -166,6 +125,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0F4312D11A0CA1A15F305FA4 /* Pods-HockeySDK-iOSDemo Framework.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HockeySDK-iOSDemo Framework.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HockeySDK-iOSDemo Framework/Pods-HockeySDK-iOSDemo Framework.debug.xcconfig"; sourceTree = "<group>"; };
+		14FBCA51D79F4716997F2F93 /* Pods-HockeySDK-iOSDemo Framework.appstore.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HockeySDK-iOSDemo Framework.appstore.xcconfig"; path = "Pods/Target Support Files/Pods-HockeySDK-iOSDemo Framework/Pods-HockeySDK-iOSDemo Framework.appstore.xcconfig"; sourceTree = "<group>"; };
 		1E20A585181EC68F00D5B770 /* nl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nl; path = nl.lproj/Localizable.strings; sourceTree = "<group>"; };
 		1E30AED7191A476800BE7AC9 /* QuickLook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuickLook.framework; path = System/Library/Frameworks/QuickLook.framework; sourceTree = SDKROOT; };
 		1E30AEDE191A476D00BE7AC9 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
@@ -208,7 +169,6 @@
 		1E9A629D1550544900EE7C9D /* BITDemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BITDemoViewController.m; sourceTree = "<group>"; };
 		1E9A629E1550544900EE7C9D /* BITDemoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BITDemoViewController.xib; sourceTree = "<group>"; };
 		1E9A62A11550546300EE7C9D /* BITSettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BITSettingsViewController.h; sourceTree = "<group>"; };
-		1E9A62AF155056A800EE7C9D /* HockeySDK.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = HockeySDK.xcodeproj; path = Vendor/HockeySDK/Support/HockeySDK.xcodeproj; sourceTree = "<group>"; };
 		1E9A62C2155059D500EE7C9D /* MainWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MainWindow.xib; path = Resources/MainWindow.xib; sourceTree = SOURCE_ROOT; };
 		1EA512DE167F7EF000FC9FBA /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		1EB52FC5167B741F00C801D5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = SOURCE_ROOT; };
@@ -226,15 +186,25 @@
 		1EB9352F16C52CA800365D8F /* hu */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = hu; path = hu.lproj/Localizable.strings; sourceTree = "<group>"; };
 		1ED8B40E15F3E875002CB229 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		1EDAD46E19D0492E0051A9A7 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = ../Resources/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		4C26275A139F136EDFCC9C52 /* Pods-HockeySDK-iOSDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HockeySDK-iOSDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HockeySDK-iOSDemo/Pods-HockeySDK-iOSDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		60E5BCD2A6A165D864BC3015 /* Pods-iOSDemo-Today.appstore.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSDemo-Today.appstore.xcconfig"; path = "Pods/Target Support Files/Pods-iOSDemo-Today/Pods-iOSDemo-Today.appstore.xcconfig"; sourceTree = "<group>"; };
+		6ADE9905176F099F84855BCC /* Pods-iOSDemo-Today.adhoc.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSDemo-Today.adhoc.xcconfig"; path = "Pods/Target Support Files/Pods-iOSDemo-Today/Pods-iOSDemo-Today.adhoc.xcconfig"; sourceTree = "<group>"; };
 		6C65DFC819D2F3A000467082 /* iOSDemo-Today.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "iOSDemo-Today.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6C65DFC919D2F3A000467082 /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
 		6C65DFCD19D2F3A000467082 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6C65DFCE19D2F3A000467082 /* TodayViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TodayViewController.h; sourceTree = "<group>"; };
 		6C65DFCF19D2F3A000467082 /* TodayViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TodayViewController.m; sourceTree = "<group>"; };
 		6C65DFD119D2F3A000467082 /* MainInterface.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainInterface.storyboard; sourceTree = "<group>"; };
+		7696D8B9D0BDE21D455253D2 /* libPods-HockeySDK-iOSDemo Framework.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HockeySDK-iOSDemo Framework.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		78BEBD5BDED3A8285BB99DDA /* Pods-HockeySDK-iOSDemo.adhoc.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HockeySDK-iOSDemo.adhoc.xcconfig"; path = "Pods/Target Support Files/Pods-HockeySDK-iOSDemo/Pods-HockeySDK-iOSDemo.adhoc.xcconfig"; sourceTree = "<group>"; };
+		7B28D2582A6195994C995FEF /* libPods-iOSDemo-Today.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-iOSDemo-Today.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		88C361A825A0BFACA63F2C75 /* Pods-HockeySDK-iOSDemo.appstore.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HockeySDK-iOSDemo.appstore.xcconfig"; path = "Pods/Target Support Files/Pods-HockeySDK-iOSDemo/Pods-HockeySDK-iOSDemo.appstore.xcconfig"; sourceTree = "<group>"; };
+		9C52FF80A1919636D2E95A53 /* libPods-HockeySDK-iOSDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HockeySDK-iOSDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B136CA0C49CD0E198B2177CA /* Pods-HockeySDK-iOSDemo Framework.adhoc.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HockeySDK-iOSDemo Framework.adhoc.xcconfig"; path = "Pods/Target Support Files/Pods-HockeySDK-iOSDemo Framework/Pods-HockeySDK-iOSDemo Framework.adhoc.xcconfig"; sourceTree = "<group>"; };
 		E43264E0180C07EC005E3820 /* BITAuthenticatorDemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BITAuthenticatorDemoViewController.h; sourceTree = "<group>"; };
 		E43264E1180C07EC005E3820 /* BITAuthenticatorDemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BITAuthenticatorDemoViewController.m; sourceTree = "<group>"; };
 		E43264E2180C07EC005E3820 /* BITAuthenticatorDemoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BITAuthenticatorDemoViewController.xib; sourceTree = "<group>"; };
+		EFA2B89B2A9362AB50114528 /* Pods-iOSDemo-Today.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSDemo-Today.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iOSDemo-Today/Pods-iOSDemo-Today.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -242,8 +212,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1E3A2B561964725300D5BD66 /* CrashReporter.framework in Frameworks */,
-				1E3A2B551964723600D5BD66 /* libHockeySDK.a in Frameworks */,
 				1E3A2B4E196460E200D5BD66 /* CFNetwork.framework in Frameworks */,
 				1EB5D9611932A1C200DAA3EC /* AssetsLibrary.framework in Frameworks */,
 				1E30AEE5191A478100BE7AC9 /* QuartzCore.framework in Frameworks */,
@@ -253,6 +221,7 @@
 				1E30AED8191A476800BE7AC9 /* QuickLook.framework in Frameworks */,
 				1E9A624B15504F2E00EE7C9D /* Foundation.framework in Frameworks */,
 				1E9A624915504F2E00EE7C9D /* UIKit.framework in Frameworks */,
+				E8EF856BA16B74287B6185D0 /* libPods-HockeySDK-iOSDemo.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -260,9 +229,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1EB618181B0A38EE0035A986 /* HockeySDK.framework in Frameworks */,
 				1EB617EF1B0A38C50035A986 /* Foundation.framework in Frameworks */,
 				1EB617F01B0A38C50035A986 /* UIKit.framework in Frameworks */,
+				1B25BC0BDE52DC867AAD38FB /* libPods-HockeySDK-iOSDemo Framework.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -270,9 +239,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6C65DFE519D2F80300467082 /* libHockeySDK.a in Frameworks */,
 				6C65DFCA19D2F3A000467082 /* NotificationCenter.framework in Frameworks */,
-				6C65DFE219D2F7AD00467082 /* CrashReporter.framework in Frameworks */,
+				FF47D8756A9DC934F076E41A /* libPods-iOSDemo-Today.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -288,7 +256,7 @@
 				6C65DFCB19D2F3A000467082 /* iOSDemo-Today */,
 				1E9A624715504F2E00EE7C9D /* Frameworks */,
 				1E9A624515504F2E00EE7C9D /* Products */,
-				1E9A62AF155056A800EE7C9D /* HockeySDK.xcodeproj */,
+				AEE09091F7758D11B0AAD345 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -317,6 +285,9 @@
 				1E9A624815504F2E00EE7C9D /* UIKit.framework */,
 				1ED8B40E15F3E875002CB229 /* SenTestingKit.framework */,
 				6C65DFC919D2F3A000467082 /* NotificationCenter.framework */,
+				9C52FF80A1919636D2E95A53 /* libPods-HockeySDK-iOSDemo.a */,
+				7696D8B9D0BDE21D455253D2 /* libPods-HockeySDK-iOSDemo Framework.a */,
+				7B28D2582A6195994C995FEF /* libPods-iOSDemo-Today.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -371,18 +342,6 @@
 			path = Classes;
 			sourceTree = "<group>";
 		};
-		1E9A62B0155056A800EE7C9D /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				1E7E599F15C7FCC100D63C84 /* libHockeySDK.a */,
-				1E0F95A717E133F300CF4754 /* HockeySDKTests.xctest */,
-				1E7E59A515C7FCC100D63C84 /* HockeySDKResources.bundle */,
-				1EB618151B0A38C60035A986 /* HockeySDK.framework */,
-				1EB618171B0A38C60035A986 /* HockeySDK FrameworkTests.xctest */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		6C65DFCB19D2F3A000467082 /* iOSDemo-Today */ = {
 			isa = PBXGroup;
 			children = (
@@ -402,6 +361,22 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		AEE09091F7758D11B0AAD345 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4C26275A139F136EDFCC9C52 /* Pods-HockeySDK-iOSDemo.debug.xcconfig */,
+				78BEBD5BDED3A8285BB99DDA /* Pods-HockeySDK-iOSDemo.adhoc.xcconfig */,
+				88C361A825A0BFACA63F2C75 /* Pods-HockeySDK-iOSDemo.appstore.xcconfig */,
+				0F4312D11A0CA1A15F305FA4 /* Pods-HockeySDK-iOSDemo Framework.debug.xcconfig */,
+				B136CA0C49CD0E198B2177CA /* Pods-HockeySDK-iOSDemo Framework.adhoc.xcconfig */,
+				14FBCA51D79F4716997F2F93 /* Pods-HockeySDK-iOSDemo Framework.appstore.xcconfig */,
+				EFA2B89B2A9362AB50114528 /* Pods-iOSDemo-Today.debug.xcconfig */,
+				6ADE9905176F099F84855BCC /* Pods-iOSDemo-Today.adhoc.xcconfig */,
+				60E5BCD2A6A165D864BC3015 /* Pods-iOSDemo-Today.appstore.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -409,10 +384,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1E9A625C15504F2E00EE7C9D /* Build configuration list for PBXNativeTarget "HockeySDK-iOSDemo" */;
 			buildPhases = (
+				EEF22EFFD891FCFF7E7EE370 /* [CP] Check Pods Manifest.lock */,
 				1E9A624015504F2E00EE7C9D /* Sources */,
 				1E9A624115504F2E00EE7C9D /* Frameworks */,
 				1E9A624215504F2E00EE7C9D /* Resources */,
 				6C65DFE119D2F3A000467082 /* Embed App Extensions */,
+				C2550820C9A2E2A55D5E7E42 /* [CP] Embed Pods Frameworks */,
+				AA049678095AE7357A0DA22E /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -428,10 +406,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1EB618071B0A38C50035A986 /* Build configuration list for PBXNativeTarget "HockeySDK-iOSDemo Framework" */;
 			buildPhases = (
+				101EC635D0C514E9A14C35D8 /* [CP] Check Pods Manifest.lock */,
 				1EB617DB1B0A38C50035A986 /* Sources */,
 				1EB617E51B0A38C50035A986 /* Frameworks */,
 				1EB617F11B0A38C50035A986 /* Resources */,
 				1EB618051B0A38C50035A986 /* Embed App Extensions */,
+				902F8831D92B7BEBF4818AD6 /* [CP] Embed Pods Frameworks */,
+				6015D50FF75040B42658C878 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -447,9 +428,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6C65DFE019D2F3A000467082 /* Build configuration list for PBXNativeTarget "iOSDemo-Today" */;
 			buildPhases = (
+				BAE69C63FDB852AC07BEC0D3 /* [CP] Check Pods Manifest.lock */,
 				6C65DFC419D2F3A000467082 /* Sources */,
 				6C65DFC519D2F3A000467082 /* Frameworks */,
 				6C65DFC619D2F3A000467082 /* Resources */,
+				1B91C30610A5B75289542904 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -467,7 +450,7 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = CNS;
-				LastUpgradeCheck = 0800;
+				LastUpgradeCheck = 0820;
 				TargetAttributes = {
 					1E9A624315504F2E00EE7C9D = {
 						DevelopmentTeam = 5Z97G9NZQ6;
@@ -476,6 +459,9 @@
 								enabled = 0;
 							};
 						};
+					};
+					1EB617D81B0A38C50035A986 = {
+						DevelopmentTeam = 5Z97G9NZQ6;
 					};
 					6C65DFC719D2F3A000467082 = {
 						CreatedOnToolsVersion = 6.0.1;
@@ -507,12 +493,6 @@
 			mainGroup = 1E9A623915504F2E00EE7C9D;
 			productRefGroup = 1E9A624515504F2E00EE7C9D /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = 1E9A62B0155056A800EE7C9D /* Products */;
-					ProjectRef = 1E9A62AF155056A800EE7C9D /* HockeySDK.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
 				1E9A624315504F2E00EE7C9D /* HockeySDK-iOSDemo */,
@@ -521,44 +501,6 @@
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXReferenceProxy section */
-		1E0F95A717E133F300CF4754 /* HockeySDKTests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = HockeySDKTests.xctest;
-			remoteRef = 1E0F95A617E133F300CF4754 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		1E7E599F15C7FCC100D63C84 /* libHockeySDK.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = libHockeySDK.a;
-			remoteRef = 1E7E599E15C7FCC100D63C84 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		1E7E59A515C7FCC100D63C84 /* HockeySDKResources.bundle */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = HockeySDKResources.bundle;
-			remoteRef = 1E7E59A415C7FCC100D63C84 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		1EB618151B0A38C60035A986 /* HockeySDK.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = HockeySDK.framework;
-			remoteRef = 1EB618141B0A38C60035A986 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		1EB618171B0A38C60035A986 /* HockeySDK FrameworkTests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = "HockeySDK FrameworkTests.xctest";
-			remoteRef = 1EB618161B0A38C60035A986 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		1E9A624215504F2E00EE7C9D /* Resources */ = {
@@ -577,7 +519,6 @@
 				1E72EFE91936B0DA00DC6301 /* 58x58.png in Resources */,
 				E43264E4180C07EC005E3820 /* BITAuthenticatorDemoViewController.xib in Resources */,
 				1E9A62C3155059D500EE7C9D /* MainWindow.xib in Resources */,
-				1E754E7216221B030070AB92 /* HockeySDKResources.bundle in Resources */,
 				1EDAD46F19D0492E0051A9A7 /* LaunchScreen.storyboard in Resources */,
 				1E6E93FA1814193D00F8456E /* BITCrashReportsViewController.xib in Resources */,
 				1E546FAC196C79140081E763 /* Images.xcassets in Resources */,
@@ -603,14 +544,12 @@
 				1EB617FB1B0A38C50035A986 /* 58x58.png in Resources */,
 				1EB617FC1B0A38C50035A986 /* BITAuthenticatorDemoViewController.xib in Resources */,
 				1EB617FD1B0A38C50035A986 /* MainWindow.xib in Resources */,
-				1EB617FE1B0A38C50035A986 /* HockeySDKResources.bundle in Resources */,
 				1EB617FF1B0A38C50035A986 /* LaunchScreen.storyboard in Resources */,
 				1EB618001B0A38C50035A986 /* BITCrashReportsViewController.xib in Resources */,
 				1EB618011B0A38C50035A986 /* Images.xcassets in Resources */,
 				1EB618021B0A38C50035A986 /* Localizable.strings in Resources */,
 				1EB618031B0A38C50035A986 /* 144x144.png in Resources */,
 				1EB618041B0A38C50035A986 /* 120x120.png in Resources */,
-				1EB6181D1B0A5BBC0035A986 /* HockeySDK.framework in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -619,11 +558,133 @@
 			buildActionMask = 2147483647;
 			files = (
 				6C65DFD219D2F3A000467082 /* MainInterface.storyboard in Resources */,
-				6C65DFE619D2F93200467082 /* HockeySDKResources.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		101EC635D0C514E9A14C35D8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		1B91C30610A5B75289542904 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-iOSDemo-Today/Pods-iOSDemo-Today-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6015D50FF75040B42658C878 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HockeySDK-iOSDemo Framework/Pods-HockeySDK-iOSDemo Framework-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		902F8831D92B7BEBF4818AD6 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HockeySDK-iOSDemo Framework/Pods-HockeySDK-iOSDemo Framework-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AA049678095AE7357A0DA22E /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HockeySDK-iOSDemo/Pods-HockeySDK-iOSDemo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BAE69C63FDB852AC07BEC0D3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		C2550820C9A2E2A55D5E7E42 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HockeySDK-iOSDemo/Pods-HockeySDK-iOSDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EEF22EFFD891FCFF7E7EE370 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		1E9A624015504F2E00EE7C9D /* Sources */ = {
@@ -736,8 +797,8 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/Vendor/HockeySDK/Classes\"";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				HEADER_SEARCH_PATHS = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				"IPHONEOS_DEPLOYMENT_TARGET[arch=arm64]" = 7.0;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -746,25 +807,25 @@
 		};
 		1E85692815D2FAAC0066F15E /* AdHoc */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 78BEBD5BDED3A8285BB99DDA /* Pods-HockeySDK-iOSDemo.adhoc.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				DEVELOPMENT_TEAM = 5Z97G9NZQ6;
 				ENABLE_BITCODE = NO;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SRCROOT)/Vendor/HockeySDK/Vendor\"",
-					"$(PROJECT_DIR)/Vendor/HockeySDK/Vendor",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Resources/HockeySDK-iOSDemo-Prefix.pch";
+				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "Resources/HockeySDK-iOSDemo-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				PRODUCT_BUNDLE_IDENTIFIER = net.hockeyapp.sdk.ios.demo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "729e7da6-3f90-43aa-a447-484fd3d89e4c";
+				PROVISIONING_PROFILE_SPECIFIER = "iOS Wildcard In-House";
 				WRAPPER_EXTENSION = app;
 			};
 			name = AdHoc;
@@ -800,8 +861,8 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/Vendor/HockeySDK/Classes\"";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				HEADER_SEARCH_PATHS = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				"IPHONEOS_DEPLOYMENT_TARGET[arch=arm64]" = 7.0;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -836,8 +897,8 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/Vendor/HockeySDK/Classes\"";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				HEADER_SEARCH_PATHS = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				"IPHONEOS_DEPLOYMENT_TARGET[arch=arm64]" = 7.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				PROVISIONING_PROFILE = "20c340f3-a7ac-4caf-9fad-007faf206190";
@@ -849,30 +910,32 @@
 		};
 		1E9A625D15504F2E00EE7C9D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4C26275A139F136EDFCC9C52 /* Pods-HockeySDK-iOSDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				DEVELOPMENT_TEAM = 5Z97G9NZQ6;
 				ENABLE_BITCODE = NO;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SRCROOT)/Vendor/HockeySDK/Vendor\"",
-					"$(PROJECT_DIR)/Vendor/HockeySDK/Vendor",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Resources/HockeySDK-iOSDemo-Prefix.pch";
+				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "Resources/HockeySDK-iOSDemo-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				PRODUCT_BUNDLE_IDENTIFIER = net.hockeyapp.sdk.ios.demo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "2e775355-3e83-472d-a211-a34295031d84";
+				PROVISIONING_PROFILE_SPECIFIER = "XC: *";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
 		};
 		1E9A625E15504F2E00EE7C9D /* AppStore */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 88C361A825A0BFACA63F2C75 /* Pods-HockeySDK-iOSDemo.appstore.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -880,15 +943,12 @@
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				ENABLE_BITCODE = NO;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SRCROOT)/Vendor/HockeySDK/Vendor\"",
-					"$(PROJECT_DIR)/Vendor/HockeySDK/Vendor",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Resources/HockeySDK-iOSDemo-Prefix.pch";
+				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "Resources/HockeySDK-iOSDemo-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				PRODUCT_BUNDLE_IDENTIFIER = net.hockeyapp.sdk.ios.demo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
@@ -897,55 +957,55 @@
 		};
 		1EB618081B0A38C50035A986 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0F4312D11A0CA1A15F305FA4 /* Pods-HockeySDK-iOSDemo Framework.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				DEVELOPMENT_TEAM = 5Z97G9NZQ6;
 				ENABLE_BITCODE = NO;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SRCROOT)/Vendor/HockeySDK/Vendor\"",
-					"$(PROJECT_DIR)/Vendor/HockeySDK/Vendor",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Resources/HockeySDK-iOSDemo-Prefix.pch";
 				INFOPLIST_FILE = "Resources/HockeySDK-iOSDemo-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				PRODUCT_BUNDLE_IDENTIFIER = net.hockeyapp.sdk.ios.demo;
 				PRODUCT_NAME = "HockeySDK-iOSDemo";
+				PROVISIONING_PROFILE = "2e775355-3e83-472d-a211-a34295031d84";
+				PROVISIONING_PROFILE_SPECIFIER = "XC: *";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
 		};
 		1EB618091B0A38C50035A986 /* AdHoc */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B136CA0C49CD0E198B2177CA /* Pods-HockeySDK-iOSDemo Framework.adhoc.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				DEVELOPMENT_TEAM = 5Z97G9NZQ6;
 				ENABLE_BITCODE = NO;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SRCROOT)/Vendor/HockeySDK/Vendor\"",
-					"$(PROJECT_DIR)/Vendor/HockeySDK/Vendor",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Resources/HockeySDK-iOSDemo-Prefix.pch";
 				INFOPLIST_FILE = "Resources/HockeySDK-iOSDemo-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				PRODUCT_BUNDLE_IDENTIFIER = net.hockeyapp.sdk.ios.demo;
 				PRODUCT_NAME = "HockeySDK-iOSDemo";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "729e7da6-3f90-43aa-a447-484fd3d89e4c";
+				PROVISIONING_PROFILE_SPECIFIER = "iOS Wildcard In-House";
 				WRAPPER_EXTENSION = app;
 			};
 			name = AdHoc;
 		};
 		1EB6180A1B0A38C50035A986 /* AppStore */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 14FBCA51D79F4716997F2F93 /* Pods-HockeySDK-iOSDemo Framework.appstore.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -953,11 +1013,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				ENABLE_BITCODE = NO;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SRCROOT)/Vendor/HockeySDK/Vendor\"",
-					"$(PROJECT_DIR)/Vendor/HockeySDK/Vendor",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Resources/HockeySDK-iOSDemo-Prefix.pch";
 				INFOPLIST_FILE = "Resources/HockeySDK-iOSDemo-Info.plist";
@@ -970,6 +1026,7 @@
 		};
 		6C65DFD819D2F3A000467082 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EFA2B89B2A9362AB50114528 /* Pods-iOSDemo-Today.debug.xcconfig */;
 			buildSettings = {
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -978,12 +1035,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				DEVELOPMENT_TEAM = 5Z97G9NZQ6;
 				ENABLE_BITCODE = NO;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Vendor/HockeySDK/Vendor",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -996,12 +1051,15 @@
 				MTL_ENABLE_DEBUG_INFO = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "net.hockeyapp.sdk.ios.demo.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "2e775355-3e83-472d-a211-a34295031d84";
+				PROVISIONING_PROFILE_SPECIFIER = "XC: *";
 				SKIP_INSTALL = YES;
 			};
 			name = Debug;
 		};
 		6C65DFD919D2F3A000467082 /* AdHoc */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6ADE9905176F099F84855BCC /* Pods-iOSDemo-Today.adhoc.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -1023,10 +1081,7 @@
 				ENABLE_BITCODE = NO;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Vendor/HockeySDK/Vendor",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
@@ -1048,6 +1103,7 @@
 		};
 		6C65DFDA19D2F3A000467082 /* AppStore */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 60E5BCD2A6A165D864BC3015 /* Pods-iOSDemo-Today.appstore.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -1069,10 +1125,7 @@
 				ENABLE_BITCODE = NO;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Vendor/HockeySDK/Vendor",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;

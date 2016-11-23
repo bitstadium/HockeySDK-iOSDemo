@@ -8,8 +8,8 @@
 
 #import "BITStoreUpdatesViewController.h"
 
-#import "HockeySDK.h"
-#import "HockeySDKPrivate.h"
+#import <HockeySDK/HockeySDK.h>
+
 
 
 @interface BITStoreUpdatesViewController ()
@@ -65,13 +65,13 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
   [tableView deselectRowAtIndexPath:indexPath animated:YES];
   
-  NSString *versionString = [NSString stringWithFormat:@"%@ %@", BITHockeyLocalizedString(@"UpdateVersion"), @"6.0"];
+  NSString *versionString = [NSString stringWithFormat:@"%@ %@", NSLocalizedString(@"UpdateVersion", @""), @"6.0"];
   
-  UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:BITHockeyLocalizedString(@"UpdateAvailable")
-                                                      message:[NSString stringWithFormat:BITHockeyLocalizedString(@"UpdateAlertTextWithAppVersion"), versionString]
+  UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"UpdateAvailable", @"")
+                                                      message:[NSString stringWithFormat:NSLocalizedString(@"UpdateAlertTextWithAppVersion", @""), versionString]
                                                      delegate:self
-                                            cancelButtonTitle:BITHockeyLocalizedString(@"UpdateIgnore")
-                                            otherButtonTitles:BITHockeyLocalizedString(@"UpdateRemindMe"), BITHockeyLocalizedString(@"UpdateShow"), nil
+                                            cancelButtonTitle:NSLocalizedString(@"UpdateIgnore", @"")
+                                            otherButtonTitles:NSLocalizedString(@"UpdateRemindMe", @""), NSLocalizedString(@"UpdateShow", @""), nil
                             ];
   [alertView show];
 

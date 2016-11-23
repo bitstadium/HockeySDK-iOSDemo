@@ -1,0 +1,1 @@
+../../../../HockeySDK/HockeySDK-iOS/HockeySDKCrashOnlyExtension/HockeySDK.framework/Headers/BITHockeyManager.h
