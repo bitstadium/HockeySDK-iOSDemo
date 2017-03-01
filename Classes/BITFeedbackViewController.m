@@ -120,7 +120,10 @@
       NSString *settingsDir = [[paths objectAtIndex:0] stringByAppendingPathComponent:BITHOCKEY_IDENTIFIER];
       
       NSData *binaryData = [NSData dataWithContentsOfFile:[settingsDir stringByAppendingPathComponent:@"BITFeedbackManager.plist"]];
-      [[BITHockeyManager sharedHockeyManager].feedbackManager showFeedbackComposeViewWithPreparedItems:@[binaryData]];
+      // Only do this if we have binary data. Use one of the other API first, then do this.
+      if(binaryData) {
+        [[BITHockeyManager sharedHockeyManager].feedbackManager showFeedbackComposeViewWithPreparedItems:@[binaryData]];
+      }
     }
   } else if (indexPath.section == 1) {
     [self openShareActivity];
