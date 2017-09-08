@@ -47,11 +47,13 @@
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-  return 3;
+  return 4;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
   if (section == 0) {
+    return 4;
+  } else if (section == 1) {
     return 4;
   }
   
@@ -61,6 +63,8 @@
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
   if (section == 0) {
     return NSLocalizedString(@"View Controllers", @"");
+  } else if (section == 1) {
+      return NSLocalizedString(@"Observation", @"");
   } else {
     return NSLocalizedString(@"Alerts", @"");
   }
@@ -68,7 +72,7 @@
 }
 
 - (NSString *)tableView:(UITableView *)tableView titleForFooterInSection:(NSInteger)section {
-  if (section == 0 || section == 2) {
+  if (section == 0 || section == 3) {
     return NSLocalizedString(@"Presented UI relevant for localization", @"");
   }
   
@@ -94,11 +98,20 @@
       cell.textLabel.text = NSLocalizedString(@"Compose with data", @"");
     }
   } else if (indexPath.section == 1) {
+    if (indexPath.row == 0) {
+      cell.textLabel.text = NSLocalizedString(@"None", @"");
+    } else if (indexPath.row == 1) {
+      cell.textLabel.text = NSLocalizedString(@"ModeOnScreenshot", @"");
+    } else if (indexPath.row == 2) {
+      cell.textLabel.text = NSLocalizedString(@"ModeThreeFingerTap", @"");
+    } else {
+      cell.textLabel.text = NSLocalizedString(@"ModeAll", @"");
+    }
+  } else if (indexPath.section == 2) {
     cell.textLabel.text = NSLocalizedString(@"Activity/Share", @"");
   } else {
     cell.textLabel.text = NSLocalizedString(@"New feedback available", @"");
   }
-  
   return cell;
 }
 
@@ -126,6 +139,16 @@
       }
     }
   } else if (indexPath.section == 1) {
+    if (indexPath.row == 0) {
+      [[BITHockeyManager sharedHockeyManager].feedbackManager setFeedbackObservationMode:BITFeedbackObservationNone];
+    } else if (indexPath.row == 1) {
+      [[BITHockeyManager sharedHockeyManager].feedbackManager setFeedbackObservationMode:BITFeedbackObservationModeOnScreenshot];
+    } else if (indexPath.row == 2) {
+      [[BITHockeyManager sharedHockeyManager].feedbackManager setFeedbackObservationMode:BITFeedbackObservationModeThreeFingerTap];
+    } else {
+      [[BITHockeyManager sharedHockeyManager].feedbackManager setFeedbackObservationMode:BITFeedbackObservationModeAll];
+    }
+  } else if (indexPath.section == 2) {
     [self openShareActivity];
   } else {
     UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:BITHockeyLocalizedString(@"HockeyFeedbackNewMessageTitle")
