@@ -84,7 +84,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
   // Return the number of rows in the section.
-  return 5;
+  return 6;
 }
 
 
@@ -122,6 +122,11 @@
       
     case 4: {
       cell.textLabel.text = NSLocalizedString(@"Crash Reports", @"");
+      break;
+    }
+      
+    case 5: {
+      cell.textLabel.text = NSLocalizedString(@"Track Event", @"");
       break;
     }
       
@@ -168,6 +173,12 @@
     case 4: {
       BITCrashReportsViewController *vc = [[BITCrashReportsViewController alloc] initWithNibName:nil bundle:nil];
       [self.navigationController pushViewController:vc animated:YES];
+      break;
+    }
+      
+    case 5: {
+      BITMetricsManager *metricsManager = [BITHockeyManager sharedHockeyManager].metricsManager;
+      [metricsManager trackEventWithName:@"TEST"];
       break;
     }
       
