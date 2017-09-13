@@ -38,7 +38,7 @@
 
 @implementation BITAppDelegate
 
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+- (BOOL)application:(__unused UIApplication *)application didFinishLaunchingWithOptions:(__unused NSDictionary *)launchOptions {
 #if 1 //live
   [[BITHockeyManager sharedHockeyManager] configureWithIdentifier:@"fd51a3647d651add2171dd59d3b6e5ec"
                                                          delegate:self];
@@ -67,7 +67,7 @@
   return YES;
 }
 
-- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
+- (BOOL)application:(__unused UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
   return [[BITHockeyManager sharedHockeyManager].authenticator handleOpenURL:url
                                                            sourceApplication:sourceApplication
                                                                   annotation:annotation];
@@ -111,7 +111,7 @@
 
 #pragma mark - BITCrashManagerDelegate
 
-- (NSString *)applicationLogForCrashManager:(BITCrashManager *)crashManager {
+- (NSString *)applicationLogForCrashManager:(__unused BITCrashManager *)crashManager {
   return @"applicationLog";
 }
 
@@ -125,19 +125,19 @@
 //  return attachment;
 //}
 
-- (void)crashManagerWillCancelSendingCrashReport:(BITCrashManager *)crashManager {
+- (void)crashManagerWillCancelSendingCrashReport:(__unused BITCrashManager *)crashManager {
   if ([self didCrashInLastSessionOnStartup]) {
     [self setupApplication];
   }
 }
 
-- (void)crashManager:(BITCrashManager *)crashManager didFailWithError:(NSError *)error {
+- (void)crashManager:(__unused BITCrashManager *)crashManager didFailWithError:(__unused NSError *)error {
   if ([self didCrashInLastSessionOnStartup]) {
     [self setupApplication];
   }
 }
        
-- (void)crashManagerDidFinishSendingCrashReport:(BITCrashManager *)crashManager {
+- (void)crashManagerDidFinishSendingCrashReport:(__unused BITCrashManager *)crashManager {
   if ([self didCrashInLastSessionOnStartup]) {
     [self setupApplication];
   }

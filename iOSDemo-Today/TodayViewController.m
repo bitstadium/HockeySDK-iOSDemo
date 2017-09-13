@@ -23,7 +23,7 @@
     [[BITHockeyManager sharedHockeyManager] startManager];
     self.didSetupHockeySDK = YES;
   }
-  self.preferredContentSize = CGSizeMake(self.view.frame.size.width, 40.0f);
+  self.preferredContentSize = CGSizeMake(self.view.frame.size.width, 40.0);
 }
 
 - (void)didReceiveMemoryWarning {
@@ -41,7 +41,7 @@
   completionHandler(NCUpdateResultNewData);
 }
 
-- (IBAction)testCrashTapped:(id)sender {
+- (IBAction)testCrashTapped:(__unused id) sender {
   /* Trigger a crash */
   NSArray *array = [NSArray array];
   [array objectAtIndex:23];
