@@ -145,7 +145,7 @@ typedef NS_ENUM(NSUInteger, AuthenticatorDemoAlertViewTag) {
   //you could either switch back authenticator to automatic mode on app launch,
   //or do it all for yourself. For now, just to it ourselves
   //authenticator.automaticMode = YES;
-  [authenticator identifyWithCompletion:^(BOOL identified, NSError *error) {
+  [authenticator identifyWithCompletion:^(BOOL identified, __unused NSError *error) {
     if(identified) {
       [[[UIAlertView alloc] initWithTitle:nil message:@"Thanks" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil] show];
     }
@@ -214,11 +214,11 @@ typedef NS_ENUM(NSUInteger, AuthenticatorDemoAlertViewTag) {
 
 #pragma mark - Table view data source
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+- (NSInteger)numberOfSectionsInTableView:(__unused UITableView *)tableView {
   return 4;
 }
 
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+- (NSInteger)tableView:(__unused UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
   if (section == 0) {
     return 6;
   } else if (section == 1) {
@@ -230,7 +230,7 @@ typedef NS_ENUM(NSUInteger, AuthenticatorDemoAlertViewTag) {
   }
 }
 
-- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
+- (NSString *)tableView:(__unused UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
   if (section == 0) {
     return NSLocalizedString(@"Authenticate", @"");
   } else if (section == 1) {
@@ -243,7 +243,7 @@ typedef NS_ENUM(NSUInteger, AuthenticatorDemoAlertViewTag) {
   return nil;
 }
 
-- (NSString *)tableView:(UITableView *)tableView titleForFooterInSection:(NSInteger)section {
+- (NSString *)tableView:(__unused UITableView *)tableView titleForFooterInSection:(NSInteger)section {
   if (section == 0 || section == 1) {
     return NSLocalizedString(@"Presented UI relevant for localization", @"");
   }
@@ -308,7 +308,7 @@ typedef NS_ENUM(NSUInteger, AuthenticatorDemoAlertViewTag) {
 
 #pragma mark - Table view delegate
 
-- (NSIndexPath *)tableView:(UITableView *)tableView willSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+- (NSIndexPath *)tableView:(__unused UITableView *)tableView willSelectRowAtIndexPath:(NSIndexPath *)indexPath {
   if (indexPath.section == 0 && indexPath.row == 5) {
     return nil;
   }
