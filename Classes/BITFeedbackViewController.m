@@ -38,6 +38,10 @@
                                                                                                applicationActivities:@[feedbackActivity]];
   activityViewController.excludedActivityTypes = @[UIActivityTypeAssignToContact];
   
+  if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) {
+    activityViewController.popoverPresentationController.sourceView = self.view;
+  }
+  
   [self presentViewController:activityViewController animated:YES completion:^{
     activityViewController.excludedActivityTypes = nil;
     activityViewController = nil;
