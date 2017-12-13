@@ -94,6 +94,13 @@
           [[BITHockeyManager sharedHockeyManager].crashManager timeIntervalCrashInLastSessionOccurred] < 5);
 }
 
+- (void)applicationDidEnterBackground:(UIApplication *) __unused application {
+  [[BITHockeyManager sharedHockeyManager].metricsManager trackEventWithName:@"applicationDidEnterBackground"];
+}
+
+- (void)applicationWillEnterForeground:(UIApplication *) __unused application {
+  [[BITHockeyManager sharedHockeyManager].metricsManager trackEventWithName:@"applicationWillEnterForeground"];
+}
 
 #pragma mark - BITHockeyManagerDelegate
 
