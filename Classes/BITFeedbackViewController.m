@@ -134,7 +134,7 @@
       [[BITHockeyManager sharedHockeyManager].feedbackManager showFeedbackComposeViewWithGeneratedScreenshot];
     } else {
       NSArray *paths = NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES);
-      NSString *settingsDir = [[paths objectAtIndex:0] stringByAppendingPathComponent:BITHOCKEY_IDENTIFIER];
+      NSString *settingsDir = [(NSString *)[paths objectAtIndex:0] stringByAppendingPathComponent:BITHOCKEY_IDENTIFIER];
       
       NSData *binaryData = [NSData dataWithContentsOfFile:[settingsDir stringByAppendingPathComponent:@"BITFeedbackManager.plist"]];
       // Only do this if we have binary data. Use one of the other API first, then do this.
@@ -155,13 +155,19 @@
   } else if (indexPath.section == 2) {
     [self openShareActivity];
   } else {
-    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:BITHockeyLocalizedString(@"HockeyFeedbackNewMessageTitle")
-                                                        message:BITHockeyLocalizedString(@"HockeyFeedbackNewMessageText")
-                                                       delegate:self
-                                              cancelButtonTitle:BITHockeyLocalizedString(@"HockeyFeedbackIgnore")
-                                              otherButtonTitles:BITHockeyLocalizedString(@"HockeyFeedbackShow"), nil
-                              ];
-    [alertView show];
+    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:BITHockeyLocalizedString(@"HockeyFeedbackNewMessageTitle")
+                                                                             message:BITHockeyLocalizedString(@"HockeyFeedbackNewMessageText")
+                                                                      preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertAction *ignoreAction = [UIAlertAction actionWithTitle:BITHockeyLocalizedString(@"HockeyFeedbackIgnore")
+                                                           style:UIAlertActionStyleCancel
+                                                         handler:^(UIAlertAction __unused *action) {}];
+    [alertController addAction:ignoreAction];
+    UIAlertAction *showAction = [UIAlertAction actionWithTitle:BITHockeyLocalizedString(@"HockeyFeedbackShow")
+                                                         style:UIAlertActionStyleDefault
+                                                       handler:^(UIAlertAction __unused *action) {}];
+    [alertController addAction:showAction];
+    
+    [self presentViewController:alertController animated:YES completion:nil];
   }
 }
 
