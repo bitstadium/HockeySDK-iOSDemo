@@ -121,19 +121,26 @@
       alertDescription = [NSString stringWithFormat:BITHockeyLocalizedString(@"CrashDataFoundDescription"), appName];
     }
     
-
-    
-    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:[NSString stringWithFormat:BITHockeyLocalizedString(@"CrashDataFoundTitle"), appName]
-                                                        message:alertDescription
-                                                       delegate:self
-                                              cancelButtonTitle:BITHockeyLocalizedString(@"CrashDontSendReport")
-                                              otherButtonTitles:BITHockeyLocalizedString(@"CrashSendReport"), nil];
+    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:[NSString stringWithFormat:BITHockeyLocalizedString(@"CrashDataFoundTitle"), appName]
+                                                                             message:alertDescription
+                                                                      preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertAction *dontSendAction = [UIAlertAction actionWithTitle:BITHockeyLocalizedString(@"CrashDontSendReport")
+                                                           style:UIAlertActionStyleCancel
+                                                         handler:^(UIAlertAction __unused *action) {}];
+    [alertController addAction:dontSendAction];
+    UIAlertAction *sendAction = [UIAlertAction actionWithTitle:BITHockeyLocalizedString(@"CrashSendReport")
+                                                           style:UIAlertActionStyleDefault
+                                                         handler:^(UIAlertAction __unused *action) {}];
+    [alertController addAction:sendAction];
     
     if (indexPath.row == 1) {
-      [alertView addButtonWithTitle:BITHockeyLocalizedString(@"CrashSendReportAlways")];
+      UIAlertAction *alwaysSendAction = [UIAlertAction actionWithTitle:BITHockeyLocalizedString(@"CrashSendReportAlways")
+                                                           style:UIAlertActionStyleDefault
+                                                         handler:^(UIAlertAction __unused *action) {}];
+      [alertController addAction:alwaysSendAction];
     }
     
-    [alertView show];
+    [self presentViewController:alertController animated:YES completion:nil];
   }
 }
 

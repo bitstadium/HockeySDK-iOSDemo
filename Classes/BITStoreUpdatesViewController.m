@@ -64,17 +64,25 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
   [tableView deselectRowAtIndexPath:indexPath animated:YES];
-  
   NSString *versionString = [NSString stringWithFormat:@"%@ %@", BITHockeyLocalizedString(@"UpdateVersion"), @"6.0"];
+  UIAlertController *alertController = [UIAlertController alertControllerWithTitle:BITHockeyLocalizedString(@"UpdateAvailable")
+                                                                           message:[NSString stringWithFormat:BITHockeyLocalizedString(@"UpdateAlertTextWithAppVersion"), versionString]
+                                                                    preferredStyle:UIAlertControllerStyleAlert];
+  UIAlertAction *ignoreAction = [UIAlertAction actionWithTitle:BITHockeyLocalizedString(@"UpdateIgnore")
+                                                           style:UIAlertActionStyleCancel
+                                                         handler:^(UIAlertAction __unused *action) {}];
+  [alertController addAction:ignoreAction];
+  UIAlertAction *remindAction = [UIAlertAction actionWithTitle:BITHockeyLocalizedString(@"UpdateRemindMe")
+                                                       style:UIAlertActionStyleDefault
+                                                     handler:^(UIAlertAction __unused *action) {}];
+  [alertController addAction:remindAction];
   
-  UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:BITHockeyLocalizedString(@"UpdateAvailable")
-                                                      message:[NSString stringWithFormat:BITHockeyLocalizedString(@"UpdateAlertTextWithAppVersion"), versionString]
-                                                     delegate:self
-                                            cancelButtonTitle:BITHockeyLocalizedString(@"UpdateIgnore")
-                                            otherButtonTitles:BITHockeyLocalizedString(@"UpdateRemindMe"), BITHockeyLocalizedString(@"UpdateShow"), nil
-                            ];
-  [alertView show];
-
+  UIAlertAction *showAction = [UIAlertAction actionWithTitle:BITHockeyLocalizedString(@"UpdateShow")
+                                                             style:UIAlertActionStyleDefault
+                                                           handler:^(UIAlertAction __unused *action) {}];
+  [alertController addAction:showAction];
+  
+  [self presentViewController:alertController animated:YES completion:nil];
 }
 
 @end

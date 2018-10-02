@@ -10,12 +10,6 @@
 #import "HockeySDK.h"
 #import "HockeySDKPrivate.h"
 
-typedef NS_ENUM(NSUInteger, AuthenticatorDemoAlertViewTag) {
-  AuthenticatorDemoAlertViewTagOther = 0,
-  AuthenticatorDemoAlertViewTagAsking,
-  AuthenticatorDemoAlertViewTagMessages
-};
-
 @interface BITAuthenticatorDemoViewController ()
 
 @end
@@ -111,89 +105,84 @@ typedef NS_ENUM(NSUInteger, AuthenticatorDemoAlertViewTag) {
   
   //present an alertView and kindly ask the user to identify to allow an easier
   //AdHoc handling
-  UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:nil
-                                                      message:@"Would you like to help the developers during the Beta by identifying yourself via your device ID?"
-                                                     delegate:self
-                                            cancelButtonTitle:@"Never"
-                                            otherButtonTitles:@"Sure!", nil];
-  alertView.tag = AuthenticatorDemoAlertViewTagAsking;
-  [alertView show];
-}
-
-
-- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
-  switch((AuthenticatorDemoAlertViewTag)alertView.tag) {
-    case AuthenticatorDemoAlertViewTagAsking:
-      [self askingAlertView:alertView clickedButtonAtIndex:buttonIndex];
-      break;
-    case AuthenticatorDemoAlertViewTagMessages:
-    case AuthenticatorDemoAlertViewTagOther:
-      break;
-  }
-}
-
-- (void) askingAlertView:(UIAlertView*) alertView clickedButtonAtIndex:(NSInteger) buttonIndex {
-  if(alertView.cancelButtonIndex == buttonIndex) {
-    //user doesn't want to be identified.
-    //you could store a flag to user-defaults and never ask him again
-    return;
-  }
-  
-  //cool, lets configure the authenticator and let it show the login view
-  BITAuthenticator *authenticator =   [BITHockeyManager sharedHockeyManager].authenticator;
-  authenticator.identificationType = BITAuthenticatorIdentificationTypeDevice;
-  //you could either switch back authenticator to automatic mode on app launch,
-  //or do it all for yourself. For now, just to it ourselves
-  //authenticator.automaticMode = YES;
-  [authenticator identifyWithCompletion:^(BOOL identified, __unused NSError *error) {
-    if(identified) {
-      [[[UIAlertView alloc] initWithTitle:nil message:@"Thanks" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil] show];
-    }
-  }];
-
+  UIAlertController *alertController = [UIAlertController alertControllerWithTitle:nil
+                                                                           message:@"Would you like to help the developers during the Beta by identifying yourself via your device ID?"
+                                                                    preferredStyle:UIAlertControllerStyleAlert];
+  UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"Never"
+                                                     style:UIAlertActionStyleCancel
+                                                   handler:^(UIAlertAction __unused *action) {
+                                                     //user doesn't want to be identified.
+                                                     //you could store a flag to user-defaults and never ask him again
+                                                   }];
+  [alertController addAction:cancelAction];
+  UIAlertAction *okAction = [UIAlertAction actionWithTitle:@"Sure!"
+                                                         style:UIAlertActionStyleDefault
+                                                       handler:^(UIAlertAction __unused *action) {
+                                                         
+                                                         //cool, lets configure the authenticator and let it show the login view
+                                                         authenticator.identificationType = BITAuthenticatorIdentificationTypeDevice;
+                                                         //you could either switch back authenticator to automatic mode on app launch,
+                                                         //or do it all for yourself. For now, just to it ourselves
+                                                         //authenticator.automaticMode = YES;
+                                                         [authenticator identifyWithCompletion:^(BOOL identified, __unused NSError *error) {
+                                                           if(identified) {
+                                                             
+                                                             UIAlertController *innerAlertController = [UIAlertController alertControllerWithTitle:nil
+                                                                                                                                      message:@"Thanks"
+                                                                                                                               preferredStyle:UIAlertControllerStyleAlert];
+                                                             UIAlertAction *innerCancelAction = [UIAlertAction actionWithTitle:@"OK"
+                                                                                                                    style:UIAlertActionStyleCancel
+                                                                                                                  handler:^(UIAlertAction __unused *innerAction) {}];
+                                                             [innerAlertController addAction:innerCancelAction];
+                                                             [self presentViewController:innerAlertController animated:YES completion:nil];
+                                                           }
+                                                         }];                                                       }];
+  [alertController addAction:okAction];
+  [self presentViewController:alertController animated:YES completion:nil];
 }
 
 - (void)checkAndBlock {
   BITAuthenticator *authenticator =   [BITHockeyManager sharedHockeyManager].authenticator;
   if(!authenticator.isIdentified) {
-    [[[UIAlertView alloc] initWithTitle:@"Error"
-                                message:@"Make sure to identify the user first"
-                               delegate:nil
-                      cancelButtonTitle:@"OK"
-                      otherButtonTitles:nil] show];
+    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Error"
+                                                                             message:@"Make sure to identify the user first."
+                                                                      preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"Ok"
+                                                           style:UIAlertActionStyleCancel
+                                                         handler:^(UIAlertAction __unused *action) {                                                     }];
+    [alertController addAction:cancelAction];
+    [self presentViewController:alertController animated:YES completion:nil];
     return;
   }
-  UIAlertView *blockingView = [[UIAlertView alloc] initWithTitle:nil
-                                                         message:@"Please stand by..."
-                                                        delegate:nil
-                                               cancelButtonTitle:nil
-                                               otherButtonTitles:nil];
+  UIAlertController *blockingAlertController = [UIAlertController alertControllerWithTitle:nil
+                                                                           message:@"Please stand by..."
+                                                                    preferredStyle:UIAlertControllerStyleAlert];
   [authenticator validateWithCompletion:^(BOOL validated, NSError *error) {
     if(validated) {
-      [blockingView dismissWithClickedButtonIndex:blockingView.cancelButtonIndex animated:YES];
+      [self dismissViewControllerAnimated:YES completion:nil];
     } else {
       //if he's not allowed to test the app anymore, show another alert,
       //exit the app, etc.
-      UIAlertView *errorAlert = [[UIAlertView alloc] initWithTitle:nil
-                                                           message:error.localizedDescription
-                                                          delegate:nil
-                                                 cancelButtonTitle:nil
-                                                 otherButtonTitles:nil];
-      [errorAlert show];
+      UIAlertController *errorAlertController = [UIAlertController alertControllerWithTitle:nil
+                                                                                       message:error.localizedDescription
+                                                                                preferredStyle:UIAlertControllerStyleAlert];
+      
+      [self presentViewController:errorAlertController animated:YES completion:nil];
     }
   }];
-  [blockingView show];
+  [self presentViewController:blockingAlertController animated:YES completion:nil];
 }
 
 #pragma mark -
 - (void)handleAlerts:(NSInteger)index {
-  UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:nil
-                                                      message:[self authenticatorAlertMessages][index]
-                                                     delegate:self
-                                            cancelButtonTitle:@"OK"
-                                            otherButtonTitles:nil];
-  alertView.tag = AuthenticatorDemoAlertViewTagMessages;
-  [alertView show];
+  UIAlertController *alertController = [UIAlertController alertControllerWithTitle:nil
+                                                                           message:[self authenticatorAlertMessages][index]
+                                                                    preferredStyle:UIAlertControllerStyleAlert];
+  UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"OK"
+                                                         style:UIAlertActionStyleCancel
+                                                       handler:^(UIAlertAction __unused *action) {}];
+  [alertController addAction:cancelAction];
+  [self presentViewController:alertController animated:YES completion:nil];
 }
 
 - (NSArray *) authenticatorAlertMessages {
