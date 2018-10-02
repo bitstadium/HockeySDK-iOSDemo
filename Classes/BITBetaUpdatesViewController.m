@@ -88,24 +88,34 @@
     [[BITHockeyManager sharedHockeyManager].updateManager showUpdateView];
   } else {
     if (indexPath.row == 2) {
-      UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:BITHockeyLocalizedString(@"UpdateAvailable")
-                                                          message:[NSString stringWithFormat:BITHockeyLocalizedString(@"UpdateAlertMandatoryTextWithAppVersion"), @"DemoApp 5.0 (284)"]
-                                                         delegate:self
-                                                cancelButtonTitle:BITHockeyLocalizedString(@"UpdateInstall")
-                                                otherButtonTitles:nil
-                                ];
-      [alertView show];
+      UIAlertController *alertController = [UIAlertController alertControllerWithTitle:BITHockeyLocalizedString(@"UpdateAvailable")
+                                                                               message:[NSString stringWithFormat:BITHockeyLocalizedString(@"UpdateAlertMandatoryTextWithAppVersion"), @"DemoApp 5.0 (284)"]
+                                                                        preferredStyle:UIAlertControllerStyleAlert];
+      UIAlertAction *okAction = [UIAlertAction actionWithTitle:BITHockeyLocalizedString(@"UpdateInstall")
+                                                         style:UIAlertActionStyleCancel
+                                                       handler:^(UIAlertAction __unused *action) {}];
+      [alertController addAction:okAction];
+      [self presentViewController:alertController animated:YES completion:nil];
     } else {
-      UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:BITHockeyLocalizedString(@"UpdateAvailable")
-                                                          message:[NSString stringWithFormat:BITHockeyLocalizedString(@"UpdateAlertTextWithAppVersion"), @"DemoApp 5.0 (284)"]
-                                                         delegate:self
-                                                cancelButtonTitle:BITHockeyLocalizedString(@"UpdateIgnore")
-                                                otherButtonTitles:BITHockeyLocalizedString(@"UpdateShow"), nil
-                                ];
+      UIAlertController *alertController = [UIAlertController alertControllerWithTitle:BITHockeyLocalizedString(@"UpdateAvailable")
+                                                                               message:[NSString stringWithFormat:BITHockeyLocalizedString(@"UpdateAlertTextWithAppVersion"), @"DemoApp 5.0 (284)"]
+                                                                        preferredStyle:UIAlertControllerStyleAlert];
+      UIAlertAction *okAction = [UIAlertAction actionWithTitle:BITHockeyLocalizedString(@"UpdateIgnore")
+                                                         style:UIAlertActionStyleDefault
+                                                       handler:^(UIAlertAction __unused *action) {}];
+      [alertController addAction:okAction];
+      UIAlertAction *showAction = [UIAlertAction actionWithTitle:BITHockeyLocalizedString(@"UpdateShow")
+                                                         style:UIAlertActionStyleDefault
+                                                       handler:^(UIAlertAction __unused *action) {}];
+      [alertController addAction:showAction];
+      
       if (indexPath.row == 1) {
-        [alertView addButtonWithTitle:BITHockeyLocalizedString(@"UpdateInstall")];
+        UIAlertAction *installAction = [UIAlertAction actionWithTitle:BITHockeyLocalizedString(@"UpdateInstall")
+                                                             style:UIAlertActionStyleCancel
+                                                           handler:^(UIAlertAction __unused *action) {}];
+        [alertController addAction:installAction];
       }
-      [alertView show];
+      [self presentViewController:alertController animated:YES completion:nil];
     }
   }
 }
